@@ -40,7 +40,9 @@
     "rulesGallery": "ルールギャラリー",
     "rulesHelp": "ルールヘルプ",
     "rulesSettings": "ルール設定",
-    "sensorFusion": "センサーフュージョン"
+    "ruleTrigger": "ルールトリガー",
+    "healthCheck": "ヘルスチェック",
+    "fileServer": "ファイルサーバー"
   },
   "quickActions": {
     "toggleRecording": "記録切替",
@@ -59,6 +61,7 @@
     "tags": "タグ",
     "export": "エクスポート",
     "select": "選択",
+    "selectAll": "すべて選択",
     "add": "追加",
     "later": "後で",
     "continue": "続ける",
@@ -66,7 +69,9 @@
     "openSettings": "設定を開く",
     "upgrade": "アップグレード",
     "error": "エラー",
-    "discard": "破棄"
+    "discard": "破棄",
+    "upload": "アップロード",
+    "success": "成功"
   },
   "license": {
     "activated": "ライセンス認証完了",
@@ -139,7 +144,7 @@
     "howDoesItWorkDescription": "この記録をSensor Logger Cloudにアップロードします。アップロード後、ウェブ上でストーリーを表示・構築するためのリンクが提供されます。リンクを他の人と共有しない限り、アップロードした記録や作成したストーリーにアクセスできるのはあなただけです。",
     "viewExamples": "例を見る",
     "viewExamplesDescription": "タップして、インスピレーションのためのストーリー例のギャラリーを表示します。",
-    "freeFootnote": "ストーリーは無料でご利用いただけます。すべてのユーザーに100mbの無料Sensor Logger Cloudストレージが提供されます。さらにアップロードしたい場合は、有料プランへのアップグレードをご検討ください。",
+    "freeFootnote": "ストーリーは無料でご利用いただけます。すべてのユーザーに少量の無料Sensor Logger Cloudストレージが提供されます。さらにアップロードしたい場合は、有料プランへのアップグレードをご検討ください。",
     "whatsNext": "次のステップは？",
     "whatsNextDescription": "この記録が添付された新しいストーリーが作成されました。続行するには、任意のブラウザでこのリンクにアクセスしてください。そこでストーリーを編集・構築できます。 ",
     "viewStory": "ストーリーを見る",
@@ -242,6 +247,7 @@
     "generateNewLink": "新しいリンクを生成"
   },
   "recordings": {
+    "backup": "バックアップ",
     "noRecordings": "記録なし",
     "createRecordings": "ロガーを使用してデータ記録を作成します。",
     "noMatchingTags": "選択されたタグに一致するデータ記録はありません。",
@@ -277,7 +283,7 @@
     "subscribe": "購読",
     "subscribeSubtext": "追加の有料機能",
     "cloud": "Sensor Logger Cloud",
-    "cloudSubtext": "研究とストーリーのストレージ",
+    "cloudSubtext": "研究、ストーリー、バックアップのために",
     "appIcon": "アプリアイコン",
     "appIconSubtext": "アイコンを変更",
     "language": "言語",
@@ -294,12 +300,18 @@
     "privacySubtext": "要約：データは非公開",
     "aboutItem": "について",
     "aboutSubtext": "Sensor Loggerウェブサイト",
+    "loggerLabsSubtext": "他のアプリを探す",
     "unitReference": "単位リファレンス",
     "unitSubtext": "単位のガイド",
     "coordinateReference": "座標リファレンス",
     "coordinateSubtext": "軸定義のガイド",
     "samplingReference": "サンプリングリファレンス",
     "samplingSubtext": "サンプリングレートのガイド",
+    "deepLinksReference": "ディープリンクリファレンス",
+    "deepLinksSubtextIos": "iOS ショートカットで自動化",
+    "deepLinksSubtextAndroid": "簡単な自動化のために",
+    "sandboxSubtext": "ミニゲームと実験",
+    "zooSubtext": "オープンソースアルゴリズム",
     "emailSupport": "メールサポート",
     "emailSubtext": "ProおよびUltimateユーザー向け",
     "versionBuild": "バージョン%{version} ビルド%{build}",
@@ -307,7 +319,9 @@
     "moreInspiration": "その他のインスピレーション",
     "physicist": "物理学者",
     "reservedColours": "予約済みカラー",
-    "reservedColoursMessage": "このカラーは購読者専用です。Sensor Loggerを購読してこのカラーをアンロックしてください。"
+    "reservedColoursMessage": "このカラーは購読者専用です。Sensor Loggerを購読してこのカラーをアンロックしてください。",
+    "healthCheck": "ヘルスチェック",
+    "healthCheckSubtext": "記録の問題を診断する"
   },
   "sensorSettings": {
     "waitingForData": "データ待機中",
@@ -318,13 +332,15 @@
     "samples": "サンプル",
     "connectingDevice": "追加データのためにデバイスに接続中。",
     "totalAccelerationWarning": "デバイスに重力なしの加速度を記録するセンサーがないため、Sensor Loggerは総加速度（重力を含む）を表示しています。",
-    "compassCalibrationWarning": "設定 > プライバシーとセキュリティ > 位置情報サービス > システムサービスで「コンパスの調整」と「モーションの調整と距離」の両方を有効にする必要があります。そうしないとデータが0として報告されます。",
+    "compassCalibrationWarning": "設定 > プライバシーとセキュリティ > 位置情報サービス > システムサービスで「コンパスの調整」と「モーションの調整と距離」の両方を有効にする必要があります。そうしないとデータが0として報告されるか、ファイルが空になります。",
     "latestReadings": "最新の測定値",
     "waitingForSensor": "センサーからのデータ受信を待っています...",
     "liveReadings": "このセンサーからのライブ測定値が以下に表示されます。",
     "decodedData": "デコードされたデータ",
     "waitingForAdditional": "センサーからの追加データを待っています...",
     "decodedInfo": "次の情報をデコードしました。タップしてコピーします。",
+    "deviceInformation": "デバイス情報",
+    "deviceInformationDescription": "接続されたデバイスから読み取りました。",
     "sensorInformation": "センサー情報",
     "sensorInfoDescription": "デバイスメーカーがこのセンサーに関する次の情報を提供しています。タップしてコピーします。",
     "bluetoothResources": "Bluetoothリソース",
@@ -366,6 +382,8 @@
     "copied": "コピー済み",
     "noPlottableData": "プロット可能なデータなし",
     "noPlottableDataSubtitle": "このBluetoothデータにはプロット可能なフィールドが含まれていません。",
+    "variableFormatTitle": "可変フォーマットデータ",
+    "variableFormatSubtitle": "このセンサーはプロットできない可変フィールドを報告します。データを表示するにはJSONとしてエクスポートしてください。",
     "selectData": "データを選択",
     "displayInDegrees": "角度で表示",
     "proportionalScale": "等倍スケール",
@@ -388,7 +406,16 @@
     "altitude": "高度",
     "map": "地図",
     "coords": "座標",
-    "address": "住所"
+    "address": "住所",
+    "wkbrew": "WKBrew",
+    "wkbrewEncoding": "リンクを作成中",
+    "wkbrewEncodingNotReady": "トラックをエンコードしています。少し時間がかかる場合があります。",
+    "wkbrewExplanation": "WKBrew は、ジオメトリの表示・共有・変換ができる無料ツールです。下のリンクは、この記録の GPS トラックを URL 内に完全にエンコードしており、他の場所にデータは保存されません。任意のブラウザで開くと、トラックを表示したり、GeoJSON や WKT などに変換したりできます。",
+    "wkbrewCopyLink": "リンクをコピー",
+    "wkbrewOpen": "ブラウザで開く",
+    "wkbrewSimplified": "WKBrew の URL 長の制限に収めるため、このリンクは記録された %{total} 点のうち %{used} 点に簡略化されたトラックをエンコードしています。",
+    "wkbrewLimitedFootnote": "現在プロットの解像度が下げられているため、リンクは表示中のトラックをエンコードしており、記録されたすべての点を含むわけではありません。",
+    "summary": "概要"
   },
   "logger": {
     "startRecording": "記録開始",
@@ -398,17 +425,21 @@
     "seconds": "秒",
     "note": "注意：",
     "httpPush": "HTTP プッシュ",
-    "skipWriting": "書き込みスキップ",
+    "skipWriting": "ストリーミングのみ、ローカル録音なし",
     "mqtt": "MQTT",
     "mqttPush": "MQTT プッシュ",
     "mqttSubscribe": "MQTT サブスクライブ",
     "coordinatesCloaked": "座標を隠蔽",
-    "checkpointEnabled": "チェックポイント有効",
+    "checkpointEnabledHour": "チェックポイント有効（1時間ごと）",
+    "checkpointEnabledHours": "チェックポイント有効（%{value}時間ごと）",
     "ntpEnabled": "NTP 有効",
+    "locationPrewarming": "Location ウォームアップ（待機中）",
+    "locationPrewarmingAccuracy": "Location ウォームアップ (±%{accuracy} m)",
     "oneRuleEnabled": "1件のルール有効",
     "nRulesEnabled": "%{count}件のルール有効",
     "endRecordingConfirm": "この記録セッションを終了してもよろしいですか？",
     "continueRecording": "記録を続ける",
+    "recordingTapToWake": "記録中（タップで復帰）",
     "endNow": "今すぐ終了",
     "renameRecording": "データ記録名を変更",
     "saveAndExport": "保存してエクスポート",
@@ -430,6 +461,8 @@
     "tapToExpand": "タップして展開・操作",
     "keepAwakeAlert": "画面を維持",
     "keepAwakeAlertMessage": "このセンサーは画面オフ時に正常に動作しない場合があります。記録中に画面をオンのままにしますか？この設定は後で変更できます。",
+    "keepAwakeNo": "必要ありません",
+    "keepAwakeYes": "画面をオン＆暗くする",
     "serverError": "サーバーエラー",
     "serverErrorMessage": "HTTPプッシュサーバーがエラーメッセージで応答しました: %{message}。",
     "serverErrorCode": "HTTPプッシュサーバーがコード499で応答しました。これはサーバー側エラーを示します",
@@ -449,6 +482,8 @@
     "uploadToCloud": "研究調査員が後でダウンロードできるように、Sensor Loggerクラウドにデータ記録をアップロードします。",
     "uploadToBucket": "調査員が設定したストレージバケットにデータ記録をアップロードします。",
     "uploadNow": "今すぐアップロード",
+    "uploadAndDelete": "アップロードして削除",
+    "uploadAndDeleteMessage": "アップロード成功後、このデータ記録はデバイスから削除されます。",
     "uploadInstructions": "アップロード手順",
     "uploadInstructionsDefault": "研究調査員はアップロード手順を提供していません。詳細については調査員にお問い合わせください。",
     "unknownDelivery": "不明な配信メカニズム",
@@ -461,9 +496,18 @@
     "clear": "クリア",
     "scanning": "スキャン中",
     "scan": "スキャン",
+    "potentialConfigIssues": "設定に関する潜在的な問題",
+    "tapToScanDevices": "タップして個別デバイスをスキャン",
+    "sensorEnabled": "有効",
+    "sensorDisabled": "無効",
+    "allBluetoothSensors": "すべてのBluetoothセンサー",
+    "bluetoothUpgradeMessage": "アップグレードしてすべてのBluetoothセンサーを一度に記録するか、個別のセンサーを無料でスキャンして有効にしてください。",
+    "recoveredStudyTitle": "復元された記録",
+    "recoveredStudyMessage": "前回の研究セッションの記録が見つかりました。",
     "hintBar": {
       "studyActive": "研究アクティブ",
       "studyActiveMessage": "「%{studyName}」に参加中。設定は規定されています。詳細についてはタップしてください。",
+      "studySettingsLocked": "ここの設定は研究者によって指定されています。変更するには研究から退出してください。",
       "exporting": "記録をエクスポート中...",
       "uploading": "記録をアップロード中: %{progress}%",
       "keepAppOpen": "アップロードが完了するまでアプリを開いたままにしてください。"
@@ -476,17 +520,15 @@
       "otherSensors": "その他のセンサー",
       "deviceProperties": "デバイスプロパティ",
       "bluetoothBeacons": "Bluetoothデバイス"
-    },
-    "keepAwakeNo": "必要ありません",
-    "keepAwakeYes": "画面をオン＆暗くする",
-    "tapToScanDevices": "タップして個別デバイスをスキャン",
-    "allBluetoothSensors": "すべてのBluetoothセンサー",
-    "bluetoothUpgradeMessage": "アップグレードしてすべてのBluetoothセンサーを一度に記録するか、個別のセンサーを無料でスキャンして有効にしてください。"
+    }
   },
   "settings": {
     "language": "言語",
     "troubleshooting": "トラブルシューティングについては、tszheichoi.com/sensorloggerhelpをタップして訪問してください",
     "resetToDefaults": "デフォルトにリセット",
+    "restoreSettingsTitle": "設定をデフォルトに戻す",
+    "restoreSettingsMessage": "すべての設定をデフォルトに戻しますか？収集済みのデータには影響しません。",
+    "restore": "復元",
     "sendPhotos": "画像を送信",
     "sendPhotosSubtitle": "カメラ有効時にペイロードに画像を含めます。画像はJPEGバイトのbase64文字列としてエンコードされます。動画モードには対応していません。",
     "skipWritingTitle": "ローカル保存をスキップ",
@@ -500,12 +542,11 @@
       "microphone": "マイク",
       "location": "位置情報",
       "bluetooth": "Bluetooth",
+      "customDecoders": "カスタムデコーダー",
       "additionalData": "追加データ",
       "camera": "カメラ",
       "checkpoint": "チェックポイント",
       "standardisation": "標準化",
-      "standardisationFusion": "標準化とフュージョン",
-      "sensorFusion": "センサーフュージョン",
       "httpPush": "HTTPプッシュ",
       "mqttPublishing": "MQTT公開",
       "mqttSubscription": "MQTTサブスクリプション",
@@ -515,7 +556,9 @@
       "annotationPresets": "注釈プリセット",
       "exportShareRestore": "エクスポート、共有、復元",
       "deviceSettings": "デバイス設定",
-      "language": "言語"
+      "language": "言語",
+      "audioIndicator": "オーディオインジケーター",
+      "fileServer": "ローカルファイルサーバー"
     },
     "recordingMechanism": {
       "confirmBeforeEnding": "終了前に確認",
@@ -527,6 +570,7 @@
       "keepAwakeOff": "オフ",
       "keepAwakeOn": "オン",
       "keepAwakeOnDim": "オン＆ディム",
+      "keepAwakeOnBlack": "オン＆ブラック",
       "proximityLock": "近接ロック",
       "proximityLockSubtitle": "記録中に近接センサーがトリガーされると、スリープ防止がオンの場合でも画面をオフにします。ポケットに入れているときの誤入力を避け、バッテリーを節約します。それ以外の場合は、画面がオンであるかのように動作します。",
       "inlinePreview": "インラインプレビュー",
@@ -565,11 +609,40 @@
     },
     "checkpoint": {
       "checkpoint": "チェックポイント",
-      "checkpointSubtitle": "24時間の連続記録ごとに、そのデータは中断なくシームレスに「記録」タブの新しいエントリとして自動的に保存されます。これにより、日次データ記録を整理することで長期的なデータ収集が容易になります。"
+      "checkpointSubtitle": "{{interval}}の連続記録ごとに、そのデータは中断なく新しいエントリとして自動的に保存されます。",
+      "interval": "チェックポイント間隔",
+      "hour": "1時間",
+      "hours": "{{value}}時間",
+      "backupCallout": "バックアップと併用すると、長時間の記録を自動的に分割してアップロードできます。手動の操作は不要です。"
+    },
+    "audioIndicator": {
+      "startStopTone": "開始・停止トーン",
+      "startStopToneSubtitle": "録音の開始時と停止時にチャイムを再生します。",
+      "previewStart": "録音開始",
+      "previewStop": "録音終了",
+      "intervalTone": "インターバルリマインダー",
+      "intervalToneSubtitle": "録音中にリマインダーとして定期的にトーンを再生します。マイクセンサーに干渉する場合があります。",
+      "toneType": "トーンタイプ",
+      "preview": "トーンを試聴",
+      "sec": "{{value}}秒",
+      "min": "{{value}}分",
+      "custom": "カスタム",
+      "change": "変更",
+      "everySeconds": "{{value}}秒ごと",
+      "everyMinutes": "{{value}}分ごと",
+      "intervalPromptTitle": "インターバル（秒）",
+      "intervalPromptMessage": "1〜86,400秒（24時間）の間隔を入力してください。",
+      "invalidInterval": "無効なインターバル",
+      "invalidIntervalMessage": "1〜86,400の整数を入力してください。"
     },
     "additionalData": {
       "uncalibratedValues": "未校正値",
-      "uncalibratedValuesSubtitle": "加速度計、ジャイロスコープ、磁力計から未処理の値を記録します。低レベルの後処理やカスタムセンサー融合を実行するのに便利です。校正されたデータは常に記録されます。",
+      "uncalibratedValuesSubtitle": "加速度計・ジャイロスコープ・磁力計のどのストリームを保存するかを選択します。未校正は低レベルの後処理や独自のフュージョン向けの生の値を記録します。他のセンサーや、姿勢・重力などのフュージョンストリームには影響しません。",
+      "calibratedOnly": "校正済みのみ",
+      "both": "両方",
+      "uncalibratedOnly": "未校正のみ",
+      "uncalibratedOnlyWarning": "校正済みストリームは保存されません。多くのツールはこれらのファイルを前提としています。",
+      "uncalibratedUnavailableWarning": "このデバイスには未校正の加速度センサーがないため、加速度データはまったく記録されません。両方または校正済みのみを選択してください。",
       "additionalLocationData": "追加の位置情報データ",
       "additionalLocationDataSubtitle": "デフォルトでは、融合された位置情報のみが記録されます。GPS専用とネットワーク専用からの追加測定を記録します。",
       "learnMoreLocation": "位置情報データの詳細",
@@ -594,13 +667,26 @@
       "imageQualityMedium": "中",
       "imageQualityHigh": "高",
       "cameraMode": "カメラモード",
-      "cameraModeSubtitle": "定期的に画像をキャプチャするか、音声付きのビデオとして継続的にキャプチャするか。",
+      "cameraModeSubtitle": "画像はフル画質の写真を撮影します。スナップショットは標準の画像処理パイプラインを省略し、より高速に撮影します。ビデオは単一のビデオファイルとして連続録画します。ビデオモードで音声を有効にするには、マイクセンサーもオンにしてください。画像とスナップショットの間隔はサンプリング周波数で調整してください。",
       "cameraModeImages": "画像",
       "cameraModeVideo": "ビデオ",
+      "cameraModeSnapshot": "スナップショット",
+      "notSupportedInSnapshot": "スナップショットモードではサポートされていません。",
       "captureDepth": "深度キャプチャ",
       "captureDepthImage": "画像",
       "captureDepthImageDepth": "画像＋深度",
       "depthNotSupportedInVideo": "深度データはビデオモードではサポートされていません。",
+      "captureDepthDescription": "画像ファイルに深度データが埋め込まれた状態で撮影されます。",
+      "captureDepthCamera": "選択されたカメラは%{camera}です。",
+      "captureDepthSupported": "このデバイスは深度データをサポートしています。",
+      "captureDepthNotSupported": "このデバイスは深度データをサポートしていません。",
+      "maxVideoFps": "最高ビデオFPS",
+      "maxVideoFpsSubtitle": "ビデオ録画の目標フレームレート。実際のFPSはデバイスと解像度によって異なります。",
+      "maxVideoFps15": "15",
+      "maxVideoFps30": "30",
+      "maxVideoFps60": "60",
+      "maxVideoFpsWarning": "このデバイスは、画質（%{quality}）のFPS（%{fps}）をサポートしていません。サポートされる範囲は%{min}-%{max}です。",
+      "maxVideoFpsResolutionNote": "このデバイスは%{fps} FPSをサポートしていますが、次の画質が必要です：%{qualities}。",
       "cameraLensOrder": "レンズの優先順位",
       "cameraLensOrderSubtitle": "ドラッグして並べ替えてください。デバイスで利用可能な最初のレンズが使用されます。録画中にビューファインダーでピンチして デジタルズームすることもできます。"
     },
@@ -617,7 +703,9 @@
       "coordinatesTo01": "0.1°まで",
       "coordinatesDrop": "ドロップ",
       "optimizeForNavigation": "ナビゲーション用に最適化",
-      "optimizeForNavigationSubtitle": "位置情報センサーをナビゲーションモードに設定し、追加のセンサーを使用して精度を向上させます。"
+      "optimizeForNavigationSubtitle": "位置情報センサーをナビゲーションモードに設定し、追加のセンサーを使用して精度を向上させます。",
+      "prewarmLocation": "ウォームアップ",
+      "prewarmLocationSubtitle": "Location センサーを高精度モードで自動的にウォームアップし、記録開始時にすぐ位置情報が得られるようにします。"
     },
     "bluetooth": {
       "scanningDuration": "スキャン時間",
@@ -627,17 +715,34 @@
       "rssiNoLimit": "制限なし",
       "rssiAbove70": "> -70dBm",
       "rssiAbove60": "> -60dBm",
+      "gattDeviceInfo": "デバイス情報の取得",
+      "gattDeviceInfoSubtitle": "近くのデバイスに一時的に接続し、製造元とモデルを読み取ります。デコードには不要で、一部のデバイスのデータ受信を妨げる可能性があります。",
+      "gattDeviceInfoOff": "オフ",
+      "gattDeviceInfoScan": "スキャン中",
+      "gattDeviceInfoAlways": "常に",
       "decodeValues": "値をデコード",
-      "decodeValuesSubtitle": "サポートされている場合、アドバタイズされたデータとストリーミングされたデータをデコードします。github.com/tszheichoi/sensor-bleでサポートされているデバイスを参照してください。"
+      "decodeValuesSubtitle": "サポートされている場合、アドバタイズされたデータとストリーミングされたデータをデコードします。",
+      "supportedDevicesLink": "対応デバイス",
+      "customDecodersHeader": "カスタムBluetoothデコーダー",
+      "customDecodersDescription": "Sensor-BLE互換のデコーダーファイルへのURLを指定して、新しいBLEビーコンのサポートを追加します。",
+      "addCustomDecoderTitle": "デコーダーを追加",
+      "addCustomDecoderMessage": ".jsデコーダーファイルのURLを入力してください:",
+      "deleteDecoderTitle": "デコーダーを削除",
+      "deleteDecoderMessage": "カスタムデコーダー「{{name}}」を削除してもよろしいですか？",
+      "decoderAddedSuccess": "デコーダーの読み込みと登録に成功しました！",
+      "decoderRefreshedSuccess": "デコーダーを最新バージョンに更新しました！",
+      "decoderNoUrl": "このデコーダーには更新用の保存されたURLがありません。削除してURLから再追加してください。",
+      "decoderRenameConflict": "更新されたファイルはこのデコーダーの名前を「{{name}}」に変更しますが、その名前のデコーダーは既に存在します。競合するデコーダーを先に削除してください。",
+      "fetchErrorTitle": "取得エラー",
+      "validationErrorTitle": "検証失敗"
     },
     "export": {
-      "copyExportCode": "エクスポートコードをコピー",
-      "showQrCode": "QRコードを表示",
-      "hideQrCode": "QRコードを非表示",
+      "copyDeepLink": "ディープリンクをコピー",
       "restoreFromClipboard": "クリップボードから復元",
       "cannotExportInStudy": "研究中は設定をエクスポートまたは復元できません。",
       "explanatoryText": "設定と現在有効になっているセンサーのセットは、生成されたコードを使用してエクスポートできます。このコードを使用して、同じデバイスまたは別のデバイスでこれらの設定を復元できます。データを収集するときに同じ設定を持つように、コードを他の人と共有できます。コードを転送するか、スマートフォンでQRコードをスキャンするように依頼するだけです。これはデバイスに依存する性質のため、Bluetoothセンサーは除外されることに注意してください。",
-      "restoreFailedError": "クリップボードからの設定の復元に失敗しました。クリップボードが正しいか確認してください。"
+      "restoreFailedError": "クリップボードからの設定の復元に失敗しました。クリップボードが正しいか確認してください。",
+      "qrCodeTooLarge": "この設定はQRコードとして表示するには大きすぎます。代わりに「ディープリンクをコピー」を使用して共有してください。"
     },
     "annotationPresets": {
       "addAnnotationPreset": "注釈プリセットを追加",
@@ -686,11 +791,9 @@
     },
     "standardisation": {
       "title": "単位とフレームを標準化",
-      "subtitle": "異なるプラットフォームは異なる単位と座標系で値を報告する可能性があり、クロスプラットフォーム分析が困難になります。オンにすると、プラットフォーム間で定義が調和します。",
-      "learnMore": "何に影響しますか？"
+      "subtitle": "異なるプラットフォームは異なる単位と座標系で値を報告する可能性があり、クロスプラットフォーム分析が困難になります。オンにすると、プラットフォーム間で定義が調和します。 データ処理アルゴリズムやフィルターも標準化するには、Sensor Zooをご覧ください。"
     },
     "sensorFusion": {
-      "description": "プラットフォームによって重力、ユーザー加速度、方位の推定に異なる仮定やアルゴリズムが使用されます。カスタムフィルターを選択すると、オープンソースの透明なアルゴリズムを使用してプラットフォーム間でセンサー処理が標準化されます。カスタムフィルターを使用するには、以下のすべてが必要です：",
       "viewComparison": "ライブ比較を表示",
       "waitingForData": "センサーデータを待機中..."
     },
@@ -718,20 +821,17 @@
     },
     "dataStreaming": {
       "title": "データストリーミング",
-      "description": "HTTPとMQTTを使用してデータをプッシュします。"
+      "description": "HTTPとMQTTでデータをプッシュしたり、記録をコンピューターに配信したりできます。"
     },
     "sensorConfiguration": {
       "title": "センサー構成",
       "description": "カメラ、マイク、GPS、Bluetooth、未校正データの設定。"
     },
     "standardisation": {
-      "description": "単位と座標を標準化し、カスタムセンサーフュージョンアルゴリズムを設定します。"
+      "description": "単位と座標を標準化します。"
     },
-    "standardisationFusion": {
-      "description": "単位と座標を標準化し、カスタムセンサーフュージョンアルゴリズムを設定します。"
-    },
-    "sensorFusion": {
-      "description": "重力、方位、ユーザー加速度のためのカスタムセンサーフュージョンアルゴリズム。"
+    "sensorZoo": {
+      "description": "カスタムオープンソース実装による標準化されたアルゴリズムとフィルター。"
     },
     "samplingFrequencies": {
       "description": "測定がサンプリングされる頻度を制御します。"
@@ -854,6 +954,15 @@
       "message": "研究調査員が提供する研究コードは6〜8文字である必要があります。"
     },
     "viewStudy": "研究を表示"
+  },
+  "sandbox": {
+    "description": "リアルタイムのセンサーデータでミニゲームや物理実験を楽しめます。下のリンクを別のデバイス、スマートフォン、またはパソコンで開き、ここでQRコードをスキャンしてください。",
+    "openInBrowser": "ブラウザで開く",
+    "scanQrCode": "QRコードをスキャン",
+    "scanQrCodeSubtext": "SandboxのQRコードをスキャンしてセッションに参加",
+    "unavailable": "カメラを使用できません",
+    "cameraPermissionRequired": "QRコードをスキャンするにはカメラの許可が必要です。",
+    "noCameraAvailable": "このデバイスにはカメラがありません。"
   },
   "studyDetail": {
     "stats": {
@@ -1123,7 +1232,7 @@
       "subtitle": "ペアリングされたウォッチから",
       "description": "手首のウォッチからモーション関連の測定値を記録します。これには、回転速度（x、y、z）、重力ベクトル（x、y、z）、加速度（x、y、z）、四元数での姿勢が含まれます。",
       "frequency": "構成できません。通常100Hz",
-      "units": "電話の対応するセンサーと同じ単位。",
+      "units": "加速度と重力ベクトルは、m/s²を使用する電話とは異なり、標準重力(g)で報告されます。「単位とフレームを標準化」が有効な場合、両方が電話に合わせてm/s²に変換されます。その他の値は電話の対応するセンサーと同じです。ウォッチの未校正加速度ストリームも同じ単位に従います。",
       "warning": "ウォッチアプリがフォアグラウンドでウォッチ画面がオンの場合、これらのセンサーは常に機能します。バックグラウンド記録が必要な場合は、心拍数センサーも有効にし、関連する権限を付与する必要があります。これにより、手首モーションデータのバックグラウンド記録が間接的に有効になります。"
     },
     "watchLocation": {
@@ -1138,7 +1247,7 @@
       "description": "手首のウォッチから気圧計の測定値を記録します。",
       "frequencyIos": "約2.5秒ごと（0.4Hz）。構成できません。",
       "frequencyAndroid": "デバイスモデルに依存します。構成できません。",
-      "units": "電話の対応するセンサーと同じ単位。",
+      "units": "圧力は、mbarを使用する電話とは異なり、kPaで報告されます。相対高度は電話と同じくメートルです。「単位とフレームを標準化」が有効な場合、圧力は電話に合わせてmbarに変換されます。",
       "warning": "ウォッチアプリがフォアグラウンドでウォッチ画面がオンの場合、これらのセンサーは常に機能します。バックグラウンド記録が必要な場合は、心拍数センサーも有効にし、関連する権限を付与する必要があります。これにより、気圧計データのバックグラウンド記録が間接的に有効になります。"
     },
     "watchMagnetometer": {
@@ -1156,6 +1265,13 @@
       "frequencyAndroid": "デバイスモデルに依存します。構成できません。",
       "units": "度で報告されます。",
       "warning": "測定値は強い局所磁場の影響を受ける可能性があります。ウォッチアプリがフォアグラウンドでウォッチ画面がオンの場合、これらのセンサーは常に機能します。バックグラウンド記録が必要な場合は、心拍数センサーも有効にし、関連する権限を付与する必要があります。"
+    },
+    "watchMicrophone": {
+      "subtitle": "ペアリングされたウォッチから",
+      "description": "ウォッチの内蔵マイクからオーディオと音量（dBFS）を記録します。",
+      "frequency": "オーディオは16kHzモノラルAAC。音量（dBFS）は10Hzでサンプリング。設定不可。",
+      "units": "音量はdBFS。オーディオは.mp4形式。",
+      "warning": "ウォッチアプリがフォアグラウンドにあり、ウォッチ画面がオンになっている場合、これらのセンサーは常に機能します。バックグラウンドでの記録が必要な場合は、心拍数センサーを有効にし、関連する権限を付与する必要があります。これにより、マイクデータのバックグラウンド記録が間接的に有効になります。"
     },
     "microphone": {
       "subtitle": "オーディオとレベル",
@@ -1181,14 +1297,14 @@
       "subtitle": "AirPodsモーション",
       "description": "AirPodsワイヤレスBluetoothイヤフォンからモーション測定値を記録します。これをヘッドトラッキングなどのアプリケーションに使用できます。これには、加速度（x、y、z）、重力ベクトル（x、y、z）、回転速度（x、y、z）、姿勢が含まれます。制限により、一度に1つのイヤフォンのみがモーションデータを記録します。アクティブなイヤフォンはsensorLocationフィールドで示されます。",
       "frequency": "構成できず、変動します。最新モデルで最大25Hz、古いモデルで15Hz。",
-      "units": "電話の対応するセンサーと同じ単位。",
+      "units": "加速度は標準重力(g)で報告される一方、重力ベクトルはすでにm/s²であるため、両者は異なります。「単位とフレームを標準化」が有効な場合、加速度もm/s²に変換され、両方が電話と一致します。その他の値は電話の対応するセンサーと同じです。",
       "warning": "ペアリングされたAirPodsを装着する必要があります。両方または片方のイヤフォンのみを装着できます。AirPods設定で「自動耳検出」をオフにすると、電話に接続されている限り、耳に装着していないときでもAirPodsのモーションを記録できます。"
     },
     "battery": {
-      "subtitle": "バッテリーレベル",
-      "description": "デバイスのバッテリーレベルを測定します。また、バッテリーの状態（充電中、満充電など）も記録します。負の値はバッテリーの状態が不明であることを意味します。",
+      "subtitle": "バッテリー残量",
+      "description": "デバイスのバッテリー残量を測定します。バッテリーの状態（充電中、フル充電など）や低電力モードのステータスも記録します。対応しているデバイスでは、バッテリー電圧、充電電流、全体的なバッテリーの状態（ヘルス）も追加で記録されます。",
       "frequency": "1Hzでサンプリング、構成できません。",
-      "units": "分数で報告されます。例：0.5は50%です。"
+      "units": "割合（例：0.5は50%）、状態は文字列。対応デバイスでは、電圧（ボルト）、電流（mA）、状態（文字列）が報告されます。"
     },
     "batteryTemp": {
       "subtitle": "バッテリー温度",
@@ -1232,6 +1348,9 @@
       "connectable": "接続可能です",
       "notConnectable": "接続できません",
       "deviceWarning": "Bluetoothデータはアプリが開いていて画面がオンのときにのみ記録されます。このデバイスの名前などの詳細情報を表示するには、スマートフォンの設定でこのデバイスをペアリングする必要がある場合があります。名前内のすべてのカンマはダッシュに置き換えられます。CSVエクスポートでは、カンマ区切りのリストはパイプで区切られます。",
+      "statusActive": "受信中",
+      "statusIdle": "待機中",
+      "statusOffline": "オフライン",
       "missingPermissions": "権限がありません",
       "bluetoothPermissionMessage": "この機能を使用するには、設定でBluetooth権限を許可する必要があります。"
     }
@@ -1246,5 +1365,146 @@
     "feedbackMessage": "Sensor Loggerのサブスクリプションを解除したことに気付きました。Sensor Loggerを改善する方法についてフィードバックをお聞かせください。フィードバックを提供しますか？",
     "noThanks": "いいえ、結構です",
     "provideFeedback": "フィードバックを提供"
+  },
+  "deepLinks": {
+    "annotationTitle": "注釈",
+    "notRecording": "記録中ではありません。アノテーションを追加する前に記録を開始してください。",
+    "noAnnotationText": "注釈テキストを指定してください（例: sensorlogger://annotate/pothole）",
+    "annotationBanner": "注釈を追加: %{text}",
+    "featureEnabledTitle": "機能を有効化しました",
+    "featureEnabledMessage": "「%{flag}」機能が有効になりました。",
+    "unknownFlagTitle": "不明な機能フラグ",
+    "unknownFlagMessage": "機能フラグ「%{flag}」はこのバージョンのSensor Loggerではサポートされていません。"
+  },
+  "cloudScreen": {
+    "notVerifiedYet": "まだ認証されていません",
+    "notVerifiedYetMessage": "メールはまだ認証されていません。受信トレイのリンクをクリックしてから、もう一度お試しください。",
+    "upgradeStorage": "ストレージをアップグレード",
+    "cloudStorage": "クラウドストレージ",
+    "bannerDescription": "Studies、Stories、およびバックアップをホストするための、Sensor Loggerのコンパニオンクラウドサービス。",
+    "cloudStorageDescription": "Studies（参加者がアップロードした記録）、Stories、およびバックアップ（ご自身でアップロードした記録）を安全にホストします。",
+    "backups": "バックアップ",
+    "enableBackups": "バックアップを有効にする",
+    "enableBackupsDescription": "記録を自動的にバックアップし、後でウェブや別のデバイスでダウンロードできます。また、以前にバックアップされた記録をこのデバイスに再インポートすることもできます。",
+    "storageFull": "ストレージが一杯です",
+    "storageFullMessage": "クラウドストレージの上限に達しました。バックアップを有効にするには、ストレージサブスクリプションをアップグレードしてください。",
+    "emailNotVerified": "メール未認証",
+    "emailNotVerifiedMessage": "バックアップを有効にする前に、メールアドレスを認証してください。他のデバイスからバックアップにアクセスする際に、このメールアドレスを使用します。",
+    "checkingEmail": "メールの認証状況を確認中...",
+    "verificationSent": "確認コードが %{email} に送信されました。受信トレイを確認し、以下の6桁のコードを入力して確認してください。",
+    "checkVerification": "コードを確認",
+    "changeEmail": "メール変更",
+    "emailForBackups": "バックアップ用メールアドレス",
+    "enterEmail": "メールアドレスを入力",
+    "sendVerification": "確認コードを送信",
+    "freshInstallInfo": "すでに Sensor Logger を購入済みで、これが新規インストールの場合は、以前のバックアップを表示するために購入を復元する必要がある場合があります。",
+    "manageBackups": "バックアップを管理",
+    "useMobileData": "モバイルデータを使用",
+    "useMobileDataDescription": "Wi-Fiが利用できない場合に、バックアップでのモバイルデータの使用を許可します。",
+    "missingEmail": "メールアドレスがありません",
+    "missingEmailMessage": "最初にバックアップ用メールアドレスを入力してください。",
+    "accessBackupsOnWeb": "メールアドレスを使用して sensorlogger.app/backups にアクセスすると、どこからでも記録にアクセスできます。",
+    "accessBackupsOnWebFull": "メールアドレスを使用して sensorlogger.app/backups にアクセスすると、どこからでもオンラインで、API やエージェント経由で記録にアクセスできます。",
+    "verificationCode": "確認コード",
+    "enterVerificationCode": "6桁のコードを入力",
+    "invalidCode": "無効なコード",
+    "invalidCodeMessage": "有効な6桁の確認コードを入力してください。"
+  },
+  "backupsScreen": {
+    "downloadIncomplete": "ダウンロードが不完全です。接続を確認して、もう一度お試しください。",
+    "fetchFailedTitle": "バックアップを読み込めませんでした",
+    "fetchFailedSubtitle": "接続を確認し、更新をタップして再試行してください。",
+    "keepAppOpen": "バックアップを完了するには Sensor Logger を開いたままにしてください。",
+    "wifiOnlyNote": "バックアップは Wi-Fi 接続時のみアップロードされます。",
+    "waitingForWifi": "モバイルデータ通信中のため、バックアップは一時停止しています。Wi-Fi に接続すると自動的に再開します。",
+    "waitingForConnection": "インターネットに接続されていません。オンラインに戻ると、バックアップは自動的に再開します。",
+    "sortOptions": {
+      "largest": "サイズの大きい順",
+      "smallest": "サイズの小さい順",
+      "thisDeviceFirst": "このデバイスを優先",
+      "otherDevicesFirst": "他のデバイスを優先"
+    },
+    "downloadFailed": "ダウンロード失敗",
+    "invalidLocalPath": "バックアップのローカルパスが無効です。",
+    "genericDownloadError": "記録のダウンロード中にエラーが発生しました。",
+    "deleteBackup": "バックアップを削除",
+    "deleteBackupConfirmation": "クラウドから「%{name}」を完全に削除してもよろしいですか？この操作は取り消せません。",
+    "fromThisDevice": "このデバイスから",
+    "fromAnotherDevice": "別のデバイスから",
+    "pendingUpload": "アップロード待ち",
+    "quotaExceeded": "ストレージ容量制限を超過",
+    "uploadingStatus": "アップロード中...",
+    "syncingMetadata": "メタデータを同期中",
+    "backedUp": "バックアップ済み",
+    "activityQueue": "アクティビティキュー",
+    "activityQueueWithCount": "アクティビティキュー (%{count})",
+    "loadingBackups": "バックアップを読み込み中",
+    "fetchingBackups": "バックアップを取得中...",
+    "noBackupsFound": "バックアップが見つかりません",
+    "noBackupsFoundSubtitle": "アップロードされると、バックアップがここに表示されます。",
+    "backupsDisabled": "バックアップが無効です",
+    "backupsDisabledSubtitle": "保留中のアップロードキューを表示し、記録を自動的に同期するには、「クラウド」タブでバックアップを有効にしてください。",
+    "everythingBackedUp": "すべてバックアップ済み",
+    "everythingBackedUpSubtitle": "すべてのローカル記録が正常にアップロードされ、同期されました。"
+  },
+  "healthCheck": {
+    "title": "ヘルスチェック",
+    "locationTitle": "バックグラウンドの位置情報",
+    "locationStatusAlways": "許可",
+    "locationStatusWarning": "制限あり",
+    "locationDescription": "アプリがバックグラウンドでデータを記録するには、位置情報のアクセスを「常に許可」に設定する必要があります。",
+    "storageTitle": "ストレージ",
+    "storageStatusOk": "十分",
+    "storageStatusWarning": "残りわずか",
+    "storageDescription": "長時間の記録セッションに十分な空き容量（2GB以上）がデバイスにあることを確認します。",
+    "batteryOptTitle": "バッテリー最適化",
+    "batteryOptStatusOk": "制限なし",
+    "batteryOptStatusWarning": "最適化中",
+    "batteryOptDescription": "バッテリー最適化を「制限なし」に設定すると、システムがバックグラウンドでの記録を途中で停止するのを防ぎます。",
+    "batteryTitle": "バッテリー残量",
+    "batteryStatusOk": "良好",
+    "batteryStatusWarning": "低下",
+    "batteryStatusCharging": "充電中",
+    "batteryDescription": "バッテリー残量が十分であることを確認するか、デバイスを電源に接続して連続動作を確保してください。",
+    "keepAwakeTitle": "画面のスリープ防止",
+    "keepAwakeDescription": "一部のセンサー（Bluetoothやカメラなど）は、継続的にデータを記録するために画面をアクティブにしておく必要があります。",
+    "keepAwakeStatusEnabled": "有効",
+    "keepAwakeStatusDisabled": "無効（必須）",
+    "keepAwakeStatusNotRequired": "無効（不要）",
+    "lowPowerTitle": "低電力モード",
+    "lowPowerDescription": "低電力モードはバックグラウンド処理やセンサーの記録を制限します。最適な結果を得るために、システム設定でオフにしてください。",
+    "lowPowerStatusOn": "有効",
+    "lowPowerStatusOff": "無効",
+    "fixButton": "修正",
+    "grantButton": "許可する",
+    "enableButton": "有効にする",
+    "openSettingsButton": "設定を開く",
+    "checking": "確認中...",
+    "unknown": "不明",
+    "freeSpace": "空き{{size}}"
+  },
+  "fileServer": {
+    "intro": "同じネットワークに接続されたコンピューターから記録を閲覧・ダウンロードできます。データはこのスマートフォンから直接コンピューターへ送られます。",
+    "start": "ローカルサーバーを開始",
+    "stop": "サーバーを停止",
+    "port": "ポート",
+    "portPromptMessage": "%{min} から %{max} の間のポート番号を入力してください。",
+    "invalidPortTitle": "無効なポート",
+    "stats": "%{requests}件のリクエスト · %{sent} 送信済み · %{connections}件接続中",
+    "noWifi": "このスマートフォンを Wi-Fi に接続するか、インターネット共有をオンにしてパソコンを接続してください。",
+    "address_wifi": "Wi-Fi",
+    "address_hotspot": "インターネット共有",
+    "address_usb": "USB",
+    "address_ethernet": "イーサネット",
+    "startError": "サーバーを開始できませんでした。",
+    "stoppedInBackground": "アプリがバックグラウンドに移動したため、サーバーは停止しました。",
+    "ipChanged": "このスマートフォンのネットワークアドレスが変わりました。新しいリンクを取得するにはサーバーを再起動してください。",
+    "goodToKnow": "知っておくと便利",
+    "tipSameNetwork": "コンピューターはこのスマートフォンと同じネットワークに接続されている必要があります。",
+    "tipPrivateLink": "リンクにはプライベートコードが含まれます。サーバーを開始するたびに変わります。",
+    "tipForeground": "転送中はこの画面を開いたままにしてください。画面は自動的にオンのままになります。",
+    "tipIsolation": "ゲスト用やオフィスのネットワークでは、デバイス同士の通信が制限されることがあります。その場合はこのスマートフォンのテザリングをご利用ください。",
+    "settingsDescription": "同じネットワーク上のコンピューターから記録を閲覧・ダウンロードします。",
+    "starting": "開始しています…"
   }
 }

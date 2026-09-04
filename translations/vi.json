@@ -39,7 +39,10 @@
     "rulesEditor": "Trình chỉnh sửa quy tắc",
     "rulesGallery": "Thư viện quy tắc",
     "rulesHelp": "Trợ giúp quy tắc",
-    "rulesSettings": "Cài đặt quy tắc"
+    "rulesSettings": "Cài đặt quy tắc",
+    "ruleTrigger": "Trình kích hoạt quy tắc",
+    "healthCheck": "Kiểm Tra Sức Khỏe",
+    "fileServer": "Máy chủ tệp"
   },
   "quickActions": {
     "toggleRecording": "Bật/Tắt ghi",
@@ -58,6 +61,7 @@
     "tags": "Nhãn",
     "export": "Xuất",
     "select": "Chọn",
+    "selectAll": "Tất cả",
     "add": "Thêm",
     "later": "Để sau",
     "continue": "Tiếp tục",
@@ -65,7 +69,9 @@
     "openSettings": "Mở cài đặt",
     "upgrade": "Nâng cấp",
     "error": "Lỗi",
-    "discard": "Hủy bỏ"
+    "discard": "Hủy bỏ",
+    "upload": "Tải lên",
+    "success": "Thành công"
   },
   "license": {
     "activated": "Đã kích hoạt giấy phép",
@@ -138,7 +144,7 @@
     "howDoesItWorkDescription": "Tải bản ghi này lên Sensor Logger Cloud. Sau khi tải lên, bạn sẽ có liên kết để xem và xây dựng Câu chuyện trên web. Chỉ bạn mới có quyền truy cập vào bản ghi đã tải lên và Câu chuyện đã tạo, trừ khi bạn chia sẻ liên kết với người khác.",
     "viewExamples": "Xem ví dụ",
     "viewExamplesDescription": "Nhấn để xem thư viện Câu chuyện mẫu để lấy cảm hứng.",
-    "freeFootnote": "Câu chuyện miễn phí sử dụng. Mỗi người dùng được 100MB lưu trữ Sensor Logger Cloud miễn phí. Nếu bạn muốn tải lên nhiều hơn, hãy cân nhắc nâng cấp lên các gói trả phí.",
+    "freeFootnote": "Câu chuyện miễn phí sử dụng. Mỗi người dùng được một chút dung lượng lưu trữ Sensor Logger Cloud miễn phí. Nếu bạn muốn tải lên nhiều hơn, hãy cân nhắc nâng cấp lên các gói trả phí.",
     "whatsNext": "Tiếp theo là gì?",
     "whatsNextDescription": "Một Câu chuyện mới đã được tạo với bản ghi này đính kèm. Truy cập liên kết này trên bất kỳ trình duyệt nào để tiếp tục. Bạn chỉnh sửa và xây dựng Câu chuyện ở đó. ",
     "viewStory": "Xem câu chuyện",
@@ -241,6 +247,7 @@
     "generateNewLink": "Tạo liên kết mới"
   },
   "recordings": {
+    "backup": "Sao lưu",
     "noRecordings": "Không có bản ghi",
     "createRecordings": "Tạo bản ghi bằng trình ghi dữ liệu.",
     "noMatchingTags": "Không có bản ghi nào khớp với nhãn đã chọn.",
@@ -276,7 +283,7 @@
     "subscribe": "Đăng ký",
     "subscribeSubtext": "Tính năng trả phí bổ sung",
     "cloud": "Sensor Logger Cloud",
-    "cloudSubtext": "Lưu trữ cho Nghiên cứu & Câu chuyện",
+    "cloudSubtext": "Cho Nghiên cứu, Câu chuyện & Sao lưu",
     "appIcon": "Biểu tượng ứng dụng",
     "appIconSubtext": "Thay đổi biểu tượng",
     "language": "Ngôn ngữ",
@@ -293,12 +300,18 @@
     "privacySubtext": "Tóm tắt: Dữ liệu của bạn được giữ riêng tư",
     "aboutItem": "Giới thiệu",
     "aboutSubtext": "Trang web Sensor Logger",
+    "loggerLabsSubtext": "Khám phá các ứng dụng khác",
     "unitReference": "Tham chiếu đơn vị",
     "unitSubtext": "Hướng dẫn về đơn vị",
     "coordinateReference": "Tham chiếu tọa độ",
     "coordinateSubtext": "Hướng dẫn về định nghĩa trục",
     "samplingReference": "Tham chiếu lấy mẫu",
     "samplingSubtext": "Hướng dẫn về tần số lấy mẫu",
+    "deepLinksReference": "Tham chiếu liên kết sâu",
+    "deepLinksSubtextIos": "Tự động hóa với iOS Shortcuts",
+    "deepLinksSubtextAndroid": "Để tự động hóa dễ dàng",
+    "sandboxSubtext": "Trò chơi nhỏ và thí nghiệm",
+    "zooSubtext": "Thuật toán mã nguồn mở",
     "emailSupport": "Hỗ trợ qua email",
     "emailSubtext": "Cho người dùng Pro & Ultimate",
     "versionBuild": "Phiên bản %{version} Bản dựng %{build}",
@@ -306,7 +319,9 @@
     "moreInspiration": "Thêm cảm hứng",
     "physicist": "Nhà vật lý",
     "reservedColours": "Màu dành riêng",
-    "reservedColoursMessage": "Màu này dành riêng cho người đăng ký. Đăng ký Sensor Logger để mở khóa màu này."
+    "reservedColoursMessage": "Màu này dành riêng cho người đăng ký. Đăng ký Sensor Logger để mở khóa màu này.",
+    "healthCheck": "Kiểm Tra Sức Khỏe",
+    "healthCheckSubtext": "Chẩn đoán sự cố ghi âm"
   },
   "sensorSettings": {
     "waitingForData": "Đang chờ dữ liệu",
@@ -317,13 +332,15 @@
     "samples": "Mẫu",
     "connectingDevice": "Đang kết nối với thiết bị để lấy thêm dữ liệu.",
     "totalAccelerationWarning": "Sensor Logger đang hiển thị gia tốc tổng (bao gồm trọng lực) vì thiết bị của bạn thiếu cảm biến để ghi gia tốc không có trọng lực.",
-    "compassCalibrationWarning": "Cả 'Hiệu chuẩn la bàn' và 'Hiệu chuẩn chuyển động & Khoảng cách' cần được bật trong Cài đặt > Quyền riêng tư & Bảo mật > Dịch vụ vị trí > Dịch vụ hệ thống, nếu không dữ liệu sẽ được báo cáo là 0.",
+    "compassCalibrationWarning": "Cả 'Hiệu chuẩn la bàn' và 'Hiệu chuẩn chuyển động & Khoảng cách' cần được bật trong Cài đặt > Quyền riêng tư & Bảo mật > Dịch vụ vị trí > Dịch vụ hệ thống, nếu không dữ liệu sẽ được báo cáo là 0 hoặc tệp sẽ trống.",
     "latestReadings": "Số đọc mới nhất",
     "waitingForSensor": "Đang chờ nhận dữ liệu từ cảm biến...",
     "liveReadings": "Số đọc trực tiếp từ cảm biến này được hiển thị bên dưới.",
     "decodedData": "Dữ liệu đã giải mã",
     "waitingForAdditional": "Đang chờ dữ liệu bổ sung từ cảm biến...",
     "decodedInfo": "Đã giải mã thông tin sau. Nhấn để sao chép.",
+    "deviceInformation": "Thông tin thiết bị",
+    "deviceInformationDescription": "Đọc từ thiết bị đã kết nối.",
     "sensorInformation": "Thông tin cảm biến",
     "sensorInfoDescription": "Nhà sản xuất thiết bị đã cung cấp thông tin sau về cảm biến này. Nhấn để sao chép.",
     "bluetoothResources": "Tài nguyên Bluetooth",
@@ -365,6 +382,8 @@
     "copied": "Đã sao chép",
     "noPlottableData": "Không có dữ liệu để vẽ",
     "noPlottableDataSubtitle": "Dữ liệu Bluetooth này không chứa trường nào có thể vẽ biểu đồ.",
+    "variableFormatTitle": "Dữ liệu định dạng biến đổi",
+    "variableFormatSubtitle": "Cảm biến này báo cáo các trường biến đổi không thể vẽ biểu đồ. Vui lòng xuất dưới dạng JSON để xem dữ liệu.",
     "selectData": "Chọn dữ liệu",
     "displayInDegrees": "Hiển thị bằng độ",
     "proportionalScale": "Tỷ lệ cân đối",
@@ -387,7 +406,16 @@
     "altitude": "Độ cao",
     "map": "Bản đồ",
     "coords": "Tọa độ",
-    "address": "Địa chỉ"
+    "address": "Địa chỉ",
+    "wkbrew": "WKBrew",
+    "wkbrewEncoding": "Đang tạo liên kết",
+    "wkbrewEncodingNotReady": "Đang mã hóa quỹ đạo, có thể mất một lát.",
+    "wkbrewExplanation": "WKBrew là công cụ miễn phí để xem, chia sẻ và chuyển đổi dữ liệu hình học. Liên kết bên dưới mã hóa toàn bộ quỹ đạo GPS của bản ghi này ngay trong URL, không lưu trữ bất kỳ dữ liệu nào ở nơi khác. Mở trong bất kỳ trình duyệt nào để xem quỹ đạo hoặc chuyển đổi sang GeoJSON, WKT và nhiều định dạng khác.",
+    "wkbrewCopyLink": "Sao chép liên kết",
+    "wkbrewOpen": "Mở trong trình duyệt",
+    "wkbrewSimplified": "Để phù hợp với giới hạn độ dài URL của WKBrew, liên kết mã hóa quỹ đạo đã được đơn giản hóa với %{used} trong số %{total} điểm đã ghi.",
+    "wkbrewLimitedFootnote": "Độ phân giải biểu đồ hiện đang được giảm, vì vậy liên kết mã hóa quỹ đạo đang hiển thị chứ không phải mọi điểm đã ghi.",
+    "summary": "Tổng quan"
   },
   "logger": {
     "startRecording": "Bắt đầu ghi",
@@ -397,17 +425,21 @@
     "seconds": "giây",
     "note": "Ghi chú:",
     "httpPush": "HTTP Push",
-    "skipWriting": "Bỏ qua ghi dữ liệu",
+    "skipWriting": "Chỉ Truyền Phát, Không Lưu Bản Ghi Cục Bộ",
     "mqtt": "MQTT",
     "mqttPush": "MQTT Push",
     "mqttSubscribe": "MQTT Subscribe",
     "coordinatesCloaked": "Tọa độ đã che",
-    "checkpointEnabled": "Đã bật điểm kiểm tra",
+    "checkpointEnabledHour": "Đã bật điểm kiểm tra mỗi giờ",
+    "checkpointEnabledHours": "Đã bật điểm kiểm tra mỗi %{value} giờ",
     "ntpEnabled": "Đã bật NTP",
+    "locationPrewarming": "Làm nóng trước Location (Đang chờ)",
+    "locationPrewarmingAccuracy": "Làm nóng trước Location (±%{accuracy} m)",
     "oneRuleEnabled": "1 quy tắc đã bật",
     "nRulesEnabled": "%{count} quy tắc đã bật",
     "endRecordingConfirm": "Bạn có chắc muốn kết thúc phiên ghi này không?",
     "continueRecording": "Tiếp tục ghi",
+    "recordingTapToWake": "Đang ghi (chạm để bật sáng)",
     "endNow": "Kết thúc ngay",
     "renameRecording": "Đổi tên bản ghi",
     "saveAndExport": "Lưu & Xuất",
@@ -450,6 +482,8 @@
     "uploadToCloud": "Tải bản ghi lên Sensor Logger Cloud để nhà nghiên cứu có thể tải xuống sau.",
     "uploadToBucket": "Tải bản ghi lên Bucket lưu trữ mà nhà nghiên cứu đã thiết lập.",
     "uploadNow": "Tải lên ngay",
+    "uploadAndDelete": "Tải lên và Xóa",
+    "uploadAndDeleteMessage": "Bản ghi này sẽ bị xóa khỏi thiết bị của bạn sau khi tải lên thành công.",
     "uploadInstructions": "Hướng dẫn tải lên",
     "uploadInstructionsDefault": "Nhà nghiên cứu chưa cung cấp hướng dẫn tải lên. Bạn có thể liên hệ nhà nghiên cứu để biết thêm thông tin.",
     "unknownDelivery": "Cơ chế giao nhận không xác định",
@@ -462,12 +496,18 @@
     "clear": "Xóa",
     "scanning": "Đang quét",
     "scan": "Quét",
+    "potentialConfigIssues": "Sự cố cấu hình tiềm ẩn",
     "tapToScanDevices": "Nhấn để quét thiết bị riêng lẻ",
+    "sensorEnabled": "Đã bật",
+    "sensorDisabled": "Đã tắt",
     "allBluetoothSensors": "Tất cả cảm biến Bluetooth",
     "bluetoothUpgradeMessage": "Nâng cấp để mở khóa ghi tất cả cảm biến Bluetooth cùng lúc, hoặc quét và bật từng cảm biến miễn phí.",
+    "recoveredStudyTitle": "Bản ghi đã khôi phục",
+    "recoveredStudyMessage": "Chúng tôi đã tìm thấy một bản ghi từ phiên Nghiên cứu trước đó của bạn.",
     "hintBar": {
       "studyActive": "Nghiên cứu đang hoạt động",
       "studyActiveMessage": "Đang tham gia \"%{studyName}\". Cài đặt được quy định. Nhấn để biết thêm.",
+      "studySettingsLocked": "Cấu hình ở đây được quy định bởi người nghiên cứu. Rời khỏi nghiên cứu để thay đổi.",
       "exporting": "Đang xuất bản ghi...",
       "uploading": "Đang tải bản ghi lên: %{progress}%",
       "keepAppOpen": "Giữ ứng dụng mở cho đến khi tải lên hoàn tất."
@@ -486,6 +526,9 @@
     "language": "Ngôn ngữ",
     "troubleshooting": "Để khắc phục sự cố, nhấn để truy cập tszheichoi.com/sensorloggerhelp",
     "resetToDefaults": "Đặt lại mặc định",
+    "restoreSettingsTitle": "Khôi phục cài đặt mặc định",
+    "restoreSettingsMessage": "Bạn có chắc chắn muốn khôi phục tất cả cài đặt về mặc định không? Dữ liệu đã thu thập sẽ không bị ảnh hưởng.",
+    "restore": "Khôi phục",
     "sendPhotos": "Gửi hình ảnh",
     "sendPhotosSubtitle": "Bao gồm hình ảnh trong gói tin khi Camera được bật. Hình ảnh được mã hóa dưới dạng chuỗi base64 của byte JPEG. Chế độ video không được hỗ trợ.",
     "skipWritingTitle": "Bỏ qua ghi dữ liệu",
@@ -499,6 +542,7 @@
       "microphone": "Micrô",
       "location": "Vị trí",
       "bluetooth": "Bluetooth",
+      "customDecoders": "Bộ giải mã tùy chỉnh",
       "additionalData": "Dữ liệu bổ sung",
       "camera": "Camera",
       "checkpoint": "Điểm kiểm tra",
@@ -512,7 +556,9 @@
       "annotationPresets": "Mẫu chú thích",
       "exportShareRestore": "Xuất, Chia sẻ & Khôi phục",
       "deviceSettings": "Cài đặt thiết bị",
-      "language": "Ngôn ngữ"
+      "language": "Ngôn ngữ",
+      "audioIndicator": "Chỉ báo Âm thanh",
+      "fileServer": "Máy chủ tệp cục bộ"
     },
     "recordingMechanism": {
       "confirmBeforeEnding": "Xác nhận trước khi kết thúc",
@@ -524,6 +570,7 @@
       "keepAwakeOff": "Tắt",
       "keepAwakeOn": "Bật",
       "keepAwakeOnDim": "Bật & Làm mờ",
+      "keepAwakeOnBlack": "Bật & Màn hình đen",
       "proximityLock": "Khóa cận kề",
       "proximityLockSubtitle": "Tắt màn hình, ngay cả khi Giữ màn hình bật đang bật, trong khi ghi khi cảm biến cận kề được kích hoạt. Tránh thao tác nhầm và tiết kiệm pin khi điện thoại trong túi. Nếu không thì hoạt động như màn hình đang bật.",
       "inlinePreview": "Xem trước trực tiếp",
@@ -562,11 +609,40 @@
     },
     "checkpoint": {
       "checkpoint": "Điểm kiểm tra",
-      "checkpointSubtitle": "Sau mỗi 24 giờ ghi liên tục, dữ liệu đó sẽ được tự động lưu thành mục mới trong tab \"Bản ghi\" một cách liền mạch không gián đoạn. Điều này giúp thu thập dữ liệu dài hạn bằng cách tổ chức bản ghi hàng ngày."
+      "checkpointSubtitle": "Sau mỗi {{interval}} ghi liên tục, dữ liệu đó sẽ được tự động lưu thành mục mới không gián đoạn.",
+      "interval": "Khoảng thời gian điểm kiểm tra",
+      "hour": "1 giờ",
+      "hours": "{{value}} giờ",
+      "backupCallout": "Dùng cùng Sao lưu để tự động chia và tải lên các bản ghi dài mà không cần thao tác thủ công."
+    },
+    "audioIndicator": {
+      "startStopTone": "Âm Bắt đầu & Dừng",
+      "startStopToneSubtitle": "Phát âm thanh khi bắt đầu và dừng ghi.",
+      "previewStart": "Bắt đầu Ghi",
+      "previewStop": "Kết thúc Ghi",
+      "intervalTone": "Nhắc nhở Khoảng thời gian",
+      "intervalToneSubtitle": "Phát âm thanh định kỳ trong khi ghi như một lời nhắc. Có thể ảnh hưởng đến cảm biến micrô.",
+      "toneType": "Loại Âm",
+      "preview": "Nghe thử Âm",
+      "sec": "{{value}}s",
+      "min": "{{value}}m",
+      "custom": "Tùy chỉnh",
+      "change": "Thay đổi",
+      "everySeconds": "Mỗi {{value}} giây",
+      "everyMinutes": "Mỗi {{value}} phút",
+      "intervalPromptTitle": "Khoảng thời gian (giây)",
+      "intervalPromptMessage": "Nhập khoảng thời gian từ 1 đến 86.400 giây (24 giờ).",
+      "invalidInterval": "Khoảng thời gian Không hợp lệ",
+      "invalidIntervalMessage": "Vui lòng nhập số nguyên từ 1 đến 86.400."
     },
     "additionalData": {
       "uncalibratedValues": "Giá trị chưa hiệu chuẩn",
-      "uncalibratedValuesSubtitle": "Ghi giá trị thô từ gia tốc kế, con quay hồi chuyển và từ kế. Hữu ích để thực hiện xử lý hậu kỳ cấp thấp hơn hoặc kết hợp cảm biến tùy chỉnh. Dữ liệu đã hiệu chuẩn luôn được ghi.",
+      "uncalibratedValuesSubtitle": "Chọn luồng dữ liệu nào của gia tốc kế, con quay hồi chuyển và từ kế được lưu. Chưa Hiệu Chuẩn ghi giá trị thô cho hậu xử lý cấp thấp hoặc tự kết hợp cảm biến. Các cảm biến khác và các luồng kết hợp như hướng và trọng lực không bị ảnh hưởng.",
+      "calibratedOnly": "Chỉ Đã Hiệu Chuẩn",
+      "both": "Cả Hai",
+      "uncalibratedOnly": "Chỉ Chưa Hiệu Chuẩn",
+      "uncalibratedOnlyWarning": "Các luồng đã hiệu chuẩn sẽ không được lưu. Hầu hết công cụ cần các tệp này.",
+      "uncalibratedUnavailableWarning": "Thiết bị này không có gia tốc kế chưa hiệu chuẩn, nên sẽ không có dữ liệu gia tốc kế nào được ghi. Hãy chọn Cả Hai hoặc Chỉ Đã Hiệu Chuẩn.",
       "additionalLocationData": "Dữ liệu vị trí bổ sung",
       "additionalLocationDataSubtitle": "Theo mặc định, chỉ vị trí kết hợp được ghi. Ghi thêm phép đo chỉ từ GPS và chỉ từ mạng.",
       "learnMoreLocation": "Tìm hiểu thêm về dữ liệu vị trí",
@@ -591,13 +667,26 @@
       "imageQualityMedium": "Trung bình",
       "imageQualityHigh": "Cao",
       "cameraMode": "Chế độ camera",
-      "cameraModeSubtitle": "Chụp ảnh theo khoảng thời gian đều đặn, được xác định trong Tần số lấy mẫu, hoặc liên tục dưới dạng video đơn. Để bật âm thanh trong chế độ video, cũng bật cảm biến Micrô.",
+      "cameraModeSubtitle": "Hình ảnh chụp ảnh chất lượng đầy đủ. Chụp nhanh bỏ qua quy trình xử lý ảnh tiêu chuẩn để chụp nhanh hơn. Video ghi liên tục thành một tệp video. Để bật âm thanh trong chế độ video, cũng bật cảm biến Micrô. Điều chỉnh khoảng thời gian hình ảnh và chụp nhanh trong Tần số lấy mẫu.",
       "cameraModeImages": "Hình ảnh",
       "cameraModeVideo": "Video",
+      "cameraModeSnapshot": "Chụp nhanh",
+      "notSupportedInSnapshot": "Không hỗ trợ trong chế độ chụp nhanh.",
       "captureDepth": "Chụp độ sâu",
       "captureDepthImage": "Hình ảnh",
       "captureDepthImageDepth": "Hình ảnh + Độ sâu",
       "depthNotSupportedInVideo": "Dữ liệu độ sâu không được hỗ trợ trong chế độ video.",
+      "captureDepthDescription": "Hình ảnh được chụp với dữ liệu độ sâu được nhúng trong tệp ảnh.",
+      "captureDepthCamera": "Camera đã chọn là %{camera}.",
+      "captureDepthSupported": "Thiết bị này hỗ trợ dữ liệu độ sâu.",
+      "captureDepthNotSupported": "Thiết bị này không hỗ trợ dữ liệu độ sâu.",
+      "maxVideoFps": "FPS video tối đa",
+      "maxVideoFpsSubtitle": "Tốc độ khung hình mục tiêu cho quay video. FPS thực tế phụ thuộc vào thiết bị và độ phân giải.",
+      "maxVideoFps15": "15",
+      "maxVideoFps30": "30",
+      "maxVideoFps60": "60",
+      "maxVideoFpsWarning": "FPS (%{fps}) không được thiết bị này hỗ trợ cho Chất lượng hình ảnh (%{quality}). Phạm vi được hỗ trợ là %{min}-%{max}.",
+      "maxVideoFpsResolutionNote": "Thiết bị này hỗ trợ %{fps} FPS, nhưng yêu cầu Chất lượng hình ảnh: %{qualities}.",
       "cameraLensOrder": "Ưu tiên ống kính",
       "cameraLensOrderSubtitle": "Kéo để sắp xếp lại. Ống kính có sẵn đầu tiên trên thiết bị sẽ được sử dụng. Bạn cũng có thể kéo hai ngón để phóng to kỹ thuật số trong khung ngắm khi ghi."
     },
@@ -614,7 +703,9 @@
       "coordinatesTo01": "Đến 0,1°",
       "coordinatesDrop": "Bỏ",
       "optimizeForNavigation": "Tối ưu cho điều hướng",
-      "optimizeForNavigationSubtitle": "Đặt cảm biến vị trí sang chế độ điều hướng, sử dụng thêm cảm biến để cải thiện độ chính xác."
+      "optimizeForNavigationSubtitle": "Đặt cảm biến vị trí sang chế độ điều hướng, sử dụng thêm cảm biến để cải thiện độ chính xác.",
+      "prewarmLocation": "Làm nóng trước",
+      "prewarmLocationSubtitle": "Tự động làm nóng cảm biến Location ở chế độ độ chính xác cao, để có ngay vị trí khi bắt đầu ghi."
     },
     "bluetooth": {
       "scanningDuration": "Thời lượng quét",
@@ -624,17 +715,34 @@
       "rssiNoLimit": "Không giới hạn",
       "rssiAbove70": "> -70dBm",
       "rssiAbove60": "> -60dBm",
+      "gattDeviceInfo": "Tra cứu thông tin thiết bị",
+      "gattDeviceInfoSubtitle": "Kết nối ngắn với các thiết bị gần đó để đọc nhà sản xuất và model. Không bắt buộc để giải mã, và có thể làm gián đoạn dữ liệu từ một số thiết bị.",
+      "gattDeviceInfoOff": "Tắt",
+      "gattDeviceInfoScan": "Trong khi quét",
+      "gattDeviceInfoAlways": "Luôn luôn",
       "decodeValues": "Giải mã giá trị",
-      "decodeValuesSubtitle": "Nếu được hỗ trợ, giải mã dữ liệu quảng bá và truyền trực tuyến. Xem github.com/tszheichoi/sensor-ble cho các thiết bị được hỗ trợ."
+      "decodeValuesSubtitle": "Nếu được hỗ trợ, giải mã dữ liệu quảng bá và truyền trực tuyến.",
+      "supportedDevicesLink": "Thiết bị được hỗ trợ",
+      "customDecodersHeader": "Bộ giải mã Bluetooth tùy chỉnh",
+      "customDecodersDescription": "Thêm hỗ trợ cho các thẻ định vị BLE mới bằng cách cung cấp URL đến tệp giải mã tương thích với Sensor-BLE.",
+      "addCustomDecoderTitle": "Thêm bộ giải mã",
+      "addCustomDecoderMessage": "Nhập URL của tệp giải mã .js:",
+      "deleteDecoderTitle": "Xóa bộ giải mã",
+      "deleteDecoderMessage": "Bạn có chắc chắn muốn xóa bộ giải mã tùy chỉnh \"{{name}}\" không?",
+      "decoderAddedSuccess": "Đã tải và đăng ký bộ giải mã thành công!",
+      "decoderRefreshedSuccess": "Đã cập nhật bộ giải mã lên phiên bản mới nhất!",
+      "decoderNoUrl": "Bộ giải mã này không có URL được lưu để làm mới. Hãy xóa và thêm lại qua URL.",
+      "decoderRenameConflict": "Tệp được cập nhật đổi tên bộ giải mã này thành \"{{name}}\", nhưng bộ giải mã với tên đó đã tồn tại. Hãy xóa bộ giải mã bị xung đột trước.",
+      "fetchErrorTitle": "Lỗi tải về",
+      "validationErrorTitle": "Xác thực thất bại"
     },
     "export": {
-      "copyExportCode": "Sao chép mã xuất",
-      "showQrCode": "Hiển thị mã QR",
-      "hideQrCode": "Ẩn mã QR",
+      "copyDeepLink": "Sao chép đường liên kết sâu",
       "restoreFromClipboard": "Khôi phục từ bộ nhớ tạm",
       "cannotExportInStudy": "Bạn không thể xuất hoặc khôi phục cài đặt khi đang trong nghiên cứu.",
       "explanatoryText": "Cài đặt và bộ cảm biến hiện đang bật có thể được xuất bằng mã đã tạo. Mã này có thể được sử dụng để khôi phục các cài đặt này trên cùng thiết bị hoặc thiết bị khác. Bạn có thể chia sẻ mã với người khác để họ có cùng cài đặt khi thu thập dữ liệu. Chỉ cần chuyển tiếp mã cho họ hoặc yêu cầu họ quét mã QR trên điện thoại. Lưu ý điều này không bao gồm cảm biến Bluetooth do tính phụ thuộc thiết bị.",
-      "restoreFailedError": "Không thể khôi phục cài đặt từ bộ nhớ tạm, kiểm tra bộ nhớ tạm có đúng không."
+      "restoreFailedError": "Không thể khôi phục cài đặt từ bộ nhớ tạm, kiểm tra bộ nhớ tạm có đúng không.",
+      "qrCodeTooLarge": "Cấu hình này quá lớn để hiển thị dưới dạng mã QR. Hãy dùng \"Sao chép đường liên kết sâu\" để chia sẻ."
     },
     "annotationPresets": {
       "addAnnotationPreset": "Thêm mẫu chú thích",
@@ -683,8 +791,11 @@
     },
     "standardisation": {
       "title": "Chuẩn hóa đơn vị & Khung tham chiếu",
-      "subtitle": "Các nền tảng khác nhau có thể báo cáo giá trị bằng các đơn vị và hệ tọa độ khác nhau, gây khó khăn cho phân tích đa nền tảng. Bật để hài hòa các định nghĩa giữa các nền tảng.",
-      "learnMore": "Tìm hiểu thêm về sự khác biệt trong đơn vị & tọa độ giữa các nền tảng, và những cảm biến nào bị ảnh hưởng."
+      "subtitle": "Các nền tảng khác nhau có thể báo cáo giá trị bằng các đơn vị và hệ tọa độ khác nhau, gây khó khăn cho phân tích đa nền tảng. Bật để hài hòa các định nghĩa giữa các nền tảng. Để chuẩn hóa cả các thuật toán xử lý dữ liệu và bộ lọc, hãy xem Sensor Zoo."
+    },
+    "sensorFusion": {
+      "viewComparison": "Xem so sánh trực tiếp",
+      "waitingForData": "Đang chờ dữ liệu cảm biến..."
     },
     "orderSensors": {
       "infoText": "Kéo để thay đổi thứ tự hiển thị cảm biến. Beacon Bluetooth luôn xuất hiện ở cuối."
@@ -710,14 +821,17 @@
     },
     "dataStreaming": {
       "title": "Truyền dữ liệu",
-      "description": "Sử dụng HTTP & MQTT để đẩy dữ liệu."
+      "description": "Đẩy dữ liệu bằng HTTP & MQTT, hoặc truyền bản ghi tới máy tính của bạn."
     },
     "sensorConfiguration": {
       "title": "Cấu hình cảm biến",
       "description": "Cài đặt cho camera, micrô, GPS, bluetooth & dữ liệu chưa hiệu chuẩn."
     },
     "standardisation": {
-      "description": "Chuẩn hóa đơn vị và tọa độ giữa các thiết bị."
+      "description": "Chuẩn hóa đơn vị và tọa độ."
+    },
+    "sensorZoo": {
+      "description": "Các thuật toán và bộ lọc được chuẩn hóa với các triển khai mã nguồn mở tùy chỉnh."
     },
     "samplingFrequencies": {
       "description": "Điều khiển tần suất lấy mẫu phép đo."
@@ -840,6 +954,15 @@
       "message": "Mã nghiên cứu do nhà nghiên cứu cung cấp phải từ 6 đến 8 ký tự."
     },
     "viewStudy": "Xem nghiên cứu"
+  },
+  "sandbox": {
+    "description": "Chơi trò chơi nhỏ và thực hiện thí nghiệm vật lý với dữ liệu cảm biến thời gian thực. Mở liên kết bên dưới trên thiết bị khác, điện thoại hoặc máy tính, và quét mã QR tại đây.",
+    "openInBrowser": "Mở trong trình duyệt",
+    "scanQrCode": "Quét mã QR",
+    "scanQrCodeSubtext": "Quét mã QR Sandbox để tham gia phiên",
+    "unavailable": "Không thể sử dụng",
+    "cameraPermissionRequired": "Cần quyền truy cập camera để quét mã QR.",
+    "noCameraAvailable": "Không có camera trên thiết bị này."
   },
   "studyDetail": {
     "stats": {
@@ -1096,6 +1219,9 @@
       "connectable": "có thể kết nối",
       "notConnectable": "không thể kết nối",
       "deviceWarning": "Dữ liệu Bluetooth chỉ được ghi khi ứng dụng mở và màn hình bật. Bạn có thể phải ghép nối thiết bị này trong cài đặt điện thoại để xem thêm thông tin, chẳng hạn như tên. Tất cả dấu phẩy trong tên được thay thế bằng dấu gạch ngang; Trong xuất CSV, danh sách phân tách bằng dấu phẩy được phân cách bằng dấu sổ dọc.",
+      "statusActive": "Hoạt động",
+      "statusIdle": "Chờ",
+      "statusOffline": "Ngoại tuyến",
       "missingPermissions": "Thiếu quyền",
       "bluetoothPermissionMessage": "Bạn cần cấp quyền Bluetooth trong cài đặt để sử dụng tính năng này."
     },
@@ -1124,7 +1250,7 @@
       "subtitle": "Từ đồng hồ đã ghép nối",
       "description": "Ghi các số đo liên quan đến chuyển động từ đồng hồ trên cổ tay. Bao gồm tốc độ quay (x, y, z), vector trọng lực (x, y, z), gia tốc (x, y, z) và tư thế bằng quaternion.",
       "frequency": "Không thể cấu hình, thường ở 100Hz",
-      "units": "Cùng đơn vị với các cảm biến tương ứng trên điện thoại.",
+      "units": "Gia tốc và vectơ trọng lực được báo cáo bằng trọng lực chuẩn (g), khác với điện thoại dùng m/s². Khi \"Chuẩn hóa đơn vị & Khung tham chiếu\" được bật, cả hai được chuyển đổi sang m/s² để khớp với điện thoại. Tất cả các giá trị khác giống với các cảm biến tương ứng trên điện thoại. Luồng gia tốc kế chưa hiệu chuẩn từ đồng hồ cũng theo cùng đơn vị.",
       "warning": "Các cảm biến này luôn hoạt động nếu ứng dụng đồng hồ ở nền trước với màn hình đồng hồ bật. Nếu bạn muốn ghi nền, bạn cũng phải bật cảm biến nhịp tim và cấp các quyền liên quan. Điều này gián tiếp cho phép ghi nền dữ liệu chuyển động cổ tay."
     },
     "watchLocation": {
@@ -1139,7 +1265,7 @@
       "description": "Ghi số đo khí áp kế từ đồng hồ trên cổ tay.",
       "frequencyIos": "Khoảng mỗi 2,5 giây (0,4Hz). Không thể cấu hình.",
       "frequencyAndroid": "Phụ thuộc vào mẫu thiết bị. Không thể cấu hình.",
-      "units": "Cùng đơn vị với các cảm biến tương ứng trên điện thoại.",
+      "units": "Áp suất được báo cáo bằng kPa, khác với điện thoại dùng mbar. Độ cao tương đối tính bằng mét, giống như điện thoại. Khi \"Chuẩn hóa đơn vị & Khung tham chiếu\" được bật, áp suất được chuyển đổi sang mbar để khớp với điện thoại.",
       "warning": "Các cảm biến này luôn hoạt động nếu ứng dụng đồng hồ ở nền trước với màn hình đồng hồ bật. Nếu bạn muốn ghi nền, bạn cũng phải bật cảm biến nhịp tim và cấp các quyền liên quan. Điều này gián tiếp cho phép ghi nền dữ liệu khí áp kế."
     },
     "watchMagnetometer": {
@@ -1157,6 +1283,13 @@
       "frequencyAndroid": "Phụ thuộc vào mẫu thiết bị. Không thể cấu hình.",
       "units": "Báo cáo bằng độ.",
       "warning": "Số đọc có thể bị ảnh hưởng bởi bất kỳ từ trường mạnh nào gần đó. Các cảm biến này luôn hoạt động nếu ứng dụng đồng hồ ở nền trước với màn hình đồng hồ bật. Nếu bạn muốn ghi nền, bạn cũng phải bật cảm biến nhịp tim và cấp các quyền liên quan."
+    },
+    "watchMicrophone": {
+      "subtitle": "Từ đồng hồ đã ghép đôi",
+      "description": "Ghi lại âm thanh và độ lớn (dBFS) từ micrô tích hợp trên đồng hồ của bạn.",
+      "frequency": "Âm thanh ở định dạng AAC đơn kênh 16kHz. Độ lớn (dBFS) được lấy mẫu ở tần số 10Hz. Không thể định cấu hình.",
+      "units": "Độ lớn tính bằng dBFS. Âm thanh ở định dạng .mp4.",
+      "warning": "Các cảm biến này sẽ luôn hoạt động nếu ứng dụng đồng hồ ở chế độ chạy nền và màn hình đồng hồ bật. Nếu bạn muốn ghi âm chạy nền, bạn cũng phải bật cảm biến nhịp tim và cấp các quyền liên quan. Điều này gián tiếp bật tính năng ghi âm chạy nền cho dữ liệu micrô."
     },
     "microphone": {
       "subtitle": "Âm thanh & Mức độ",
@@ -1182,14 +1315,14 @@
       "subtitle": "Chuyển động AirPods",
       "description": "Ghi số đo chuyển động từ tai nghe không dây Bluetooth AirPods. Bạn có thể sử dụng cho các ứng dụng như theo dõi đầu. Bao gồm gia tốc (x, y, z), vector trọng lực (x, y, z), tốc độ quay (x, y, z) và tư thế. Do giới hạn, chỉ một tai nghe ghi dữ liệu chuyển động tại một thời điểm. Tai nghe đang hoạt động được chỉ báo bởi trường sensorLocation.",
       "frequency": "Không thể cấu hình và thay đổi, lên đến 25Hz trên mẫu mới nhất và 15Hz trên mẫu cũ hơn.",
-      "units": "Cùng đơn vị với các cảm biến tương ứng trên điện thoại.",
+      "units": "Gia tốc được báo cáo bằng trọng lực chuẩn (g) trong khi vectơ trọng lực đã tính bằng m/s², nên hai giá trị này khác nhau. Khi \"Chuẩn hóa đơn vị & Khung tham chiếu\" được bật, gia tốc cũng được chuyển đổi sang m/s² để cả hai khớp với điện thoại. Tất cả các giá trị khác giống với các cảm biến tương ứng trên điện thoại.",
       "warning": "Bạn phải đeo AirPods đã ghép nối -- bạn có thể đeo cả hai hoặc chỉ một tai nghe. Nếu tắt 'Phát hiện tai tự động' trong cài đặt AirPods, có thể ghi chuyển động AirPods khi chúng không đeo miễn là chúng kết nối với điện thoại."
     },
     "battery": {
       "subtitle": "Mức pin",
-      "description": "Đo mức pin của thiết bị. Cũng ghi trạng thái pin (đang sạc, đầy, v.v.). Giá trị âm nghĩa là trạng thái pin không xác định.",
+      "description": "Đo mức pin của thiết bị. Cũng ghi lại trạng thái pin (đang sạc, đầy, v.v.) và trạng thái chế độ nguồn điện thấp. Trên các thiết bị được hỗ trợ, tính năng này còn ghi lại điện áp pin, dòng sạc và tình trạng pin tổng thể.",
       "frequency": "Lấy mẫu ở 1Hz, không thể cấu hình.",
-      "units": "Báo cáo bằng phân số, ví dụ 0,5 là 50%."
+      "units": "Mức pin ở dạng phân số (ví dụ: 0,5 là 50%), trạng thái dưới dạng chuỗi. Ở những thiết bị được hỗ trợ, điện áp được báo cáo bằng vôn, dòng điện bằng mA và tình trạng pin dưới dạng chuỗi."
     },
     "batteryTemp": {
       "subtitle": "Nhiệt độ pin",
@@ -1232,5 +1365,146 @@
     "feedbackMessage": "Chúng tôi nhận thấy bạn đã hủy đăng ký Sensor Logger. Chúng tôi rất muốn nghe phản hồi của bạn về cách cải thiện Sensor Logger. Bạn có muốn gửi phản hồi không?",
     "noThanks": "Không, cảm ơn",
     "provideFeedback": "Gửi phản hồi"
+  },
+  "deepLinks": {
+    "annotationTitle": "Chú thích",
+    "notRecording": "Không có bản ghi đang hoạt động. Bắt đầu bản ghi trước khi thêm chú thích.",
+    "noAnnotationText": "Vui lòng cung cấp văn bản chú thích, ví dụ: sensorlogger://annotate/pothole",
+    "annotationBanner": "Đã thêm chú thích: %{text}",
+    "featureEnabledTitle": "Đã bật tính năng",
+    "featureEnabledMessage": "Tính năng '%{flag}' đã được bật.",
+    "unknownFlagTitle": "Tính năng không xác định",
+    "unknownFlagMessage": "Tính năng '%{flag}' không được hỗ trợ trong phiên bản Sensor Logger này."
+  },
+  "cloudScreen": {
+    "notVerifiedYet": "Chưa được xác minh",
+    "notVerifiedYetMessage": "Email của bạn chưa được xác minh. Hãy nhấp vào liên kết trong hộp thư đến trước, sau đó thử lại.",
+    "upgradeStorage": "Nâng cấp dung lượng",
+    "cloudStorage": "Lưu trữ đám mây",
+    "bannerDescription": "Dịch vụ đám mây đồng hành cùng Sensor Logger để lưu trữ Studies, Stories & Bản sao lưu.",
+    "cloudStorageDescription": "Lưu trữ an toàn Studies của bạn (tức là các bản ghi mà người tham gia tải lên), Stories & Bản sao lưu (tức là các bản ghi bạn tự tải lên).",
+    "backups": "Bản sao lưu",
+    "enableBackups": "Bật sao lưu",
+    "enableBackupsDescription": "Tự động sao lưu các bản ghi của bạn và tải xuống sau trên web hoặc thiết bị khác. Bạn cũng có thể nhập lại các bản ghi đã sao lưu trước đó vào thiết bị này.",
+    "storageFull": "Bộ nhớ đầy",
+    "storageFullMessage": "Bạn đã đạt đến giới hạn dung lượng lưu trữ đám mây. Vui lòng nâng cấp gói đăng ký dung lượng để bật sao lưu.",
+    "emailNotVerified": "Email chưa được xác minh",
+    "emailNotVerifiedMessage": "Vui lòng xác minh địa chỉ email của bạn trước khi bật sao lưu. Bạn sẽ sử dụng email này để truy cập các bản sao lưu từ thiết bị khác.",
+    "checkingEmail": "Đang kiểm tra trạng thái xác minh email...",
+    "verificationSent": "Mã xác minh đã được gửi đến %{email}. Vui lòng kiểm tra hộp thư đến của bạn và nhập mã gồm 6 chữ số bên dưới để xác minh.",
+    "checkVerification": "Xác minh mã",
+    "changeEmail": "Đổi email",
+    "emailForBackups": "Email để sao lưu",
+    "enterEmail": "Nhập email của bạn",
+    "sendVerification": "Gửi mã xác minh",
+    "freshInstallInfo": "Nếu bạn đã mua Sensor Logger và đây là bản cài đặt mới, bạn có thể cần khôi phục các giao dịch mua của mình để xem các bản sao lưu trước đó.",
+    "manageBackups": "Quản lý bản sao lưu",
+    "useMobileData": "Sử dụng dữ liệu di động",
+    "useMobileDataDescription": "Cho phép sao lưu sử dụng dữ liệu di động khi không có Wi-Fi.",
+    "missingEmail": "Thiếu email",
+    "missingEmailMessage": "Vui lòng nhập địa chỉ email sao lưu trước.",
+    "accessBackupsOnWeb": "Truy cập các bản ghi của bạn ở bất kỳ đâu bằng cách truy cập sensorlogger.app/backups bằng email của bạn.",
+    "accessBackupsOnWebFull": "Truy cập các bản ghi của bạn ở bất kỳ đâu trực tuyến, qua API hoặc tác nhân, bằng cách truy cập sensorlogger.app/backups bằng email của bạn.",
+    "verificationCode": "Mã xác minh",
+    "enterVerificationCode": "Nhập mã 6 chữ số",
+    "invalidCode": "Mã không hợp lệ",
+    "invalidCodeMessage": "Vui lòng nhập mã xác minh gồm 6 chữ số hợp lệ."
+  },
+  "backupsScreen": {
+    "downloadIncomplete": "Tải xuống chưa hoàn tất. Vui lòng kiểm tra kết nối và thử lại.",
+    "fetchFailedTitle": "Không thể tải bản sao lưu",
+    "fetchFailedSubtitle": "Kiểm tra kết nối của bạn và nhấn làm mới để thử lại.",
+    "keepAppOpen": "Giữ Sensor Logger mở để hoàn tất sao lưu.",
+    "wifiOnlyNote": "Bản sao lưu chỉ tải lên qua Wi-Fi.",
+    "waitingForWifi": "Bạn đang dùng dữ liệu di động nên bản sao lưu đang tạm dừng. Quá trình sẽ tự động tiếp tục khi có Wi-Fi.",
+    "waitingForConnection": "Không có kết nối internet. Bản sao lưu sẽ tự động tiếp tục khi bạn trực tuyến trở lại.",
+    "sortOptions": {
+      "largest": "Lớn nhất",
+      "smallest": "Nhỏ nhất",
+      "thisDeviceFirst": "Thiết bị này trước",
+      "otherDevicesFirst": "Thiết bị khác trước"
+    },
+    "downloadFailed": "Tải xuống thất bại",
+    "invalidLocalPath": "Đường dẫn cục bộ của bản sao lưu không hợp lệ.",
+    "genericDownloadError": "Đã xảy ra lỗi khi tải xuống bản ghi.",
+    "deleteBackup": "Xóa bản sao lưu",
+    "deleteBackupConfirmation": "Bạn có chắc chắn muốn xóa vĩnh viễn \"%{name}\" khỏi đám mây không? Hành động này không thể hoàn tác.",
+    "fromThisDevice": "Từ thiết bị này",
+    "fromAnotherDevice": "Từ thiết bị khác",
+    "pendingUpload": "Đang chờ tải lên",
+    "quotaExceeded": "Vượt quá hạn mức lưu trữ",
+    "uploadingStatus": "Đang tải lên...",
+    "syncingMetadata": "Đang đồng bộ hóa siêu dữ liệu",
+    "backedUp": "Đã sao lưu",
+    "activityQueue": "Hàng đợi hoạt động",
+    "activityQueueWithCount": "Hàng đợi hoạt động (%{count})",
+    "loadingBackups": "Đang tải các bản sao lưu",
+    "fetchingBackups": "Đang truy xuất các bản sao lưu của bạn...",
+    "noBackupsFound": "Không tìm thấy bản sao lưu nào",
+    "noBackupsFoundSubtitle": "Các bản sao lưu của bạn sẽ xuất hiện ở đây sau khi được tải lên.",
+    "backupsDisabled": "Đã tắt sao lưu",
+    "backupsDisabledSubtitle": "Bật sao lưu trong tab Đám mây để xem hàng đợi tải lên đang chờ xử lý và tự động đồng bộ hóa các bản ghi.",
+    "everythingBackedUp": "Mọi thứ đã được sao lưu",
+    "everythingBackedUpSubtitle": "Tất cả các bản ghi cục bộ của bạn đã được tải lên và đồng bộ hóa thành công."
+  },
+  "healthCheck": {
+    "title": "Kiểm Tra Sức Khỏe",
+    "locationTitle": "Vị trí trong nền",
+    "locationStatusAlways": "Đã cho phép",
+    "locationStatusWarning": "Bị giới hạn",
+    "locationDescription": "Quyền truy cập vị trí phải được đặt thành 'Luôn cho phép' để ứng dụng ghi lại dữ liệu khi ở trong nền.",
+    "storageTitle": "Lưu trữ",
+    "storageStatusOk": "Đủ dung lượng",
+    "storageStatusWarning": "Sắp hết",
+    "storageDescription": "Đảm bảo thiết bị của bạn có đủ dung lượng (>2GB trống) cho các phiên ghi dữ liệu dài.",
+    "batteryOptTitle": "Tối ưu hóa pin",
+    "batteryOptStatusOk": "Không giới hạn",
+    "batteryOptStatusWarning": "Đang tối ưu",
+    "batteryOptDescription": "Đặt Tối ưu hóa pin thành 'Không giới hạn' giúp ngăn hệ thống dừng ghi dữ liệu sớm trong nền.",
+    "batteryTitle": "Mức pin",
+    "batteryStatusOk": "Tốt",
+    "batteryStatusWarning": "Yếu",
+    "batteryStatusCharging": "Đang sạc",
+    "batteryDescription": "Đảm bảo mức pin của bạn ở mức cao hoặc cắm sạc thiết bị để đảm bảo hoạt động liên tục.",
+    "keepAwakeTitle": "Giữ màn hình bật",
+    "keepAwakeDescription": "Một số cảm biến nhất định (như Bluetooth và Camera) yêu cầu màn hình hoạt động để ghi dữ liệu liên tục.",
+    "keepAwakeStatusEnabled": "Đã bật",
+    "keepAwakeStatusDisabled": "Đã tắt (Bắt buộc)",
+    "keepAwakeStatusNotRequired": "Đã tắt (Không bắt buộc)",
+    "lowPowerTitle": "Chế độ nguồn điện thấp",
+    "lowPowerDescription": "Chế độ nguồn điện thấp hạn chế các tiến trình nền và ghi cảm biến. Hãy tắt nó trong cài đặt hệ thống để có kết quả tốt nhất.",
+    "lowPowerStatusOn": "Đã bật",
+    "lowPowerStatusOff": "Đã tắt",
+    "fixButton": "Sửa lỗi",
+    "grantButton": "Cấp quyền",
+    "enableButton": "Bật",
+    "openSettingsButton": "Mở cài đặt",
+    "checking": "Đang kiểm tra...",
+    "unknown": "Không xác định",
+    "freeSpace": "còn trống {{size}}"
+  },
+  "fileServer": {
+    "intro": "Duyệt và tải bản ghi của bạn từ máy tính trong cùng mạng. Dữ liệu đi thẳng từ điện thoại này đến máy tính của bạn.",
+    "start": "Khởi động máy chủ cục bộ",
+    "stop": "Dừng máy chủ",
+    "port": "Cổng",
+    "portPromptMessage": "Nhập cổng từ %{min} đến %{max}.",
+    "invalidPortTitle": "Cổng không hợp lệ",
+    "stats": "%{requests} yêu cầu · %{sent} đã gửi · %{connections} kết nối",
+    "noWifi": "Kết nối điện thoại này với Wi-Fi, hoặc bật điểm phát sóng và kết nối máy tính của bạn với nó.",
+    "address_wifi": "Wi-Fi",
+    "address_hotspot": "Điểm phát sóng",
+    "address_usb": "USB",
+    "address_ethernet": "Ethernet",
+    "startError": "Không thể khởi động máy chủ.",
+    "stoppedInBackground": "Máy chủ đã dừng khi ứng dụng chuyển sang chạy nền.",
+    "ipChanged": "Địa chỉ mạng của điện thoại này đã thay đổi. Khởi động lại máy chủ để nhận liên kết mới.",
+    "goodToKnow": "Nên biết",
+    "tipSameNetwork": "Máy tính của bạn phải ở cùng mạng với điện thoại này.",
+    "tipPrivateLink": "Liên kết chứa một mã riêng tư. Mã thay đổi mỗi lần bạn khởi động máy chủ.",
+    "tipForeground": "Giữ màn hình này mở trong khi truyền dữ liệu. Màn hình sẽ tự động giữ sáng.",
+    "tipIsolation": "Một số mạng khách và văn phòng chặn các thiết bị liên lạc với nhau. Hãy dùng điểm phát sóng của điện thoại này.",
+    "settingsDescription": "Duyệt và tải bản ghi từ máy tính trong mạng của bạn.",
+    "starting": "Đang khởi động…"
   }
 }

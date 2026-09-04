@@ -25,7 +25,7 @@
     "mapSelector": "Selector de Mapa",
     "console": "Consola",
     "cloud": "Nube",
-    "cloudRecording": "Grabación en Nube",
+    "cloudRecording": "Grabación en la nube",
     "cloudRecordingUpload": "Subida a Nube",
     "storyDetails": "Detalles de Historia",
     "addStory": "Agregar Historia",
@@ -40,7 +40,9 @@
     "rulesGallery": "Galería de reglas",
     "rulesHelp": "Ayuda de reglas",
     "rulesSettings": "Configuración de reglas",
-    "sensorFusion": "Sensor Fusion"
+    "ruleTrigger": "Disparador de regla",
+    "healthCheck": "Chequeo de salud",
+    "fileServer": "Servidor de Archivos"
   },
   "quickActions": {
     "toggleRecording": "Alternar Grabación",
@@ -59,6 +61,7 @@
     "tags": "Etiquetas",
     "export": "Exportar",
     "select": "Seleccionar",
+    "selectAll": "Todo",
     "add": "Agregar",
     "later": "Más tarde",
     "continue": "Continuar",
@@ -66,7 +69,9 @@
     "openSettings": "Abrir Ajustes",
     "upgrade": "Actualizar",
     "error": "Error",
-    "discard": "Descartar"
+    "discard": "Descartar",
+    "upload": "Subir",
+    "success": "Éxito"
   },
   "license": {
     "activated": "Licencia activada",
@@ -139,7 +144,7 @@
     "howDoesItWorkDescription": "Sube esta grabación a Sensor Logger Cloud. Una vez subida, tendrás un enlace para ver y construir la historia en la web. Solo tú tendrás acceso a cualquier grabación subida e historia creada, a menos que compartas el enlace con otros.",
     "viewExamples": "Ver ejemplos",
     "viewExamplesDescription": "Toca para ver una galería de historias de ejemplo como inspiración.",
-    "freeFootnote": "Historia es gratis. Cada usuario obtiene 100 MB de almacenamiento gratuito en Sensor Logger Cloud. Si deseas subir más, considera actualizar a uno de los planes de pago.",
+    "freeFootnote": "Historia es gratis. Cada usuario obtiene una pequeña cantidad de almacenamiento gratuito en Sensor Logger Cloud. Si deseas subir más, considera actualizar a uno de los planes de pago.",
     "whatsNext": "¿Qué sigue?",
     "whatsNextDescription": "Se ha creado una nueva historia con esta grabación adjunta. Visita este enlace en cualquier navegador para continuar. Allí puedes editar y construir tu historia. ",
     "viewStory": "Ver historia",
@@ -242,6 +247,7 @@
     "generateNewLink": "Generar nuevo enlace"
   },
   "recordings": {
+    "backup": "Respaldo",
     "noRecordings": "Sin Grabaciones",
     "createRecordings": "Crea grabaciones usando el registrador.",
     "noMatchingTags": "No hay grabaciones con las etiquetas seleccionadas.",
@@ -277,7 +283,7 @@
     "subscribe": "Suscripción",
     "subscribeSubtext": "Funciones premium",
     "cloud": "Sensor Logger Cloud",
-    "cloudSubtext": "Almacenamiento para Estudios",
+    "cloudSubtext": "Para Estudios, Historias y Respaldo",
     "appIcon": "Icono de la app",
     "appIconSubtext": "Cambiar el Icono",
     "helpMe": "Ayuda",
@@ -292,12 +298,18 @@
     "privacySubtext": "tldr: Tus datos son privados",
     "aboutItem": "Acerca de",
     "aboutSubtext": "Sitio web de Sensor Logger",
+    "loggerLabsSubtext": "Explora otras apps",
     "unitReference": "Referencia de Unidades",
     "unitSubtext": "Guía de unidades",
     "coordinateReference": "Referencia de Coordenadas",
     "coordinateSubtext": "Guía de ejes",
     "samplingReference": "Referencia de Muestreo",
     "samplingSubtext": "Guía de frecuencias",
+    "deepLinksReference": "Referencia de vínculos directos",
+    "deepLinksSubtextIos": "Automatiza con iOS Shortcuts",
+    "deepLinksSubtextAndroid": "Para automatización fácil",
+    "sandboxSubtext": "Minijuegos y experimentos",
+    "zooSubtext": "Algoritmos de código abierto",
     "emailSupport": "Soporte por Email",
     "emailSubtext": "Para usuarios Pro y Ultimate",
     "versionBuild": "Versión %{version} Build %{build}",
@@ -305,9 +317,11 @@
     "moreInspiration": "Más Inspiración",
     "physicist": "Físico",
     "reservedColours": "Colores Reservados",
-    "reservedColoursMessage": "Este color está reservado para suscriptores. Suscríbete para desbloquearlo.",
+    "reservedColoursMessage": "Este color está reservado para suscriptores. Suscríbete a Sensor Logger para desbloquearlo.",
     "language": "Idioma",
-    "languageSubtext": "Cambiar el idioma"
+    "languageSubtext": "Cambiar el idioma",
+    "healthCheck": "Chequeo de salud",
+    "healthCheckSubtext": "Diagnosticar problemas de grabación"
   },
   "sensorSettings": {
     "waitingForData": "Esperando Datos",
@@ -318,13 +332,15 @@
     "samples": "Muestras",
     "connectingDevice": "Conectando al dispositivo para datos adicionales.",
     "totalAccelerationWarning": "Sensor Logger muestra aceleración total (incluida gravedad) ya que tu dispositivo carece de sensores para aceleración sin gravedad.",
-    "compassCalibrationWarning": "'Calibración de Brújula' y 'Calibración de Movimiento y Distancia' deben estar habilitadas en Ajustes > Privacidad > Servicios de Ubicación > Servicios del Sistema, sino se reportarán como 0.",
+    "compassCalibrationWarning": "'Calibración de Brújula' y 'Calibración de Movimiento y Distancia' deben estar habilitadas en Ajustes > Privacidad > Servicios de Ubicación > Servicios del Sistema, sino se reportarán como 0 o los archivos estarán vacíos.",
     "latestReadings": "Últimas Lecturas",
     "waitingForSensor": "Esperando datos del sensor...",
     "liveReadings": "Lecturas en vivo de este sensor.",
     "decodedData": "Datos Decodificados",
     "waitingForAdditional": "Esperando datos adicionales...",
     "decodedInfo": "Información decodificada. Toca para copiar.",
+    "deviceInformation": "Información del Dispositivo",
+    "deviceInformationDescription": "Leída desde el dispositivo conectado.",
     "sensorInformation": "Info del Sensor",
     "sensorInfoDescription": "El fabricante proporcionó esta información. Toca para copiar.",
     "bluetoothResources": "Recursos Bluetooth",
@@ -350,17 +366,21 @@
     "seconds": "segundos",
     "note": "Nota:",
     "httpPush": "HTTP Push",
-    "skipWriting": "Omitir escritura",
+    "skipWriting": "Solo Transmitir, Sin Grabación Local",
     "mqtt": "MQTT",
     "mqttPush": "MQTT Push",
     "mqttSubscribe": "MQTT Subscribe",
     "coordinatesCloaked": "Coordenadas ocultas",
-    "checkpointEnabled": "Checkpoint activado",
+    "checkpointEnabledHour": "Checkpoint activado cada hora",
+    "checkpointEnabledHours": "Checkpoint activado cada %{value} horas",
     "ntpEnabled": "NTP activado",
+    "locationPrewarming": "Precalentamiento de Location (Esperando)",
+    "locationPrewarmingAccuracy": "Precalentamiento de Location (±%{accuracy} m)",
     "oneRuleEnabled": "1 regla activada",
     "nRulesEnabled": "%{count} reglas activadas",
     "endRecordingConfirm": "¿Finalizar esta sesión de grabación?",
     "continueRecording": "Continuar Grabando",
+    "recordingTapToWake": "Grabando (toca para activar)",
     "endNow": "Finalizar Ahora",
     "renameRecording": "Renombrar Grabación",
     "saveAndExport": "Guardar y Exportar",
@@ -379,6 +399,11 @@
     "cameraControls": "Controles de Cámara",
     "cameraControlsLarge": "Toca en cualquier lugar para enfocar, pellizca para zoom. Usa el control de exposición para ajustar el brillo.",
     "cameraControlsSmall": "Toca en cualquier lugar para enfocar, pellizca para zoom. Expande la cámara para ver controles de exposición.",
+    "tapToExpand": "Toca para expandir",
+    "keepAwakeAlert": "Mantener activo",
+    "keepAwakeAlertMessage": "Este sensor puede no funcionar de manera confiable cuando la pantalla está apagada. ¿Desea mantener la pantalla encendida durante la grabación? Siempre puede cambiar esto más tarde en Configuración.",
+    "keepAwakeNo": "No, gracias",
+    "keepAwakeYes": "Mantener pantalla y atenuar",
     "serverError": "Error del Servidor",
     "serverErrorMessage": "El servidor respondió con error: %{message}.",
     "serverErrorCode": "El servidor respondió con código 499 indicando un error del servidor",
@@ -398,6 +423,8 @@
     "uploadToCloud": "Sube la grabación a Sensor Logger Cloud para que el investigador la descargue más tarde.",
     "uploadToBucket": "Sube la grabación al almacenamiento configurado por el investigador.",
     "uploadNow": "Subir Ahora",
+    "uploadAndDelete": "Subir y Eliminar",
+    "uploadAndDeleteMessage": "Esta grabación se eliminará de su dispositivo después de subirse correctamente.",
     "uploadInstructions": "Instrucciones de Subida",
     "uploadInstructionsDefault": "El investigador no proporcionó instrucciones de subida. Puedes contactarlo para más información.",
     "unknownDelivery": "Mecanismo Desconocido",
@@ -410,9 +437,18 @@
     "clear": "Limpiar",
     "scanning": "Escaneando",
     "scan": "Escanear",
+    "potentialConfigIssues": "Posibles problemas de configuración",
+    "tapToScanDevices": "Toca para buscar dispositivos individuales",
+    "sensorEnabled": "Habilitado",
+    "sensorDisabled": "Deshabilitado",
+    "allBluetoothSensors": "Todos los sensores Bluetooth",
+    "bluetoothUpgradeMessage": "Actualiza para desbloquear la grabación de todos los sensores Bluetooth a la vez, o escanea y habilita sensores individuales gratis.",
+    "recoveredStudyTitle": "Grabación recuperada",
+    "recoveredStudyMessage": "Hemos encontrado una grabación de su última sesión de Estudio.",
     "hintBar": {
       "studyActive": "Estudio activo",
       "studyActiveMessage": "Participando en \"%{studyName}\". La configuración está prescrita. Toca para más.",
+      "studySettingsLocked": "La configuración aquí está prescrita por el investigador. Abandona el estudio para cambiarla.",
       "exporting": "Exportando grabación...",
       "uploading": "Subiendo grabación: %{progress}%",
       "keepAppOpen": "Mantén la aplicación abierta hasta que se complete la carga."
@@ -425,20 +461,15 @@
       "otherSensors": "Otros sensores",
       "deviceProperties": "Propiedades del dispositivo",
       "bluetoothBeacons": "Balizas Bluetooth"
-    },
-    "tapToExpand": "Toca para expandir",
-    "keepAwakeAlert": "Mantener activo",
-    "keepAwakeAlertMessage": "Este sensor puede no funcionar de manera confiable cuando la pantalla está apagada. ¿Desea mantener la pantalla encendida durante la grabación? Siempre puede cambiar esto más tarde en Configuración.",
-    "keepAwakeNo": "No, gracias",
-    "keepAwakeYes": "Mantener pantalla y atenuar",
-    "tapToScanDevices": "Toca para buscar dispositivos individuales",
-    "allBluetoothSensors": "Todos los sensores Bluetooth",
-    "bluetoothUpgradeMessage": "Actualiza para desbloquear la grabación de todos los sensores Bluetooth a la vez, o escanea y habilita sensores individuales gratis."
+    }
   },
   "settings": {
     "language": "Idioma",
     "troubleshooting": "Para solucionar problemas, toca para visitar tszheichoi.com/sensorloggerhelp",
     "resetToDefaults": "Restablecer",
+    "restoreSettingsTitle": "Restaurar ajustes predeterminados",
+    "restoreSettingsMessage": "¿Está seguro de que desea restaurar todos los ajustes a sus valores predeterminados? Los datos recopilados no se verán afectados.",
+    "restore": "Restaurar",
     "sendPhotos": "Enviar imágenes",
     "sendPhotosSubtitle": "Incluir imágenes en los datos cuando la cámara está activada. Imágenes codificadas en cadena base64 de los bytes JPEG. El modo de vídeo no es compatible.",
     "skipWritingTitle": "No guardar localmente",
@@ -452,12 +483,11 @@
       "microphone": "Micrófono",
       "location": "Ubicación",
       "bluetooth": "Bluetooth",
+      "customDecoders": "Decodificadores personalizados",
       "additionalData": "Datos Adicionales",
       "camera": "Cámara",
       "checkpoint": "Checkpoint",
       "standardisation": "Estandarización",
-      "standardisationFusion": "Estandarización y Fusión",
-      "sensorFusion": "Sensor Fusion",
       "httpPush": "Envío HTTP",
       "mqttPublishing": "Publicación MQTT",
       "mqttSubscription": "Suscripción MQTT",
@@ -467,7 +497,9 @@
       "annotationPresets": "Anotaciones",
       "exportShareRestore": "Exportar y Restaurar",
       "deviceSettings": "Dispositivo",
-      "language": "Idioma"
+      "language": "Idioma",
+      "audioIndicator": "Indicador de Audio",
+      "fileServer": "Servidor de Archivos Local"
     },
     "recordingMechanism": {
       "confirmBeforeEnding": "Confirmar Antes",
@@ -479,6 +511,7 @@
       "keepAwakeOff": "Apagado",
       "keepAwakeOn": "Encendido",
       "keepAwakeOnDim": "Encendido y Atenuado",
+      "keepAwakeOnBlack": "Encendido y Negro",
       "proximityLock": "Bloqueo por Proximidad",
       "proximityLockSubtitle": "Apaga la pantalla durante grabación cuando se activa el sensor de proximidad. Evita entradas accidentales.",
       "inlinePreview": "Vista en Vivo",
@@ -517,11 +550,40 @@
     },
     "checkpoint": {
       "checkpoint": "Checkpoint",
-      "checkpointSubtitle": "Cada 24 horas de grabación continua, datos se guardan automáticamente en \"Grabaciones\" sin interrupción. Ayuda a organizar datos."
+      "checkpointSubtitle": "Cada {{interval}} de grabación continua, los datos se guardan automáticamente como una nueva entrada, sin interrupción.",
+      "interval": "Intervalo de Checkpoint",
+      "hour": "1 hora",
+      "hours": "{{value}} horas",
+      "backupCallout": "Úsalo junto con Respaldo para dividir y subir grabaciones largas automáticamente, sin pasos manuales."
+    },
+    "audioIndicator": {
+      "startStopTone": "Tono de Inicio y Parada",
+      "startStopToneSubtitle": "Reproduce un sonido cuando la grabación comienza y se detiene.",
+      "previewStart": "Inicio de Grabación",
+      "previewStop": "Fin de Grabación",
+      "intervalTone": "Recordatorio de Intervalo",
+      "intervalToneSubtitle": "Reproduce un tono periódico durante la grabación como recordatorio. Puede interferir con el sensor de micrófono.",
+      "toneType": "Tipo de Tono",
+      "preview": "Vista Previa del Tono",
+      "sec": "{{value}}s",
+      "min": "{{value}}m",
+      "custom": "Personalizado",
+      "change": "Cambiar",
+      "everySeconds": "Cada {{value}} segundos",
+      "everyMinutes": "Cada {{value}} minutos",
+      "intervalPromptTitle": "Intervalo (segundos)",
+      "intervalPromptMessage": "Ingrese un intervalo entre 1 y 86.400 segundos (24 horas).",
+      "invalidInterval": "Intervalo Inválido",
+      "invalidIntervalMessage": "Ingrese un número entero entre 1 y 86.400."
     },
     "additionalData": {
       "uncalibratedValues": "Valores Sin Calibrar",
-      "uncalibratedValuesSubtitle": "Registra valores sin procesar de acelerómetro, giroscopio y magnetómetro. Datos calibrados siempre se registran.",
+      "uncalibratedValuesSubtitle": "Elige qué flujos del acelerómetro, giroscopio y magnetómetro se guardan. Sin Calibrar registra valores brutos para post-procesamiento de bajo nivel o fusión personalizada. Los demás sensores y los flujos fusionados como orientación y gravedad no se ven afectados.",
+      "calibratedOnly": "Solo Calibrado",
+      "both": "Ambos",
+      "uncalibratedOnly": "Solo Sin Calibrar",
+      "uncalibratedOnlyWarning": "Los flujos calibrados no se guardan. La mayoría de las herramientas esperan estos archivos.",
+      "uncalibratedUnavailableWarning": "Este dispositivo no tiene acelerómetro sin calibrar, por lo que no se registrará ningún dato de acelerómetro. Elige Ambos o Solo Calibrado.",
       "additionalLocationData": "Datos Adicionales de Ubicación",
       "additionalLocationDataSubtitle": "Por defecto, solo se registra ubicación fusionada. Registra mediciones adicionales de GPS y red.",
       "learnMoreLocation": "Más Sobre Datos de Ubicación",
@@ -546,13 +608,26 @@
       "imageQualityMedium": "Media",
       "imageQualityHigh": "Alta",
       "cameraMode": "Modo de Cámara",
-      "cameraModeSubtitle": "Si capturar imágenes a intervalos, o continuamente como video con audio.",
+      "cameraModeSubtitle": "Imágenes captura fotos de máxima calidad. Instantánea omite el procesamiento de imagen estándar para capturas más rápidas. Video graba continuamente como un solo archivo de video. Para habilitar sonido en modo video, active también el sensor de Micrófono. Ajuste los intervalos de imagen e instantánea en Frecuencias de Muestreo.",
       "cameraModeImages": "Imágenes",
       "cameraModeVideo": "Video",
+      "cameraModeSnapshot": "Snapshot",
+      "notSupportedInSnapshot": "No compatible en modo instantánea.",
       "captureDepth": "Captura de Profundidad",
       "captureDepthImage": "Imagen",
       "captureDepthImageDepth": "Imagen + Profundidad",
       "depthNotSupportedInVideo": "Profundidad no disponible en modo video.",
+      "captureDepthDescription": "Las imágenes se capturan con datos de profundidad incrustados en el archivo de imagen.",
+      "captureDepthCamera": "La cámara seleccionada es %{camera}.",
+      "captureDepthSupported": "Este dispositivo admite datos de profundidad.",
+      "captureDepthNotSupported": "Este dispositivo no admite datos de profundidad.",
+      "maxVideoFps": "FPS máx. de vídeo",
+      "maxVideoFpsSubtitle": "Velocidad de fotogramas objetivo para la grabación de vídeo. Los FPS reales dependen del dispositivo y la resolución.",
+      "maxVideoFps15": "15",
+      "maxVideoFps30": "30",
+      "maxVideoFps60": "60",
+      "maxVideoFpsWarning": "Los FPS (%{fps}) no son compatibles con este dispositivo para la Calidad de imagen (%{quality}). El rango compatible es %{min}-%{max}.",
+      "maxVideoFpsResolutionNote": "Este dispositivo admite %{fps} FPS, pero requiere la Calidad de imagen: %{qualities}.",
       "cameraLensOrder": "Preferencia de lente",
       "cameraLensOrderSubtitle": "Arrastra para reordenar. Se usará la primera lente disponible en el dispositivo. También puedes pellizcar para hacer zoom digital en el visor durante la grabación."
     },
@@ -569,7 +644,9 @@
       "coordinatesTo01": "A 0.1°",
       "coordinatesDrop": "Omitir",
       "optimizeForNavigation": "Optimizar para Navegación",
-      "optimizeForNavigationSubtitle": "Modo navegación, usa sensores adicionales para mejorar precisión."
+      "optimizeForNavigationSubtitle": "Modo navegación, usa sensores adicionales para mejorar precisión.",
+      "prewarmLocation": "Precalentamiento",
+      "prewarmLocationSubtitle": "Precalienta automáticamente el sensor Location en modo de alta precisión, para que la ubicación esté lista de inmediato al iniciar una grabación."
     },
     "bluetooth": {
       "scanningDuration": "Duración del Escaneo",
@@ -579,17 +656,34 @@
       "rssiNoLimit": "Sin Límite",
       "rssiAbove70": "> -70dBm",
       "rssiAbove60": "> -60dBm",
+      "gattDeviceInfo": "Consulta de Información del Dispositivo",
+      "gattDeviceInfoSubtitle": "Se conecta brevemente a dispositivos cercanos para leer su fabricante y modelo. No es necesario para la decodificación y puede interrumpir los datos de algunos dispositivos.",
+      "gattDeviceInfoOff": "Desactivado",
+      "gattDeviceInfoScan": "Durante el Escaneo",
+      "gattDeviceInfoAlways": "Siempre",
       "decodeValues": "Decodificar Valores",
-      "decodeValuesSubtitle": "Si es compatible, decodifica datos. Ver github.com/tszheichoi/sensor-ble para dispositivos soportados."
+      "decodeValuesSubtitle": "Si es compatible, decodifica datos.",
+      "supportedDevicesLink": "Dispositivos compatibles",
+      "customDecodersHeader": "Decodificadores Bluetooth personalizados",
+      "customDecodersDescription": "Agregue soporte para nuevas balizas BLE proporcionando una URL a un archivo de decodificador compatible con Sensor-BLE.",
+      "addCustomDecoderTitle": "Agregar decodificador",
+      "addCustomDecoderMessage": "Ingrese la URL del archivo decodificador .js:",
+      "deleteDecoderTitle": "Eliminar decodificador",
+      "deleteDecoderMessage": "¿Está seguro de que desea eliminar el decodificador personalizado \"{{name}}\"?",
+      "decoderAddedSuccess": "¡Decodificador cargado y registrado con éxito!",
+      "decoderRefreshedSuccess": "¡Decodificador actualizado a la última versión!",
+      "decoderNoUrl": "Este decodificador no tiene una URL guardada desde la cual actualizarse. Elimínelo y agréguelo de nuevo mediante la URL.",
+      "decoderRenameConflict": "El archivo actualizado cambia el nombre de este decodificador a \"{{name}}\", pero ya existe un decodificador con ese nombre. Elimine primero el decodificador en conflicto.",
+      "fetchErrorTitle": "Error de descarga",
+      "validationErrorTitle": "Validación fallida"
     },
     "export": {
-      "copyExportCode": "Copiar Código",
-      "showQrCode": "Mostrar QR",
-      "hideQrCode": "Ocultar QR",
+      "copyDeepLink": "Copiar vínculo directo",
       "restoreFromClipboard": "Restaurar de Portapapeles",
       "cannotExportInStudy": "No puedes exportar o restaurar configuraciones mientras estás en un estudio.",
       "explanatoryText": "Las configuraciones y sensores activados pueden exportarse usando el código generado. Este código puede usarse para restaurar configuraciones en el mismo u otro dispositivo. Comparte el código con otros para que tengan las mismas configuraciones al recopilar datos. Simplemente reenvíales el código o pídeles que escaneen el código QR en sus teléfonos. Nota: esto excluye sensores Bluetooth debido a su naturaleza dependiente del dispositivo.",
-      "restoreFailedError": "No se pudo restaurar la configuración del portapapeles, verifica que el portapapeles sea correcto."
+      "restoreFailedError": "No se pudo restaurar la configuración del portapapeles, verifica que el portapapeles sea correcto.",
+      "qrCodeTooLarge": "Esta configuración es demasiado grande para mostrarse como código QR. Usa \"Copiar vínculo directo\" para compartirla."
     },
     "annotationPresets": {
       "addAnnotationPreset": "Agregar Anotación",
@@ -638,11 +732,9 @@
     },
     "standardisation": {
       "title": "Estandarizar Unidades y Marcos",
-      "subtitle": "Diferentes plataformas pueden reportar valores en diferentes unidades y sistemas de coordenadas, dificultando el análisis multiplataforma. Activa para armonizar las definiciones entre plataformas.",
-      "learnMore": "¿Qué afecta esto?"
+      "subtitle": "Diferentes plataformas pueden reportar valores en diferentes unidades y sistemas de coordenadas, dificultando el análisis multiplataforma. Activa para armonizar las definiciones entre plataformas. Para también estandarizar algoritmos de procesamiento de datos y filtros, echa un vistazo a Sensor Zoo."
     },
     "sensorFusion": {
-      "description": "Diferentes plataformas estiman la gravedad, la aceleración del usuario y la orientación usando diferentes suposiciones y algoritmos. Elija un filtro personalizado para que el procesamiento de sensores se estandarice entre plataformas usando un algoritmo de código abierto y transparente. El uso de filtros personalizados requiere todo lo siguiente:",
       "viewComparison": "Ver comparación en vivo",
       "waitingForData": "Esperando datos del sensor..."
     },
@@ -670,20 +762,17 @@
     },
     "dataStreaming": {
       "title": "Transmisión de Datos",
-      "description": "Usa HTTP y MQTT para enviar datos."
+      "description": "Envía datos con HTTP y MQTT, o sirve registros a tu computadora."
     },
     "sensorConfiguration": {
       "title": "Configuración de Sensores",
       "description": "Configuración para cámaras, micrófonos, GPS, bluetooth y datos sin calibrar."
     },
     "standardisation": {
-      "description": "Estandarizar unidades y coordenadas, y configurar algoritmos de fusión de sensores personalizados."
+      "description": "Estandarizar unidades y coordenadas."
     },
-    "standardisationFusion": {
-      "description": "Estandarizar unidades y coordenadas, y configurar algoritmos de fusión de sensores personalizados."
-    },
-    "sensorFusion": {
-      "description": "Algoritmos de fusión de sensores personalizados para gravedad, orientación y aceleración del usuario."
+    "sensorZoo": {
+      "description": "Algoritmos y filtros estandarizados con implementaciones de código abierto personalizadas."
     },
     "samplingFrequencies": {
       "description": "Controla la frecuencia con la que se toman las mediciones."
@@ -806,6 +895,15 @@
       "message": "El código de estudio proporcionado por el investigador debe tener entre 6 y 8 caracteres."
     },
     "viewStudy": "Ver estudio"
+  },
+  "sandbox": {
+    "description": "Juega minijuegos y realiza experimentos de física con datos de sensores en tiempo real. Abre el enlace de abajo en otro dispositivo, teléfono u ordenador, y escanea el código QR aquí.",
+    "openInBrowser": "Abrir en el navegador",
+    "scanQrCode": "Escanear código QR",
+    "scanQrCodeSubtext": "Escanea un código QR de Sandbox para unirte a una sesión",
+    "unavailable": "No disponible",
+    "cameraPermissionRequired": "Se requiere permiso de cámara para escanear códigos QR.",
+    "noCameraAvailable": "No hay cámara disponible en este dispositivo."
   },
   "studyDetail": {
     "stats": {
@@ -1075,7 +1173,7 @@
       "subtitle": "Desde reloj emparejado",
       "description": "Registra lecturas relacionadas con el movimiento de tu reloj en tu muñeca. Esto incluye la tasa de rotación (en x, y y z), el vector de gravedad (en x, y y z), la aceleración (en x, y y z) y la actitud en cuaternión.",
       "frequency": "No configurable, típicamente a 100Hz",
-      "units": "Mismas unidades que los sensores correspondientes en el teléfono.",
+      "units": "La aceleración y el vector de gravedad se reportan en gravedad estándar (g), a diferencia del teléfono que usa m/s². Cuando \"Estandarizar Unidades y Marcos\" está activado, ambos se convierten a m/s² para coincidir con el teléfono. Todos los demás valores coinciden con los sensores correspondientes en el teléfono. El flujo de acelerómetro sin calibrar del reloj sigue las mismas unidades.",
       "warning": "Estos sensores siempre funcionarán si la aplicación del reloj está en primer plano con la pantalla del reloj encendida. Si deseas grabación en segundo plano, también debes habilitar el sensor de frecuencia cardíaca y otorgar los permisos relevantes. Esto habilita indirectamente la grabación en segundo plano de datos de movimiento de muñeca."
     },
     "watchLocation": {
@@ -1090,7 +1188,7 @@
       "description": "Registra lecturas del barómetro de tu reloj en tu muñeca.",
       "frequencyIos": "Aproximadamente una vez cada 2.5 segundos (0.4Hz). No configurable.",
       "frequencyAndroid": "Depende del modelo del dispositivo. No configurable.",
-      "units": "Mismas unidades que los sensores correspondientes en el teléfono.",
+      "units": "La presión se reporta en kPa, a diferencia del teléfono que usa mbar. La altitud relativa está en metros, igual que en el teléfono. Cuando \"Estandarizar Unidades y Marcos\" está activado, la presión se convierte a mbar para coincidir con el teléfono.",
       "warning": "Estos sensores siempre funcionarán si la aplicación del reloj está en primer plano con la pantalla del reloj encendida. Si deseas grabación en segundo plano, también debes habilitar el sensor de frecuencia cardíaca y otorgar los permisos relevantes. Esto habilita indirectamente la grabación en segundo plano de datos del barómetro."
     },
     "watchMagnetometer": {
@@ -1108,6 +1206,13 @@
       "frequencyAndroid": "Depende del modelo del dispositivo. No configurable.",
       "units": "Se reporta en grados.",
       "warning": "Las lecturas pueden verse influenciadas por cualquier campo magnético local fuerte. Estos sensores siempre funcionarán si la aplicación del reloj está en primer plano con la pantalla del reloj encendida. Si deseas grabación en segundo plano, también debes habilitar el sensor de frecuencia cardíaca y otorgar los permisos relevantes."
+    },
+    "watchMicrophone": {
+      "subtitle": "Desde reloj emparejado",
+      "description": "Graba audio y sonoridad (dBFS) del micrófono integrado de tu reloj.",
+      "frequency": "Audio a mono AAC de 16kHz. Sonoridad (dBFS) muestreada a 10Hz. No configurable.",
+      "units": "Sonoridad en dBFS. Audio en formato .mp4.",
+      "warning": "Estos sensores siempre funcionarán si la aplicación del reloj está en primer plano con la pantalla del reloj encendida. Si deseas grabación en segundo plano, también debes habilitar el sensor de frecuencia cardíaca y otorgar los permisos relevantes. Esto habilita indirectamente la grabación en segundo plano de datos del micrófono."
     },
     "microphone": {
       "subtitle": "Audio y nivel",
@@ -1133,20 +1238,20 @@
       "subtitle": "Movimiento de AirPods",
       "description": "Registra lecturas de movimiento de tus auriculares Bluetooth inalámbricos AirPods. Puedes usar esto para aplicaciones como seguimiento de cabeza. Esto incluye la aceleración (en x, y y z), el vector de gravedad (en x, y y z), la tasa de rotación (en x, y y z) y la actitud. Debido a limitaciones, solo un auricular registra datos de movimiento a la vez. El auricular activo está indicado por el campo sensorLocation.",
       "frequency": "No configurable y variable, hasta 25Hz en los modelos más recientes y 15Hz en modelos más antiguos.",
-      "units": "Mismas unidades que los sensores correspondientes en el teléfono.",
+      "units": "La aceleración se reporta en gravedad estándar (g) mientras que el vector de gravedad ya está en m/s², por lo que ambos difieren. Cuando \"Estandarizar Unidades y Marcos\" está activado, la aceleración también se convierte a m/s² para que ambos coincidan con el teléfono. Todos los demás valores coinciden con los sensores correspondientes en el teléfono.",
       "warning": "Debes estar usando tus AirPods emparejados; puedes usar ambos o solo uno de los auriculares. Si desactivas 'Detección automática de oído' en la configuración de AirPods, es posible registrar el movimiento de los AirPods cuando no están en tus oídos siempre que estén conectados a tu teléfono."
     },
     "battery": {
       "subtitle": "Nivel de batería",
-      "description": "Mide el nivel de batería del dispositivo. También registra el estado de la batería (cargando, completa, etc.). Un valor negativo significa que el estado de la batería es desconocido.",
+      "description": "Mide el nivel de batería del dispositivo. También registra el estado de la batería (cargando, llena, etc.) y el modo de bajo consumo. En los dispositivos compatibles, también registra el voltaje de la batería, la corriente de carga y el estado general de la batería.",
       "frequency": "Muestras a 1Hz, no configurable.",
-      "units": "Se reporta en fracción, por ejemplo, 0.5 es 50%."
+      "units": "Nivel como fracción (por ejemplo, 0.5 es 50%), estado como cadena. Cuando sea compatible, el voltaje se reporta en voltios, la corriente en mA y la salud como cadena."
     },
     "batteryTemp": {
       "subtitle": "Temperatura de la batería",
       "description": "Mide la temperatura de la batería del dispositivo.",
       "frequency": "Muestras a 1Hz, no configurable.",
-      "units": "Se reporta en celsius."
+      "units": "Reportado en grados Celsius."
     },
     "brightness": {
       "subtitle": "Brillo de pantalla",
@@ -1184,6 +1289,9 @@
       "connectable": "es conectable",
       "notConnectable": "no es conectable",
       "deviceWarning": "Los datos de Bluetooth solo se graban cuando la aplicación está abierta y la pantalla encendida. Es posible que debas emparejar este dispositivo en la configuración de tu teléfono para ver más información, como su nombre. Todas las comas en los nombres se reemplazan con guiones; en las exportaciones CSV, las listas separadas por comas se delimitan con barras verticales.",
+      "statusActive": "Activo",
+      "statusIdle": "Inactivo",
+      "statusOffline": "Sin conexión",
       "missingPermissions": "Permisos faltantes",
       "bluetoothPermissionMessage": "Necesitas otorgar permisos de Bluetooth en la configuración para usar esta función."
     }
@@ -1245,6 +1353,158 @@
     "altitude": "Altitud",
     "map": "Mapa",
     "coords": "Coord.",
-    "address": "Dirección"
+    "address": "Dirección",
+    "wkbrew": "WKBrew",
+    "wkbrewEncoding": "Creando enlace",
+    "wkbrewEncodingNotReady": "Codificando la ruta, puede tardar un momento.",
+    "wkbrewExplanation": "WKBrew es una herramienta gratuita para ver, compartir y convertir geometría. El enlace de abajo codifica la ruta GPS de esta grabación completamente dentro de la URL, sin almacenar nada en ningún otro lugar. Ábrelo en cualquier navegador para ver la ruta o convertirla a GeoJSON, WKT y más.",
+    "wkbrewCopyLink": "Copiar enlace",
+    "wkbrewOpen": "Abrir en navegador",
+    "wkbrewSimplified": "Para ajustarse al límite de longitud de URL de WKBrew, el enlace codifica una ruta simplificada de %{used} de %{total} puntos grabados.",
+    "wkbrewLimitedFootnote": "La resolución del gráfico está reducida actualmente, por lo que el enlace codifica la ruta mostrada y no todos los puntos grabados.",
+    "summary": "Resumen",
+    "variableFormatTitle": "Datos de Formato Variable",
+    "variableFormatSubtitle": "Este sensor reporta campos variables que no se pueden graficar. Por favor, exporte como JSON para ver los datos."
+  },
+  "deepLinks": {
+    "annotationTitle": "Anotación",
+    "notRecording": "No hay registro activo. Inicia un registro antes de anotar.",
+    "noAnnotationText": "Proporciona el texto de la anotación, p. ej. sensorlogger://annotate/pothole",
+    "annotationBanner": "Anotación añadida: %{text}",
+    "featureEnabledTitle": "Función activada",
+    "featureEnabledMessage": "La función '%{flag}' ha sido activada.",
+    "unknownFlagTitle": "Función desconocida",
+    "unknownFlagMessage": "La función '%{flag}' no es compatible con esta versión de Sensor Logger."
+  },
+  "cloudScreen": {
+    "notVerifiedYet": "Aún sin verificar",
+    "notVerifiedYetMessage": "Tu correo aún no está verificado. Primero haz clic en el enlace de tu bandeja de entrada y vuelve a intentarlo.",
+    "upgradeStorage": "Mejorar almacenamiento",
+    "cloudStorage": "Almacenamiento en la nube",
+    "bannerDescription": "Un servicio en la nube complementario para Sensor Logger para alojar Studies, Stories y Respaldos.",
+    "cloudStorageDescription": "Aloja de forma segura tus Studies (es decir, grabaciones que suben tus participantes), Stories y Respaldos (es decir, grabaciones que subes tú mismo).",
+    "backups": "Respaldos",
+    "enableBackups": "Activar respaldos",
+    "enableBackupsDescription": "Respalda tus grabaciones automáticamente y descárgalas más tarde en la web o en otro dispositivo. También puedes volver a importar grabaciones respaldadas anteriormente en este dispositivo.",
+    "storageFull": "Almacenamiento lleno",
+    "storageFullMessage": "Has alcanzado el límite de tu almacenamiento en la nube. Mejora tu suscripción de almacenamiento para activar los respaldos.",
+    "emailNotVerified": "Correo electrónico no verificado",
+    "emailNotVerifiedMessage": "Verifica tu dirección de correo electrónico antes de activar los respaldos. Usarás este correo para acceder a tus respaldos desde otros dispositivos.",
+    "checkingEmail": "Comprobando el estado de verificación del correo electrónico...",
+    "verificationSent": "Código de verificación enviado a %{email}. Revisa tu bandeja de entrada e ingresa el código de 6 dígitos a continuación para verificar.",
+    "checkVerification": "Verificar código",
+    "changeEmail": "Cambiar email",
+    "emailForBackups": "Correo electrónico para respaldos",
+    "enterEmail": "Introduce tu correo electrónico",
+    "sendVerification": "Enviar código de verificación",
+    "freshInstallInfo": "Si ya compraste Sensor Logger y esta es una instalación nueva, es posible que debas restaurar tus compras para ver tus respaldos anteriores.",
+    "manageBackups": "Gestionar respaldos",
+    "useMobileData": "Usar datos móviles",
+    "useMobileDataDescription": "Permitir que los respaldos usen datos móviles cuando el Wi-Fi no esté disponible.",
+    "missingEmail": "Correo electrónico faltante",
+    "missingEmailMessage": "Introduce primero una dirección de correo electrónico para respaldos.",
+    "accessBackupsOnWeb": "Accede a tus grabaciones desde cualquier lugar visitando sensorlogger.app/backups con tu correo electrónico.",
+    "accessBackupsOnWebFull": "Accede a tus grabaciones desde cualquier lugar en línea, mediante API o agente, visitando sensorlogger.app/backups con tu correo electrónico.",
+    "verificationCode": "Código de verificación",
+    "enterVerificationCode": "Ingresar código de 6 dígitos",
+    "invalidCode": "Código inválido",
+    "invalidCodeMessage": "Por favor, ingresa un código de verificación válido de 6 dígitos."
+  },
+  "backupsScreen": {
+    "downloadIncomplete": "Descarga incompleta. Comprueba tu conexión e inténtalo de nuevo.",
+    "fetchFailedTitle": "No se pudieron cargar las copias",
+    "fetchFailedSubtitle": "Comprueba tu conexión y toca actualizar para reintentar.",
+    "keepAppOpen": "Mantén Sensor Logger abierto para completar la copia de seguridad.",
+    "wifiOnlyNote": "Las copias de seguridad solo se suben por Wi-Fi.",
+    "waitingForWifi": "Estás usando datos móviles, así que las copias de seguridad están en pausa. Se reanudarán automáticamente con Wi-Fi.",
+    "waitingForConnection": "Sin conexión a internet. Las copias de seguridad se reanudarán automáticamente cuando vuelvas a estar en línea.",
+    "sortOptions": {
+      "largest": "Más grande",
+      "smallest": "Más pequeño",
+      "thisDeviceFirst": "Este dispositivo primero",
+      "otherDevicesFirst": "Otros dispositivos primero"
+    },
+    "downloadFailed": "Descarga fallida",
+    "invalidLocalPath": "Ruta local de respaldo no válida.",
+    "genericDownloadError": "Ocurrió un error al descargar la grabación.",
+    "deleteBackup": "Eliminar respaldo",
+    "deleteBackupConfirmation": "¿Seguro que quieres eliminar permanentemente \"%{name}\" de la nube? Esta acción no se puede deshacer.",
+    "fromThisDevice": "Desde este dispositivo",
+    "fromAnotherDevice": "Desde otro dispositivo",
+    "pendingUpload": "Subida pendiente",
+    "quotaExceeded": "Límite de almacenamiento excedido",
+    "uploadingStatus": "Subiendo...",
+    "syncingMetadata": "Sincronizando metadatos",
+    "backedUp": "Respaldado",
+    "activityQueue": "Cola de actividad",
+    "activityQueueWithCount": "Cola de actividad (%{count})",
+    "loadingBackups": "Cargando respaldos",
+    "fetchingBackups": "Obteniendo tus respaldos...",
+    "noBackupsFound": "No se encontraron respaldos",
+    "noBackupsFoundSubtitle": "Tus respaldos aparecerán aquí una vez subidos.",
+    "backupsDisabled": "Respaldos desactivados",
+    "backupsDisabledSubtitle": "Activa los respaldos en la pestaña Nube para ver tu cola de subidas pendientes y sincronizar las grabaciones automáticamente.",
+    "everythingBackedUp": "Todo respaldado",
+    "everythingBackedUpSubtitle": "Todas tus grabaciones locales se han subido y sincronizado correctamente."
+  },
+  "healthCheck": {
+    "title": "Chequeo de salud",
+    "locationTitle": "Ubicación en segundo plano",
+    "locationStatusAlways": "Permitido",
+    "locationStatusWarning": "Restringido",
+    "locationDescription": "El acceso a la ubicación debe estar configurado en 'Permitir siempre' para que la aplicación registre datos en segundo plano.",
+    "storageTitle": "Almacenamiento",
+    "storageStatusOk": "Suficiente",
+    "storageStatusWarning": "Bajo",
+    "storageDescription": "Garantiza que haya suficiente espacio en su dispositivo (>2 GB libres) para sesiones de grabación largas.",
+    "batteryOptTitle": "Optimización de batería",
+    "batteryOptStatusOk": "Sin restricciones",
+    "batteryOptStatusWarning": "Optimizado",
+    "batteryOptDescription": "Establecer la optimización de la batería en 'Sin restricciones' evita que el sistema detenga las grabaciones prematuramente en segundo plano.",
+    "batteryTitle": "Nivel de batería",
+    "batteryStatusOk": "Bueno",
+    "batteryStatusWarning": "Bajo",
+    "batteryStatusCharging": "Cargando",
+    "batteryDescription": "Asegúrese de que el nivel de batería sea alto o conecte su dispositivo para garantizar un funcionamiento continuo.",
+    "keepAwakeTitle": "Mantener pantalla encendida",
+    "keepAwakeDescription": "Ciertos sensores (como Bluetooth y Cámara) requieren que la pantalla permanezca activa para registrar datos continuamente.",
+    "keepAwakeStatusEnabled": "Habilitado",
+    "keepAwakeStatusDisabled": "Deshabilitado (Requerido)",
+    "keepAwakeStatusNotRequired": "Deshabilitado (No requerido)",
+    "lowPowerTitle": "Modo de bajo consumo",
+    "lowPowerDescription": "El modo de bajo consumo restringe los procesos en segundo plano y el registro de sensores. Desactívelo en los ajustes del sistema para obtener mejores resultados.",
+    "lowPowerStatusOn": "Habilitado",
+    "lowPowerStatusOff": "Deshabilitado",
+    "fixButton": "Corregir",
+    "grantButton": "Conceder",
+    "enableButton": "Habilitar",
+    "openSettingsButton": "Abrir Ajustes",
+    "checking": "Comprobando...",
+    "unknown": "Desconocido",
+    "freeSpace": "{{size}} libre"
+  },
+  "fileServer": {
+    "intro": "Explora y descarga tus registros desde una computadora en la misma red. Los datos van directamente de este teléfono a tu computadora.",
+    "start": "Iniciar Servidor Local",
+    "stop": "Detener Servidor",
+    "port": "Puerto",
+    "portPromptMessage": "Introduce un puerto entre %{min} y %{max}.",
+    "invalidPortTitle": "Puerto no válido",
+    "stats": "%{requests} solicitudes · %{sent} enviados · %{connections} conectados",
+    "noWifi": "Conecta este teléfono a Wi-Fi, o activa su zona activa y conecta tu ordenador a ella.",
+    "address_wifi": "Wi-Fi",
+    "address_hotspot": "Zona activa",
+    "address_usb": "USB",
+    "address_ethernet": "Ethernet",
+    "startError": "No se pudo iniciar el servidor.",
+    "stoppedInBackground": "El servidor se detuvo cuando la app pasó a segundo plano.",
+    "ipChanged": "La dirección de red de este teléfono cambió. Reinicia el servidor para obtener un nuevo enlace.",
+    "goodToKnow": "Bueno Saberlo",
+    "tipSameNetwork": "Tu computadora debe estar en la misma red que este teléfono.",
+    "tipPrivateLink": "El enlace contiene un código privado. Cambia cada vez que inicias el servidor.",
+    "tipForeground": "Mantén esta pantalla abierta durante la transferencia. Permanece encendida automáticamente.",
+    "tipIsolation": "Algunas redes de invitados y oficinas impiden que los dispositivos se comuniquen. Usa mejor el punto de acceso de este teléfono.",
+    "settingsDescription": "Explora y descarga registros desde una computadora en tu red.",
+    "starting": "Iniciando…"
   }
 }

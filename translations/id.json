@@ -39,7 +39,10 @@
     "rulesEditor": "Editor Aturan",
     "rulesGallery": "Galeri Aturan",
     "rulesHelp": "Bantuan Aturan",
-    "rulesSettings": "Pengaturan Aturan"
+    "rulesSettings": "Pengaturan Aturan",
+    "ruleTrigger": "Pemicu Aturan",
+    "healthCheck": "Health Check",
+    "fileServer": "Server File"
   },
   "quickActions": {
     "toggleRecording": "Aktifkan/Nonaktifkan Rekaman",
@@ -58,6 +61,7 @@
     "tags": "Label",
     "export": "Ekspor",
     "select": "Pilih",
+    "selectAll": "Semua",
     "add": "Tambah",
     "later": "Nanti",
     "continue": "Lanjutkan",
@@ -65,7 +69,9 @@
     "openSettings": "Buka Pengaturan",
     "upgrade": "Tingkatkan",
     "error": "Kesalahan",
-    "discard": "Buang"
+    "discard": "Buang",
+    "upload": "Unggah",
+    "success": "Berhasil"
   },
   "license": {
     "activated": "Lisensi Diaktifkan",
@@ -138,7 +144,7 @@
     "howDoesItWorkDescription": "Unggah rekaman ini ke Sensor Logger Cloud. Setelah diunggah, Anda akan memiliki tautan untuk melihat dan membangun Cerita di web. Hanya Anda yang memiliki akses ke rekaman yang diunggah dan Cerita yang dibuat, kecuali Anda membagikan tautan dengan orang lain.",
     "viewExamples": "Lihat Contoh",
     "viewExamplesDescription": "Ketuk untuk melihat galeri contoh Cerita untuk inspirasi.",
-    "freeFootnote": "Cerita gratis untuk digunakan. Setiap pengguna mendapat penyimpanan Sensor Logger Cloud gratis 100MB. Jika ingin mengunggah lebih banyak, pertimbangkan untuk meningkatkan ke salah satu paket berbayar.",
+    "freeFootnote": "Cerita gratis untuk digunakan. Setiap pengguna mendapat sedikit penyimpanan Sensor Logger Cloud gratis. Jika ingin mengunggah lebih banyak, pertimbangkan untuk meningkatkan ke salah satu paket berbayar.",
     "whatsNext": "Selanjutnya Apa?",
     "whatsNextDescription": "Cerita baru telah dibuat dengan rekaman ini terlampir. Kunjungi tautan ini di browser mana pun untuk melanjutkan. Anda mengedit dan membangun Cerita Anda di sana. ",
     "viewStory": "Lihat Cerita",
@@ -241,6 +247,7 @@
     "generateNewLink": "Buat Tautan Baru"
   },
   "recordings": {
+    "backup": "Backup",
     "noRecordings": "Tidak Ada Rekaman",
     "createRecordings": "Buat rekaman menggunakan perekam.",
     "noMatchingTags": "Tidak ada rekaman yang cocok dengan label yang dipilih.",
@@ -276,7 +283,7 @@
     "subscribe": "Berlangganan",
     "subscribeSubtext": "Fitur berbayar tambahan",
     "cloud": "Sensor Logger Cloud",
-    "cloudSubtext": "Penyimpanan untuk Studi & Cerita",
+    "cloudSubtext": "Untuk Studi, Cerita & Backup",
     "appIcon": "Ikon Aplikasi",
     "appIconSubtext": "Ubah Ikon",
     "language": "Bahasa",
@@ -293,12 +300,18 @@
     "privacySubtext": "Ringkasan: Data Anda tetap pribadi",
     "aboutItem": "Tentang",
     "aboutSubtext": "Situs web Sensor Logger",
+    "loggerLabsSubtext": "Jelajahi aplikasi lainnya",
     "unitReference": "Referensi Satuan",
     "unitSubtext": "Panduan satuan",
     "coordinateReference": "Referensi Koordinat",
     "coordinateSubtext": "Panduan definisi sumbu",
     "samplingReference": "Referensi Sampling",
     "samplingSubtext": "Panduan kecepatan sampling",
+    "deepLinksReference": "Referensi Deep Link",
+    "deepLinksSubtextIos": "Otomatisasi dengan iOS Shortcuts",
+    "deepLinksSubtextAndroid": "Untuk otomatisasi mudah",
+    "sandboxSubtext": "Mini game dan eksperimen",
+    "zooSubtext": "Algoritma sumber terbuka",
     "emailSupport": "Dukungan Email",
     "emailSubtext": "Untuk pengguna Pro & Ultimate",
     "versionBuild": "Versi %{version} Build %{build}",
@@ -306,7 +319,9 @@
     "moreInspiration": "Inspirasi Lainnya",
     "physicist": "Fisikawan",
     "reservedColours": "Warna Dicadangkan",
-    "reservedColoursMessage": "Warna ini dicadangkan untuk pelanggan. Berlangganan Sensor Logger untuk membuka warna ini."
+    "reservedColoursMessage": "Warna ini dicadangkan untuk pelanggan. Berlangganan Sensor Logger untuk membuka warna ini.",
+    "healthCheck": "Health Check",
+    "healthCheckSubtext": "Mendiagnosis Masalah Perekaman"
   },
   "sensorSettings": {
     "waitingForData": "Menunggu Data",
@@ -317,13 +332,15 @@
     "samples": "Sampel",
     "connectingDevice": "Menghubungkan ke perangkat untuk data tambahan.",
     "totalAccelerationWarning": "Sensor Logger menampilkan akselerasi total (termasuk gravitasi) karena perangkat Anda tidak memiliki sensor untuk merekam akselerasi tanpa gravitasi.",
-    "compassCalibrationWarning": "Baik 'Kalibrasi Kompas' maupun 'Kalibrasi Gerakan & Jarak' perlu diaktifkan di Pengaturan > Privasi & Keamanan > Layanan Lokasi > Layanan Sistem, jika tidak data akan dilaporkan sebagai 0.",
+    "compassCalibrationWarning": "Baik 'Kalibrasi Kompas' maupun 'Kalibrasi Gerakan & Jarak' perlu diaktifkan di Pengaturan > Privasi & Keamanan > Layanan Lokasi > Layanan Sistem, jika tidak data akan dilaporkan sebagai 0 atau file akan kosong.",
     "latestReadings": "Pembacaan Terbaru",
     "waitingForSensor": "Menunggu data dari sensor...",
     "liveReadings": "Pembacaan langsung dari sensor ini ditampilkan di bawah.",
     "decodedData": "Data yang Didekode",
     "waitingForAdditional": "Menunggu data tambahan dari sensor...",
     "decodedInfo": "Mendekode informasi berikut. Ketuk untuk menyalin.",
+    "deviceInformation": "Informasi Perangkat",
+    "deviceInformationDescription": "Dibaca dari perangkat yang terhubung.",
     "sensorInformation": "Informasi Sensor",
     "sensorInfoDescription": "Produsen perangkat telah menyediakan informasi berikut tentang sensor ini. Ketuk untuk menyalin.",
     "bluetoothResources": "Sumber Daya Bluetooth",
@@ -365,6 +382,8 @@
     "copied": "Disalin",
     "noPlottableData": "Tidak Ada Data yang Dapat Digrafik",
     "noPlottableDataSubtitle": "Data Bluetooth ini tidak mengandung bidang yang dapat digrafik.",
+    "variableFormatTitle": "Data Format Variabel",
+    "variableFormatSubtitle": "Sensor ini melaporkan bidang variabel yang tidak dapat digrafik. Silakan ekspor sebagai JSON untuk melihat datanya.",
     "selectData": "Pilih Data",
     "displayInDegrees": "Tampilkan dalam Derajat",
     "proportionalScale": "Skala Proporsional",
@@ -387,7 +406,16 @@
     "altitude": "Ketinggian",
     "map": "Peta",
     "coords": "Koordinat",
-    "address": "Alamat"
+    "address": "Alamat",
+    "wkbrew": "WKBrew",
+    "wkbrewEncoding": "Membuat tautan",
+    "wkbrewEncodingNotReady": "Mengodekan jejak, ini bisa memakan waktu sejenak.",
+    "wkbrewExplanation": "WKBrew adalah alat gratis untuk melihat, membagikan, dan mengonversi geometri. Tautan di bawah mengodekan jejak GPS rekaman ini sepenuhnya di dalam URL, tanpa menyimpan apa pun di tempat lain. Buka di browser mana pun untuk melihat jejak atau mengonversinya ke GeoJSON, WKT, dan lainnya.",
+    "wkbrewCopyLink": "Salin Tautan",
+    "wkbrewOpen": "Buka di Browser",
+    "wkbrewSimplified": "Agar sesuai dengan batas panjang URL WKBrew, tautan mengodekan jejak yang disederhanakan dengan %{used} dari %{total} titik yang direkam.",
+    "wkbrewLimitedFootnote": "Resolusi plot saat ini dikurangi, sehingga tautan mengodekan jejak yang ditampilkan, bukan setiap titik yang direkam.",
+    "summary": "Ringkasan"
   },
   "logger": {
     "startRecording": "Mulai Rekaman",
@@ -397,17 +425,21 @@
     "seconds": "detik",
     "note": "Catatan:",
     "httpPush": "HTTP Push",
-    "skipWriting": "Lewati Penulisan",
+    "skipWriting": "Hanya Streaming, Tanpa Rekaman Lokal",
     "mqtt": "MQTT",
     "mqttPush": "MQTT Push",
     "mqttSubscribe": "MQTT Subscribe",
     "coordinatesCloaked": "Koordinat Disamarkan",
-    "checkpointEnabled": "Titik Periksa Aktif",
+    "checkpointEnabledHour": "Titik Periksa Aktif Setiap Jam",
+    "checkpointEnabledHours": "Titik Periksa Aktif Setiap %{value} Jam",
     "ntpEnabled": "NTP Aktif",
+    "locationPrewarming": "Pemanasan Awal Location (Menunggu)",
+    "locationPrewarmingAccuracy": "Pemanasan Awal Location (±%{accuracy} m)",
     "oneRuleEnabled": "1 Aturan Aktif",
     "nRulesEnabled": "%{count} Aturan Aktif",
     "endRecordingConfirm": "Apakah Anda yakin ingin mengakhiri sesi rekaman ini?",
     "continueRecording": "Lanjutkan Rekaman",
+    "recordingTapToWake": "Merekam (Ketuk untuk Membangunkan)",
     "endNow": "Akhiri Sekarang",
     "renameRecording": "Ubah Nama Rekaman",
     "saveAndExport": "Simpan & Ekspor",
@@ -450,6 +482,8 @@
     "uploadToCloud": "Unggah rekaman ke Sensor Logger Cloud agar peneliti studi dapat mengunduhnya nanti.",
     "uploadToBucket": "Unggah rekaman ke Bucket penyimpanan yang telah disiapkan oleh peneliti.",
     "uploadNow": "Unggah Sekarang",
+    "uploadAndDelete": "Unggah dan Hapus",
+    "uploadAndDeleteMessage": "Rekaman ini akan dihapus dari perangkat Anda setelah berhasil diunggah.",
     "uploadInstructions": "Petunjuk Unggah",
     "uploadInstructionsDefault": "Peneliti studi belum memberikan petunjuk unggah. Anda dapat menghubungi peneliti studi untuk informasi lebih lanjut.",
     "unknownDelivery": "Mekanisme Pengiriman Tidak Diketahui",
@@ -462,12 +496,18 @@
     "clear": "Hapus",
     "scanning": "Memindai",
     "scan": "Pindai",
+    "potentialConfigIssues": "Potensi Masalah Konfigurasi",
     "tapToScanDevices": "Ketuk untuk memindai perangkat individual",
+    "sensorEnabled": "Aktif",
+    "sensorDisabled": "Nonaktif",
     "allBluetoothSensors": "Semua Sensor Bluetooth",
     "bluetoothUpgradeMessage": "Tingkatkan untuk membuka perekaman semua sensor Bluetooth sekaligus, atau pindai dan aktifkan sensor individual secara gratis.",
+    "recoveredStudyTitle": "Rekaman Dipulihkan",
+    "recoveredStudyMessage": "Kami menemukan rekaman dari sesi Studi terakhir Anda.",
     "hintBar": {
       "studyActive": "Studi Aktif",
       "studyActiveMessage": "Berpartisipasi dalam \"%{studyName}\". Pengaturan ditentukan. Ketuk untuk info lebih lanjut.",
+      "studySettingsLocked": "Konfigurasi di sini ditentukan oleh peneliti. Keluar dari studi untuk mengubahnya.",
       "exporting": "Mengekspor Rekaman...",
       "uploading": "Mengunggah Rekaman: %{progress}%",
       "keepAppOpen": "Biarkan aplikasi terbuka sampai unggahan selesai."
@@ -486,6 +526,9 @@
     "language": "Bahasa",
     "troubleshooting": "Untuk pemecahan masalah, ketuk untuk mengunjungi tszheichoi.com/sensorloggerhelp",
     "resetToDefaults": "Atur Ulang ke Default",
+    "restoreSettingsTitle": "Kembalikan Pengaturan ke Default",
+    "restoreSettingsMessage": "Apakah Anda yakin ingin mengembalikan semua pengaturan ke default? Data yang telah dikumpulkan tidak akan terpengaruh.",
+    "restore": "Kembalikan",
     "sendPhotos": "Kirim Gambar",
     "sendPhotosSubtitle": "Sertakan gambar dalam payload saat Kamera aktif. Gambar dikodekan dalam string base64 dari byte JPEG. Mode video tidak didukung.",
     "skipWritingTitle": "Lewati Penulisan",
@@ -499,6 +542,7 @@
       "microphone": "Mikrofon",
       "location": "Lokasi",
       "bluetooth": "Bluetooth",
+      "customDecoders": "Dekoder Kustom",
       "additionalData": "Data Tambahan",
       "camera": "Kamera",
       "checkpoint": "Titik Periksa",
@@ -512,7 +556,9 @@
       "annotationPresets": "Preset Anotasi",
       "exportShareRestore": "Ekspor, Bagikan & Pulihkan",
       "deviceSettings": "Pengaturan Perangkat",
-      "language": "Bahasa"
+      "language": "Bahasa",
+      "audioIndicator": "Indikator Audio",
+      "fileServer": "Server File Lokal"
     },
     "recordingMechanism": {
       "confirmBeforeEnding": "Konfirmasi Sebelum Mengakhiri",
@@ -524,6 +570,7 @@
       "keepAwakeOff": "Mati",
       "keepAwakeOn": "Nyala",
       "keepAwakeOnDim": "Nyala & Redup",
+      "keepAwakeOnBlack": "Nyala & Hitam",
       "proximityLock": "Kunci Sensor Jarak",
       "proximityLockSubtitle": "Mematikan layar, bahkan jika Tetap Terjaga menyala, selama perekaman saat sensor jarak dipicu. Mencegah input yang tidak disengaja dan menghemat baterai saat ponsel di saku. Jika tidak, berperilaku seolah layar menyala.",
       "inlinePreview": "Pratinjau Inline",
@@ -562,11 +609,40 @@
     },
     "checkpoint": {
       "checkpoint": "Titik Periksa",
-      "checkpointSubtitle": "Setelah setiap 24 jam perekaman berkelanjutan, data tersebut akan secara otomatis disimpan sebagai entri baru di tab \"Rekaman\" secara mulus tanpa gangguan. Ini membantu pengumpulan data jangka panjang dengan mengorganisir rekaman harian."
+      "checkpointSubtitle": "Setelah setiap {{interval}} perekaman berkelanjutan, data tersebut akan secara otomatis disimpan sebagai entri baru tanpa gangguan.",
+      "interval": "Interval Titik Periksa",
+      "hour": "1 jam",
+      "hours": "{{value}} jam",
+      "backupCallout": "Gunakan bersama Backup untuk membagi dan mengunggah rekaman panjang secara otomatis, tanpa langkah manual."
+    },
+    "audioIndicator": {
+      "startStopTone": "Nada Mulai & Berhenti",
+      "startStopToneSubtitle": "Memutar suara saat perekaman dimulai dan berhenti.",
+      "previewStart": "Mulai Rekaman",
+      "previewStop": "Akhir Rekaman",
+      "intervalTone": "Pengingat Interval",
+      "intervalToneSubtitle": "Memutar nada berkala selama perekaman sebagai pengingat. Dapat mengganggu sensor mikrofon.",
+      "toneType": "Jenis Nada",
+      "preview": "Pratinjau Nada",
+      "sec": "{{value}}s",
+      "min": "{{value}}m",
+      "custom": "Kustom",
+      "change": "Ubah",
+      "everySeconds": "Setiap {{value}} detik",
+      "everyMinutes": "Setiap {{value}} menit",
+      "intervalPromptTitle": "Interval (detik)",
+      "intervalPromptMessage": "Masukkan interval antara 1 dan 86.400 detik (24 jam).",
+      "invalidInterval": "Interval Tidak Valid",
+      "invalidIntervalMessage": "Silakan masukkan bilangan bulat antara 1 dan 86.400."
     },
     "additionalData": {
       "uncalibratedValues": "Nilai Tidak Terkalibrasi",
-      "uncalibratedValuesSubtitle": "Mencatat nilai mentah dari akselerometer, giroskop dan magnetometer. Berguna untuk melakukan pasca-pemrosesan tingkat lebih rendah atau fusi sensor kustom. Data terkalibrasi selalu dicatat.",
+      "uncalibratedValuesSubtitle": "Pilih aliran data akselerometer, giroskop, dan magnetometer yang disimpan. Tak Terkalibrasi mencatat nilai mentah untuk pasca-pemrosesan tingkat rendah atau fusi kustom. Sensor lain dan aliran fusi seperti orientasi dan gravitasi tidak terpengaruh.",
+      "calibratedOnly": "Hanya Terkalibrasi",
+      "both": "Keduanya",
+      "uncalibratedOnly": "Hanya Tak Terkalibrasi",
+      "uncalibratedOnlyWarning": "Aliran terkalibrasi tidak disimpan. Sebagian besar alat mengharapkan berkas ini.",
+      "uncalibratedUnavailableWarning": "Perangkat ini tidak memiliki akselerometer tak terkalibrasi, sehingga tidak ada data akselerometer yang akan direkam. Pilih Keduanya atau Hanya Terkalibrasi.",
       "additionalLocationData": "Data Lokasi Tambahan",
       "additionalLocationDataSubtitle": "Secara default, hanya lokasi gabungan yang dicatat. Catat pengukuran tambahan dari GPS saja dan dari jaringan saja.",
       "learnMoreLocation": "Pelajari Lebih Lanjut tentang Data Lokasi",
@@ -591,13 +667,26 @@
       "imageQualityMedium": "Sedang",
       "imageQualityHigh": "Tinggi",
       "cameraMode": "Mode Kamera",
-      "cameraModeSubtitle": "Ambil gambar pada interval teratur, seperti yang ditentukan di Frekuensi Sampling, atau secara berkelanjutan sebagai video tunggal. Untuk mengaktifkan suara dalam mode video, aktifkan juga sensor Mikrofon.",
+      "cameraModeSubtitle": "Gambar mengambil foto berkualitas penuh. Snapshot melewati alur pemrosesan gambar standar untuk pengambilan yang lebih cepat. Video merekam secara berkelanjutan sebagai satu file video. Untuk mengaktifkan suara dalam mode video, aktifkan juga sensor Mikrofon. Sesuaikan interval gambar dan snapshot di Frekuensi Sampling.",
       "cameraModeImages": "Gambar",
       "cameraModeVideo": "Video",
+      "cameraModeSnapshot": "Snapshot",
+      "notSupportedInSnapshot": "Tidak didukung dalam mode snapshot.",
       "captureDepth": "Tangkap Kedalaman",
       "captureDepthImage": "Gambar",
       "captureDepthImageDepth": "Gambar + Kedalaman",
       "depthNotSupportedInVideo": "Data kedalaman tidak didukung dalam mode video.",
+      "captureDepthDescription": "Gambar diambil dengan data kedalaman yang tertanam dalam file gambar.",
+      "captureDepthCamera": "Kamera yang dipilih adalah %{camera}.",
+      "captureDepthSupported": "Perangkat ini mendukung data kedalaman.",
+      "captureDepthNotSupported": "Perangkat ini tidak mendukung data kedalaman.",
+      "maxVideoFps": "FPS Video Maks.",
+      "maxVideoFpsSubtitle": "Target kecepatan bingkai untuk perekaman video. FPS aktual bergantung pada perangkat dan resolusi.",
+      "maxVideoFps15": "15",
+      "maxVideoFps30": "30",
+      "maxVideoFps60": "60",
+      "maxVideoFpsWarning": "FPS (%{fps}) tidak didukung oleh perangkat ini untuk Kualitas Gambar (%{quality}). Rentang yang didukung adalah %{min}-%{max}.",
+      "maxVideoFpsResolutionNote": "Perangkat ini mendukung %{fps} FPS, tetapi memerlukan Kualitas Gambar: %{qualities}.",
       "cameraLensOrder": "Preferensi Lensa",
       "cameraLensOrderSubtitle": "Seret untuk mengurutkan ulang. Lensa pertama yang tersedia di perangkat akan digunakan. Anda juga dapat mencubit untuk zoom digital di jendela bidik selama perekaman."
     },
@@ -614,7 +703,9 @@
       "coordinatesTo01": "Ke 0,1°",
       "coordinatesDrop": "Buang",
       "optimizeForNavigation": "Optimalkan untuk Navigasi",
-      "optimizeForNavigationSubtitle": "Mengatur sensor lokasi ke mode navigasi, yang menggunakan sensor tambahan untuk meningkatkan akurasi."
+      "optimizeForNavigationSubtitle": "Mengatur sensor lokasi ke mode navigasi, yang menggunakan sensor tambahan untuk meningkatkan akurasi.",
+      "prewarmLocation": "Pemanasan Awal",
+      "prewarmLocationSubtitle": "Secara otomatis memanaskan sensor Location dalam mode akurasi tinggi, sehingga lokasi langsung siap saat perekaman dimulai."
     },
     "bluetooth": {
       "scanningDuration": "Durasi Pemindaian",
@@ -624,17 +715,34 @@
       "rssiNoLimit": "Tanpa Batas",
       "rssiAbove70": "> -70dBm",
       "rssiAbove60": "> -60dBm",
+      "gattDeviceInfo": "Pencarian Info Perangkat",
+      "gattDeviceInfoSubtitle": "Terhubung sebentar ke perangkat terdekat untuk membaca merek dan modelnya. Tidak diperlukan untuk decoding, dan dapat mengganggu data dari beberapa perangkat.",
+      "gattDeviceInfoOff": "Nonaktif",
+      "gattDeviceInfoScan": "Saat Memindai",
+      "gattDeviceInfoAlways": "Selalu",
       "decodeValues": "Dekode Nilai",
-      "decodeValuesSubtitle": "Jika didukung, mendekode data yang diiklankan dan di-streaming. Lihat github.com/tszheichoi/sensor-ble untuk perangkat yang didukung."
+      "decodeValuesSubtitle": "Jika didukung, mendekode data yang diiklankan dan di-streaming.",
+      "supportedDevicesLink": "Perangkat yang didukung",
+      "customDecodersHeader": "Dekoder Bluetooth Kustom",
+      "customDecodersDescription": "Tambahkan dukungan untuk suar BLE baru dengan menyediakan URL ke file dekoder yang kompatibel dengan Sensor-BLE.",
+      "addCustomDecoderTitle": "Tambah Dekoder",
+      "addCustomDecoderMessage": "Masukkan URL file dekoder .js:",
+      "deleteDecoderTitle": "Hapus Dekoder",
+      "deleteDecoderMessage": "Apakah Anda yakin ingin menghapus dekoder kustom \"{{name}}\"?",
+      "decoderAddedSuccess": "Dekoder berhasil dimuat dan didaftarkan!",
+      "decoderRefreshedSuccess": "Dekoder diperbarui ke versi terbaru!",
+      "decoderNoUrl": "Dekoder ini tidak memiliki URL tersimpan untuk diperbarui. Hapus dan tambahkan kembali melalui URL.",
+      "decoderRenameConflict": "File yang diperbarui mengubah nama dekoder ini menjadi \"{{name}}\", tetapi dekoder dengan nama tersebut sudah ada. Hapus dekoder yang berkonflik terlebih dahulu.",
+      "fetchErrorTitle": "Gagal Mengambil",
+      "validationErrorTitle": "Validasi Gagal"
     },
     "export": {
-      "copyExportCode": "Salin Kode Ekspor",
-      "showQrCode": "Tampilkan Kode QR",
-      "hideQrCode": "Sembunyikan Kode QR",
+      "copyDeepLink": "Salin Deep Link",
       "restoreFromClipboard": "Pulihkan dari Papan Klip",
       "cannotExportInStudy": "Anda tidak dapat mengekspor atau memulihkan pengaturan saat dalam studi.",
       "explanatoryText": "Pengaturan dan set sensor yang saat ini aktif dapat diekspor menggunakan kode yang dihasilkan. Kode ini dapat digunakan untuk memulihkan pengaturan ini di perangkat yang sama atau perangkat lain. Anda dapat membagikan kode dengan orang lain agar mereka memiliki pengaturan yang sama saat mengumpulkan data. Cukup teruskan kode atau minta mereka memindai kode QR di ponsel mereka. Catatan ini tidak termasuk sensor Bluetooth karena sifatnya yang bergantung pada perangkat.",
-      "restoreFailedError": "Gagal memulihkan pengaturan dari papan klip, periksa apakah papan klip sudah benar."
+      "restoreFailedError": "Gagal memulihkan pengaturan dari papan klip, periksa apakah papan klip sudah benar.",
+      "qrCodeTooLarge": "Konfigurasi ini terlalu besar untuk ditampilkan sebagai kode QR. Gunakan \"Salin Deep Link\" untuk membagikannya."
     },
     "annotationPresets": {
       "addAnnotationPreset": "Tambah Preset Anotasi",
@@ -683,8 +791,11 @@
     },
     "standardisation": {
       "title": "Standardisasi Satuan & Kerangka",
-      "subtitle": "Platform yang berbeda dapat melaporkan nilai dalam satuan dan sistem koordinat yang berbeda, membuat analisis lintas platform sulit. Aktifkan untuk menyelaraskan definisi antar platform.",
-      "learnMore": "Pelajari lebih lanjut tentang perbedaan satuan & koordinat antar platform, dan sensor mana yang terpengaruh."
+      "subtitle": "Platform yang berbeda dapat melaporkan nilai dalam satuan dan sistem koordinat yang berbeda, membuat analisis lintas platform sulit. Aktifkan untuk menyelaraskan definisi antar platform. Untuk juga menstandarisasi algoritma pemrosesan data dan filter, lihat Sensor Zoo."
+    },
+    "sensorFusion": {
+      "viewComparison": "Lihat Perbandingan Langsung",
+      "waitingForData": "Menunggu data sensor..."
     },
     "orderSensors": {
       "infoText": "Seret untuk mengubah urutan sensor ditampilkan. Beacon Bluetooth selalu muncul di bawah."
@@ -696,26 +807,71 @@
     }
   },
   "settingsSections": {
-    "language": { "description": "Bahasa yang disukai.", "contribute": "Jika ada kesalahan terjemahan atau Anda ingin berkontribusi bahasa baru, jangan ragu untuk menghubungi.", "reviewAndContribute": "Tinjau dan Berkontribusi Terjemahan" },
-    "recordingWorkflow": { "description": "Apa yang terjadi selama, saat mengakhiri dan setelah sesi perekaman." },
-    "ruleEngine": { "title": "Mesin Aturan", "description": "Aturan otomasi untuk memicu sensor, berdasarkan pengukuran, waktu, lokasi dan lainnya." },
-    "dataStreaming": { "title": "Streaming Data", "description": "Gunakan HTTP & MQTT untuk mendorong data." },
-    "sensorConfiguration": { "title": "Konfigurasi Sensor", "description": "Pengaturan untuk kamera, mikrofon, GPS, bluetooth & data tidak terkalibrasi." },
-    "standardisation": { "description": "Standardisasi satuan dan koordinat antar perangkat." },
-    "samplingFrequencies": { "description": "Kontrol seberapa sering pengukuran disampling." },
-    "timestamps": { "description": "Atur opsi jam dan format." },
-    "sensorSections": { "description": "Ubah urutan bagian sensor." },
-    "annotations": { "title": "Anotasi", "description": "Preset untuk anotasi." },
-    "deviceSettings": { "description": "Pengaturan lanjutan untuk perangkat." },
-    "exportShareRestore": { "description": "Gunakan kode QR untuk berbagi pengaturan." }
+    "language": {
+      "description": "Bahasa yang disukai.",
+      "contribute": "Jika ada kesalahan terjemahan atau Anda ingin berkontribusi bahasa baru, jangan ragu untuk menghubungi.",
+      "reviewAndContribute": "Tinjau dan Berkontribusi Terjemahan"
+    },
+    "recordingWorkflow": {
+      "description": "Apa yang terjadi selama, saat mengakhiri dan setelah sesi perekaman."
+    },
+    "ruleEngine": {
+      "title": "Mesin Aturan",
+      "description": "Aturan otomasi untuk memicu sensor, berdasarkan pengukuran, waktu, lokasi dan lainnya."
+    },
+    "dataStreaming": {
+      "title": "Streaming Data",
+      "description": "Push data dengan HTTP & MQTT, atau sajikan rekaman ke komputer Anda."
+    },
+    "sensorConfiguration": {
+      "title": "Konfigurasi Sensor",
+      "description": "Pengaturan untuk kamera, mikrofon, GPS, bluetooth & data tidak terkalibrasi."
+    },
+    "standardisation": {
+      "description": "Standardisasi satuan dan koordinat."
+    },
+    "sensorZoo": {
+      "description": "Algoritma dan filter terstandarisasi dengan implementasi sumber terbuka kustom."
+    },
+    "samplingFrequencies": {
+      "description": "Kontrol seberapa sering pengukuran disampling."
+    },
+    "timestamps": {
+      "description": "Atur opsi jam dan format."
+    },
+    "sensorSections": {
+      "description": "Ubah urutan bagian sensor."
+    },
+    "annotations": {
+      "title": "Anotasi",
+      "description": "Preset untuk anotasi."
+    },
+    "deviceSettings": {
+      "description": "Pengaturan lanjutan untuk perangkat."
+    },
+    "exportShareRestore": {
+      "description": "Gunakan kode QR untuk berbagi pengaturan."
+    }
   },
   "exportFormats": {
-    "csvZip": { "description": "Ekspor semua data ke CSV, per sensor, dan mengemasnya menjadi file zip." },
-    "json": { "description": "Mengemas data menjadi satu file json, tidak termasuk audio dan gambar." },
-    "combinedCsv": { "description": "Menyampling ulang, menggabungkan dan mengagregasi menjadi satu CSV, menyelaraskan semua tanda waktu." },
-    "excelSheets": { "description": "Ekspor ke .xlsx. Maks 10K baris per sensor, diorganisir menjadi lembar kerja." },
-    "kml": { "description": "Ekspor data GPS ke file KML. Hanya menyertakan data lokasi." },
-    "sqlite": { "description": "Ekspor ke database SQLite, diorganisir menjadi tabel berdasarkan sensor. Termasuk metadata & label." }
+    "csvZip": {
+      "description": "Ekspor semua data ke CSV, per sensor, dan mengemasnya menjadi file zip."
+    },
+    "json": {
+      "description": "Mengemas data menjadi satu file json, tidak termasuk audio dan gambar."
+    },
+    "combinedCsv": {
+      "description": "Menyampling ulang, menggabungkan dan mengagregasi menjadi satu CSV, menyelaraskan semua tanda waktu."
+    },
+    "excelSheets": {
+      "description": "Ekspor ke .xlsx. Maks 10K baris per sensor, diorganisir menjadi lembar kerja."
+    },
+    "kml": {
+      "description": "Ekspor data GPS ke file KML. Hanya menyertakan data lokasi."
+    },
+    "sqlite": {
+      "description": "Ekspor ke database SQLite, diorganisir menjadi tabel berdasarkan sensor. Termasuk metadata & label."
+    }
   },
   "detailsScreen": {
     "untitled": "Tanpa Judul",
@@ -723,11 +879,28 @@
     "renameRecording": "Ubah Nama Rekaman",
     "fileCount": "Ditemukan %{count} file untuk rekaman ini",
     "alerts": {
-      "missingLocationData": { "title": "Data Lokasi Hilang", "message": "Satu atau lebih rekaman tidak mengandung data lokasi, dan karenanya tidak dapat diekspor ke KML." },
-      "feedback": { "title": "Umpan Balik", "message": "Terima kasih telah menggunakan Sensor Logger! Kami ingin mendengar umpan balik Anda.", "noThanks": "Tidak, Terima Kasih", "provideFeedback": "Berikan Umpan Balik" },
-      "failedToExport": { "title": "Gagal mengekspor", "message": "Terjadi kesalahan saat ekspor" },
-      "confirmDeletion": { "title": "Konfirmasi Penghapusan", "message": "Apakah Anda yakin ingin menghapus %{title}?" },
-      "alreadyUploaded": { "title": "Sudah Diunggah", "message": "Rekaman ini sudah diunggah." }
+      "missingLocationData": {
+        "title": "Data Lokasi Hilang",
+        "message": "Satu atau lebih rekaman tidak mengandung data lokasi, dan karenanya tidak dapat diekspor ke KML."
+      },
+      "feedback": {
+        "title": "Umpan Balik",
+        "message": "Terima kasih telah menggunakan Sensor Logger! Kami ingin mendengar umpan balik Anda.",
+        "noThanks": "Tidak, Terima Kasih",
+        "provideFeedback": "Berikan Umpan Balik"
+      },
+      "failedToExport": {
+        "title": "Gagal mengekspor",
+        "message": "Terjadi kesalahan saat ekspor"
+      },
+      "confirmDeletion": {
+        "title": "Konfirmasi Penghapusan",
+        "message": "Apakah Anda yakin ingin menghapus %{title}?"
+      },
+      "alreadyUploaded": {
+        "title": "Sudah Diunggah",
+        "message": "Rekaman ini sudah diunggah."
+      }
     },
     "hintBar": {
       "partOfStudy": "Bagian dari Studi",
@@ -736,25 +909,60 @@
       "uploadToCloud": "Silakan unggah rekaman ini ke Sensor Logger Cloud. Ketuk untuk info lebih lanjut.",
       "studyNoLongerExists": "Anda membuat rekaman ini untuk studi yang sudah tidak ada."
     },
-    "buttons": { "rename": "Ubah Nama", "upload": "Unggah", "analysisResources": "Sumber Daya Analisis" },
-    "actionSheet": { "freeTutorials": "Tutorial & Kode Contoh Gratis", "unitsDocumentation": "Satuan & Dokumentasi", "buildDashboards": "Bangun Dasbor" }
+    "buttons": {
+      "rename": "Ubah Nama",
+      "upload": "Unggah",
+      "analysisResources": "Sumber Daya Analisis"
+    },
+    "actionSheet": {
+      "freeTutorials": "Tutorial & Kode Contoh Gratis",
+      "unitsDocumentation": "Satuan & Dokumentasi",
+      "buildDashboards": "Bangun Dasbor"
+    }
   },
   "addStudy": {
-    "investigator": { "title": "Saya Peneliti", "subtitle": "Saya ingin membuat studi baru agar orang lain dapat merekam dan berbagi data dengan saya.", "callToAction": "Buat Studi" },
-    "participant": { "title": "Saya Peserta", "subtitle": "Saya ingin bergabung dengan studi agar dapat merekam dan berbagi data dengan peneliti.", "callToAction": "Cari Studi" },
-    "studyActiveAlert": { "title": "Studi Aktif", "message": "Anda saat ini memiliki studi aktif. Anda harus menonaktifkannya terlebih dahulu sebelum membuat yang baru.", "deactivate": "Nonaktifkan & Lanjutkan" },
+    "investigator": {
+      "title": "Saya Peneliti",
+      "subtitle": "Saya ingin membuat studi baru agar orang lain dapat merekam dan berbagi data dengan saya.",
+      "callToAction": "Buat Studi"
+    },
+    "participant": {
+      "title": "Saya Peserta",
+      "subtitle": "Saya ingin bergabung dengan studi agar dapat merekam dan berbagi data dengan peneliti.",
+      "callToAction": "Cari Studi"
+    },
+    "studyActiveAlert": {
+      "title": "Studi Aktif",
+      "message": "Anda saat ini memiliki studi aktif. Anda harus menonaktifkannya terlebih dahulu sebelum membuat yang baru.",
+      "deactivate": "Nonaktifkan & Lanjutkan"
+    },
     "tip": "Bergabung dengan studi dengan memindai kode QR yang disediakan oleh peneliti studi."
   },
   "joinStudy": {
     "instruction": "Minta peneliti studi Anda untuk kode delapan digit atau kode QR untuk bergabung dengan studi.",
     "byCode": "Dengan Kode",
     "byQrCode": "Dengan Kode QR",
-    "cameraPermissionsAlert": { "title": "Izin Kamera", "message": "Anda perlu memberikan izin kamera di pengaturan untuk memindai kode QR." },
+    "cameraPermissionsAlert": {
+      "title": "Izin Kamera",
+      "message": "Anda perlu memberikan izin kamera di pengaturan untuk memindai kode QR."
+    },
     "enterCode": "Masukkan Kode",
     "scanAnotherQrCode": "Pindai Kode QR Lain",
     "invalidQrCode": "Kode QR tidak valid terdeteksi.",
-    "invalidCodeAlert": { "title": "Kode Tidak Valid", "message": "Kode studi yang diberikan oleh peneliti studi harus antara 6 hingga 8 karakter." },
+    "invalidCodeAlert": {
+      "title": "Kode Tidak Valid",
+      "message": "Kode studi yang diberikan oleh peneliti studi harus antara 6 hingga 8 karakter."
+    },
     "viewStudy": "Lihat Studi"
+  },
+  "sandbox": {
+    "description": "Mainkan mini-game dan lakukan eksperimen fisika dengan data sensor real-time. Buka tautan di bawah di perangkat lain, ponsel atau komputer, dan pindai kode QR di sini.",
+    "openInBrowser": "Buka di Browser",
+    "scanQrCode": "Pindai Kode QR",
+    "scanQrCodeSubtext": "Pindai kode QR Sandbox untuk bergabung dengan sesi",
+    "unavailable": "Tidak tersedia",
+    "cameraPermissionRequired": "Izin kamera diperlukan untuk memindai kode QR.",
+    "noCameraAvailable": "Tidak ada kamera tersedia di perangkat ini."
   },
   "studyDetail": {
     "stats": {
@@ -1011,6 +1219,9 @@
       "connectable": "dapat dihubungkan",
       "notConnectable": "tidak dapat dihubungkan",
       "deviceWarning": "Data Bluetooth hanya direkam saat aplikasi terbuka dan layar menyala. Anda mungkin perlu memasangkan perangkat ini di pengaturan ponsel Anda untuk melihat informasi lebih lanjut, seperti namanya. Semua koma dalam nama diganti dengan tanda hubung; Dalam ekspor CSV, daftar yang dipisahkan koma dibatasi oleh pipa.",
+      "statusActive": "Aktif",
+      "statusIdle": "Siaga",
+      "statusOffline": "Offline",
       "missingPermissions": "Izin Tidak Ada",
       "bluetoothPermissionMessage": "Anda perlu memberikan izin Bluetooth di pengaturan untuk menggunakan fitur ini."
     },
@@ -1039,7 +1250,7 @@
       "subtitle": "Dari Jam Tangan yang Dipasangkan",
       "description": "Mencatat pembacaan terkait gerakan dari jam tangan di pergelangan tangan Anda. Ini termasuk kecepatan rotasi (dalam x, y dan z), vektor gravitasi (dalam x, y, dan z), akselerasi (dalam x, y, dan z) dan sikap dalam kuaternion.",
       "frequency": "Tidak dapat dikonfigurasi, biasanya pada 100Hz",
-      "units": "Satuan yang sama dengan sensor yang sesuai di ponsel.",
+      "units": "Akselerasi dan vektor gravitasi dilaporkan dalam gravitasi standar (g), berbeda dengan ponsel yang menggunakan m/s². Ketika \"Standardisasi Satuan & Kerangka\" diaktifkan, keduanya dikonversi ke m/s² agar sesuai dengan ponsel. Semua nilai lainnya sama dengan sensor yang sesuai di ponsel. Aliran akselerometer tak terkalibrasi dari jam tangan mengikuti satuan yang sama.",
       "warning": "Sensor-sensor ini akan selalu berfungsi jika aplikasi jam tangan berada di latar depan dengan layar jam tangan menyala. Jika Anda ingin perekaman latar belakang, Anda juga harus mengaktifkan sensor detak jantung dan memberikan izin yang relevan. Ini secara tidak langsung mengaktifkan perekaman latar belakang data gerakan pergelangan tangan."
     },
     "watchLocation": {
@@ -1054,7 +1265,7 @@
       "description": "Mencatat pembacaan barometer dari jam tangan di pergelangan tangan Anda.",
       "frequencyIos": "Kira-kira Sekali Setiap 2,5 detik (0,4Hz). Tidak dapat dikonfigurasi.",
       "frequencyAndroid": "Bergantung pada model perangkat. Tidak dapat dikonfigurasi.",
-      "units": "Satuan yang sama dengan sensor yang sesuai di ponsel.",
+      "units": "Tekanan dilaporkan dalam kPa, berbeda dengan ponsel yang menggunakan mbar. Ketinggian relatif dalam meter, sama seperti ponsel. Ketika \"Standardisasi Satuan & Kerangka\" diaktifkan, tekanan dikonversi ke mbar agar sesuai dengan ponsel.",
       "warning": "Sensor-sensor ini akan selalu berfungsi jika aplikasi jam tangan berada di latar depan dengan layar jam tangan menyala. Jika Anda ingin perekaman latar belakang, Anda juga harus mengaktifkan sensor detak jantung dan memberikan izin yang relevan. Ini secara tidak langsung mengaktifkan perekaman latar belakang data barometer."
     },
     "watchMagnetometer": {
@@ -1072,6 +1283,13 @@
       "frequencyAndroid": "Bergantung pada model perangkat. Tidak dapat dikonfigurasi.",
       "units": "Dilaporkan dalam derajat.",
       "warning": "Pembacaan dapat dipengaruhi oleh medan magnet lokal yang kuat. Sensor-sensor ini akan selalu berfungsi jika aplikasi jam tangan berada di latar depan dengan layar jam tangan menyala. Jika Anda ingin perekaman latar belakang, Anda juga harus mengaktifkan sensor detak jantung dan memberikan izin yang relevan."
+    },
+    "watchMicrophone": {
+      "subtitle": "Dari Jam Tangan yang Dipasangkan",
+      "description": "Merekam audio dan kekerasan suara (dBFS) dari mikrofon bawaan jam tangan Anda.",
+      "frequency": "Audio pada 16kHz mono AAC. Kekerasan suara (dBFS) disampel pada 10Hz. Tidak dapat dikonfigurasi.",
+      "units": "Kekerasan suara dalam dBFS. Audio dalam format .mp4.",
+      "warning": "Sensor-sensor ini akan selalu berfungsi jika aplikasi jam tangan berada di latar depan dengan layar jam tangan menyala. Jika Anda ingin perekaman di latar belakang, Anda juga harus mengaktifkan sensor detak jantung dan memberikan izin yang relevan. Ini secara tidak langsung mengaktifkan perekaman data mikrofon di latar belakang."
     },
     "microphone": {
       "subtitle": "Audio & Tingkat",
@@ -1097,14 +1315,14 @@
       "subtitle": "Gerakan AirPods",
       "description": "Mencatat pembacaan gerakan dari earbuds nirkabel Bluetooth AirPods Anda. Anda dapat menggunakan ini untuk aplikasi seperti pelacakan kepala. Ini termasuk akselerasi (dalam x, y, dan z), vektor gravitasi (dalam x, y, dan z), kecepatan rotasi (dalam x, y, dan z) dan sikap. Karena keterbatasan, hanya satu earbud yang merekam data gerakan pada satu waktu. Earbud aktif ditunjukkan oleh bidang sensorLocation.",
       "frequency": "Tidak dapat dikonfigurasi dan bervariasi, hingga 25Hz pada model terbaru dan 15Hz pada model lama.",
-      "units": "Satuan yang sama dengan sensor yang sesuai di ponsel.",
+      "units": "Akselerasi dilaporkan dalam gravitasi standar (g) sementara vektor gravitasi sudah dalam m/s², sehingga keduanya berbeda. Ketika \"Standardisasi Satuan & Kerangka\" diaktifkan, akselerasi juga dikonversi ke m/s² sehingga keduanya sesuai dengan ponsel. Semua nilai lainnya sama dengan sensor yang sesuai di ponsel.",
       "warning": "Anda harus memakai AirPods yang dipasangkan -- Anda dapat memakai keduanya atau hanya satu earbud. Jika Anda menonaktifkan 'Deteksi Telinga Otomatis' di pengaturan AirPods, dimungkinkan untuk merekam gerakan AirPods saat tidak di telinga Anda selama masih terhubung ke ponsel Anda."
     },
     "battery": {
       "subtitle": "Tingkat Baterai",
-      "description": "Mengukur tingkat baterai perangkat. Juga mencatat status baterai (mengisi daya, penuh, dll.). Nilai negatif berarti status baterai tidak diketahui.",
+      "description": "Mengukur tingkat baterai perangkat. Juga mencatat status baterai (mengisi daya, penuh, dll.) dan status mode hemat daya. Pada perangkat yang didukung, ini juga merekam tegangan baterai, arus pengisian daya, dan kesehatan baterai secara keseluruhan.",
       "frequency": "Sampling pada 1Hz, tidak dapat dikonfigurasi.",
-      "units": "Dilaporkan dalam fraksi, misalnya 0,5 adalah 50%."
+      "units": "Tingkat dalam pecahan (misalnya 0,5 adalah 50%), status sebagai string. Jika didukung, tegangan dilaporkan dalam volt, arus dalam mA, dan kesehatan sebagai string."
     },
     "batteryTemp": {
       "subtitle": "Suhu Baterai",
@@ -1147,5 +1365,146 @@
     "feedbackMessage": "Kami melihat bahwa Anda telah berhenti berlangganan Sensor Logger. Kami ingin mendengar umpan balik Anda tentang bagaimana kami dapat meningkatkan Sensor Logger. Apakah Anda ingin memberikan umpan balik?",
     "noThanks": "Tidak, Terima Kasih",
     "provideFeedback": "Berikan Umpan Balik"
+  },
+  "deepLinks": {
+    "annotationTitle": "Anotasi",
+    "notRecording": "Tidak ada rekaman aktif. Mulai rekaman sebelum membuat anotasi.",
+    "noAnnotationText": "Berikan teks anotasi, mis. sensorlogger://annotate/pothole",
+    "annotationBanner": "Anotasi ditambahkan: %{text}",
+    "featureEnabledTitle": "Fitur Diaktifkan",
+    "featureEnabledMessage": "Fitur '%{flag}' telah diaktifkan.",
+    "unknownFlagTitle": "Fitur Tidak Dikenal",
+    "unknownFlagMessage": "Fitur '%{flag}' tidak didukung oleh versi Sensor Logger ini."
+  },
+  "cloudScreen": {
+    "notVerifiedYet": "Belum Terverifikasi",
+    "notVerifiedYetMessage": "Email Anda belum terverifikasi. Klik tautan di kotak masuk Anda terlebih dahulu, lalu coba lagi.",
+    "upgradeStorage": "Tingkatkan Penyimpanan",
+    "cloudStorage": "Penyimpanan Cloud",
+    "bannerDescription": "Layanan cloud pendamping Sensor Logger untuk menghosting Studies, Stories & Backup.",
+    "cloudStorageDescription": "Simpan dengan aman Studies Anda (yaitu rekaman yang diunggah peserta Anda), Stories & Backup (yaitu rekaman yang Anda unggah sendiri).",
+    "backups": "Backup",
+    "enableBackups": "Aktifkan Backup",
+    "enableBackupsDescription": "Cadangkan rekaman Anda secara otomatis dan unduh nanti di web atau perangkat lain. Anda juga dapat mengimpor kembali rekaman yang telah dicadangkan sebelumnya ke perangkat ini.",
+    "storageFull": "Penyimpanan Penuh",
+    "storageFullMessage": "Anda telah mencapai batas penyimpanan cloud Anda. Silakan tingkatkan langganan penyimpanan Anda untuk mengaktifkan backup.",
+    "emailNotVerified": "Email Belum Diverifikasi",
+    "emailNotVerifiedMessage": "Silakan verifikasi alamat email Anda sebelum mengaktifkan backup. Anda akan menggunakan email ini untuk mengakses backup Anda dari perangkat lain.",
+    "checkingEmail": "Memeriksa status verifikasi email...",
+    "verificationSent": "Kode verifikasi dikirim ke %{email}. Silakan periksa kotak masuk Anda dan masukkan 6 digit kode di bawah ini untuk memverifikasi.",
+    "checkVerification": "Verifikasi Kode",
+    "changeEmail": "Ubah Email",
+    "emailForBackups": "Email untuk Backup",
+    "enterEmail": "Masukkan email Anda",
+    "sendVerification": "Kirim Kode Verifikasi",
+    "freshInstallInfo": "Jika Anda telah membeli Sensor Logger dan ini adalah penginstalan baru, Anda mungkin perlu memulihkan pembelian Anda untuk melihat backup Anda sebelumnya.",
+    "manageBackups": "Kelola Backup",
+    "useMobileData": "Gunakan Data Seluler",
+    "useMobileDataDescription": "Izinkan backup menggunakan data seluler saat Wi-Fi tidak tersedia.",
+    "missingEmail": "Email Belum Diisi",
+    "missingEmailMessage": "Silakan masukkan alamat email backup terlebih dahulu.",
+    "accessBackupsOnWeb": "Akses rekaman Anda di mana saja dengan mengunjungi sensorlogger.app/backups menggunakan email Anda.",
+    "accessBackupsOnWebFull": "Akses rekaman Anda di mana saja secara online, melalui API atau agen, dengan mengunjungi sensorlogger.app/backups menggunakan email Anda.",
+    "verificationCode": "Kode Verifikasi",
+    "enterVerificationCode": "Masukkan 6 digit kode",
+    "invalidCode": "Kode tidak valid",
+    "invalidCodeMessage": "Silakan masukkan kode verifikasi 6 digit yang valid."
+  },
+  "backupsScreen": {
+    "downloadIncomplete": "Unduhan tidak lengkap. Periksa koneksi Anda dan coba lagi.",
+    "fetchFailedTitle": "Tidak dapat memuat pencadangan",
+    "fetchFailedSubtitle": "Periksa koneksi Anda dan ketuk segarkan untuk mencoba lagi.",
+    "keepAppOpen": "Biarkan Sensor Logger tetap terbuka untuk menyelesaikan pencadangan.",
+    "wifiOnlyNote": "Pencadangan hanya diunggah melalui Wi-Fi.",
+    "waitingForWifi": "Anda menggunakan data seluler, jadi pencadangan dijeda. Pencadangan akan dilanjutkan otomatis di Wi-Fi.",
+    "waitingForConnection": "Tidak ada koneksi internet. Pencadangan akan dilanjutkan otomatis setelah Anda kembali online.",
+    "sortOptions": {
+      "largest": "Terbesar",
+      "smallest": "Terkecil",
+      "thisDeviceFirst": "Perangkat ini dulu",
+      "otherDevicesFirst": "Perangkat lain dulu"
+    },
+    "downloadFailed": "Unduhan Gagal",
+    "invalidLocalPath": "Jalur lokal backup tidak valid.",
+    "genericDownloadError": "Terjadi kesalahan saat mengunduh rekaman.",
+    "deleteBackup": "Hapus Backup",
+    "deleteBackupConfirmation": "Apakah Anda yakin ingin menghapus \"%{name}\" secara permanen dari cloud? Tindakan ini tidak dapat dibatalkan.",
+    "fromThisDevice": "Dari Perangkat Ini",
+    "fromAnotherDevice": "Dari Perangkat Lain",
+    "pendingUpload": "Unggahan Tertunda",
+    "quotaExceeded": "Kuota Penyimpanan Terlampaui",
+    "uploadingStatus": "Mengunggah...",
+    "syncingMetadata": "Menyinkronkan Metadata",
+    "backedUp": "Telah Dicadangkan",
+    "activityQueue": "Antrean Aktivitas",
+    "activityQueueWithCount": "Antrean Aktivitas (%{count})",
+    "loadingBackups": "Memuat Backup",
+    "fetchingBackups": "Mengambil backup Anda...",
+    "noBackupsFound": "Backup Tidak Ditemukan",
+    "noBackupsFoundSubtitle": "Backup Anda akan muncul di sini setelah diunggah.",
+    "backupsDisabled": "Backup Dinonaktifkan",
+    "backupsDisabledSubtitle": "Aktifkan backup di tab Cloud untuk melihat antrean unggahan tertunda Anda dan menyinkronkan rekaman secara otomatis.",
+    "everythingBackedUp": "Semua Telah Dicadangkan",
+    "everythingBackedUpSubtitle": "Semua rekaman lokal Anda telah berhasil diunggah dan disinkronkan."
+  },
+  "healthCheck": {
+    "title": "Health Check",
+    "locationTitle": "Lokasi Latar Belakang",
+    "locationStatusAlways": "Diizinkan",
+    "locationStatusWarning": "Dibatasi",
+    "locationDescription": "Akses lokasi harus disetel ke 'Selalu Izinkan' agar aplikasi dapat merekam data saat berada di latar belakang.",
+    "storageTitle": "Penyimpanan",
+    "storageStatusOk": "Cukup",
+    "storageStatusWarning": "Rendah",
+    "storageDescription": "Memastikan ada cukup ruang pada perangkat Anda (>2GB bebas) untuk sesi perekaman yang lama.",
+    "batteryOptTitle": "Optimalisasi Baterai",
+    "batteryOptStatusOk": "Tidak Dibatasi",
+    "batteryOptStatusWarning": "Dioptimalkan",
+    "batteryOptDescription": "Mengatur Pengoptimalan Baterai ke 'Tidak Dibatasi' mencegah sistem menghentikan perekaman secara prematur di latar belakang.",
+    "batteryTitle": "Tingkat Baterai",
+    "batteryStatusOk": "Baik",
+    "batteryStatusWarning": "Rendah",
+    "batteryStatusCharging": "Mengisi Daya",
+    "batteryDescription": "Pastikan tingkat baterai Anda tinggi atau hubungkan perangkat Anda ke pengisi daya untuk memastikan pengoperasian terus-menerus.",
+    "keepAwakeTitle": "Layar Tetap Menyala",
+    "keepAwakeDescription": "Beberapa sensor tertentu (seperti Bluetooth dan Kamera) mengharuskan layar tetap aktif untuk mencatat data secara terus-menerus.",
+    "keepAwakeStatusEnabled": "Aktif",
+    "keepAwakeStatusDisabled": "Nonaktif (Diperlukan)",
+    "keepAwakeStatusNotRequired": "Nonaktif (Tidak Diperlukan)",
+    "lowPowerTitle": "Mode Hemat Daya",
+    "lowPowerDescription": "Mode Hemat Daya membatasi proses latar belakang dan pencatatan sensor. Matikan di pengaturan sistem untuk hasil terbaik.",
+    "lowPowerStatusOn": "Aktif",
+    "lowPowerStatusOff": "Nonaktif",
+    "fixButton": "Perbaiki",
+    "grantButton": "Izinkan",
+    "enableButton": "Aktifkan",
+    "openSettingsButton": "Buka Pengaturan",
+    "checking": "Memeriksa...",
+    "unknown": "Tidak diketahui",
+    "freeSpace": "{{size}} tersedia"
+  },
+  "fileServer": {
+    "intro": "Jelajahi dan unduh rekaman Anda dari komputer di jaringan yang sama. Data dikirim langsung dari ponsel ini ke komputer Anda.",
+    "start": "Mulai Server Lokal",
+    "stop": "Hentikan Server",
+    "port": "Port",
+    "portPromptMessage": "Masukkan port antara %{min} dan %{max}.",
+    "invalidPortTitle": "Port Tidak Valid",
+    "stats": "%{requests} permintaan · %{sent} terkirim · %{connections} terhubung",
+    "noWifi": "Hubungkan ponsel ini ke Wi-Fi, atau aktifkan hotspot-nya dan hubungkan komputer Anda ke sana.",
+    "address_wifi": "Wi-Fi",
+    "address_hotspot": "Hotspot",
+    "address_usb": "USB",
+    "address_ethernet": "Ethernet",
+    "startError": "Tidak dapat memulai server.",
+    "stoppedInBackground": "Server berhenti saat aplikasi berpindah ke latar belakang.",
+    "ipChanged": "Alamat jaringan ponsel ini berubah. Mulai ulang server untuk mendapatkan tautan baru.",
+    "goodToKnow": "Perlu Diketahui",
+    "tipSameNetwork": "Komputer Anda harus berada di jaringan yang sama dengan ponsel ini.",
+    "tipPrivateLink": "Tautan berisi kode pribadi. Kode berubah setiap kali server dimulai.",
+    "tipForeground": "Biarkan layar ini terbuka selama transfer. Layar tetap menyala otomatis.",
+    "tipIsolation": "Beberapa jaringan tamu dan kantor mencegah perangkat saling terhubung. Gunakan hotspot ponsel ini sebagai gantinya.",
+    "settingsDescription": "Jelajahi dan unduh rekaman dari komputer di jaringan Anda.",
+    "starting": "Memulai…"
   }
 }

@@ -40,7 +40,9 @@
     "rulesGallery": "Galerie de règles",
     "rulesHelp": "Aide aux règles",
     "rulesSettings": "Paramètres des règles",
-    "sensorFusion": "Sensor Fusion"
+    "ruleTrigger": "Déclencheur de règle",
+    "healthCheck": "Bilan de santé",
+    "fileServer": "Serveur de fichiers"
   },
   "quickActions": {
     "toggleRecording": "Basculer l'enregistrement",
@@ -59,6 +61,7 @@
     "tags": "Tags",
     "export": "Exporter",
     "select": "Sélectionner",
+    "selectAll": "Tout",
     "add": "Ajouter",
     "later": "Plus tard",
     "continue": "Continuer",
@@ -66,7 +69,9 @@
     "openSettings": "Ouvrir les paramètres",
     "upgrade": "Mettre à niveau",
     "error": "Erreur",
-    "discard": "Abandonner"
+    "discard": "Abandonner",
+    "upload": "Télécharger",
+    "success": "Succès"
   },
   "license": {
     "activated": "Licence activée",
@@ -139,7 +144,7 @@
     "howDoesItWorkDescription": "Téléchargez cet enregistrement vers Sensor Logger Cloud. Une fois téléchargé, vous aurez un lien pour afficher et construire l'histoire sur le web. Vous seul aurez accès aux enregistrements téléchargés et aux histoires créées, sauf si vous partagez le lien avec d'autres.",
     "viewExamples": "Voir les exemples",
     "viewExamplesDescription": "Appuyez pour voir une galerie d'exemples d'histoires pour vous inspirer.",
-    "freeFootnote": "Histoire est gratuit. Chaque utilisateur dispose de 100 Mo de stockage gratuit sur Sensor Logger Cloud. Si vous souhaitez télécharger davantage, envisagez de passer à l'un des forfaits payants.",
+    "freeFootnote": "Histoire est gratuit. Chaque utilisateur dispose d’une petite quantité de stockage gratuit sur Sensor Logger Cloud. Si vous souhaitez télécharger davantage, envisagez de passer à l'un des forfaits payants.",
     "whatsNext": "Et ensuite ?",
     "whatsNextDescription": "Une nouvelle histoire a été créée avec cet enregistrement joint. Visitez ce lien dans n'importe quel navigateur pour continuer. Vous pouvez y modifier et construire votre histoire. ",
     "viewStory": "Voir l'histoire",
@@ -242,6 +247,7 @@
     "generateNewLink": "Générer un nouveau lien"
   },
   "recordings": {
+    "backup": "Sauvegarde",
     "noRecordings": "Aucun enregistrement",
     "createRecordings": "Créez des enregistrements à l'aide de l'enregistreur.",
     "noMatchingTags": "Aucun enregistrement ne correspond aux tags sélectionnés.",
@@ -277,7 +283,7 @@
     "subscribe": "S'abonner",
     "subscribeSubtext": "Fonctionnalités payantes supplémentaires",
     "cloud": "Sensor Logger Cloud",
-    "cloudSubtext": "Stockage pour les études et les histoires",
+    "cloudSubtext": "Pour les études, histoires et sauvegarde",
     "appIcon": "Icône de l'application",
     "appIconSubtext": "Changer l'icône",
     "helpMe": "Aidez-moi !",
@@ -292,12 +298,18 @@
     "privacySubtext": "tldr : Vos données restent privées",
     "aboutItem": "À propos",
     "aboutSubtext": "Site web de Sensor Logger",
+    "loggerLabsSubtext": "Découvrez d'autres apps",
     "unitReference": "Référence des unités",
     "unitSubtext": "Guide des unités",
     "coordinateReference": "Référence des coordonnées",
     "coordinateSubtext": "Guide des définitions d'axes",
     "samplingReference": "Référence d'échantillonnage",
     "samplingSubtext": "Guide des taux d'échantillonnage",
+    "deepLinksReference": "Référence des liens profonds",
+    "deepLinksSubtextIos": "Automatisez avec iOS Shortcuts",
+    "deepLinksSubtextAndroid": "Pour une automatisation facile",
+    "sandboxSubtext": "Mini-jeux et expériences",
+    "zooSubtext": "Algorithmes open source",
     "emailSupport": "Support par e-mail",
     "emailSubtext": "Pour les utilisateurs Pro et Ultimate",
     "versionBuild": "Version %{version} Build %{build}",
@@ -307,7 +319,9 @@
     "reservedColours": "Couleurs réservées",
     "reservedColoursMessage": "Cette couleur est réservée aux abonnés. Abonnez-vous à Sensor Logger pour débloquer cette couleur.",
     "language": "Langue",
-    "languageSubtext": "Changer la langue"
+    "languageSubtext": "Changer la langue",
+    "healthCheck": "Bilan de santé",
+    "healthCheckSubtext": "Diagnostiquer les problèmes d'enregistrement"
   },
   "sensorSettings": {
     "waitingForData": "En attente de données",
@@ -318,13 +332,15 @@
     "samples": "Échantillons",
     "connectingDevice": "Connexion à l'appareil pour des données supplémentaires.",
     "totalAccelerationWarning": "Sensor Logger affiche l'accélération totale (y compris la gravité) car votre appareil n'a pas les capteurs nécessaires pour enregistrer l'accélération sans gravité.",
-    "compassCalibrationWarning": "'Calibration de la boussole' et 'Calibration du mouvement et distance' doivent être activés dans Réglages > Confidentialité et sécurité > Services de localisation > Services système, sinon les données seront rapportées comme 0.",
+    "compassCalibrationWarning": "'Calibration de la boussole' et 'Calibration du mouvement et distance' doivent être activés dans Réglages > Confidentialité et sécurité > Services de localisation > Services système, sinon les données seront rapportées comme 0 ou les fichiers seront vides.",
     "latestReadings": "Dernières lectures",
     "waitingForSensor": "En attente de données du capteur...",
     "liveReadings": "Les lectures en direct de ce capteur sont affichées ci-dessous.",
     "decodedData": "Données décodées",
     "waitingForAdditional": "En attente de données supplémentaires du capteur...",
     "decodedInfo": "Les informations suivantes ont été décodées. Appuyez pour copier.",
+    "deviceInformation": "Informations sur l'appareil",
+    "deviceInformationDescription": "Lues depuis l'appareil connecté.",
     "sensorInformation": "Informations sur le capteur",
     "sensorInfoDescription": "Le fabricant de l'appareil a fourni les informations suivantes sur ce capteur. Appuyez pour copier.",
     "bluetoothResources": "Ressources Bluetooth",
@@ -350,17 +366,21 @@
     "seconds": "secondes",
     "note": "Note :",
     "httpPush": "HTTP Push",
-    "skipWriting": "Ignorer l'écriture",
+    "skipWriting": "Diffusion Uniquement, Pas d'Enregistrement Local",
     "mqtt": "MQTT",
     "mqttPush": "MQTT Push",
     "mqttSubscribe": "MQTT Subscribe",
     "coordinatesCloaked": "Coordonnées masquées",
-    "checkpointEnabled": "Checkpoint activé",
+    "checkpointEnabledHour": "Checkpoint activé toutes les heures",
+    "checkpointEnabledHours": "Checkpoint activé toutes les %{value} heures",
     "ntpEnabled": "NTP activé",
+    "locationPrewarming": "Préchauffage de Location (En attente)",
+    "locationPrewarmingAccuracy": "Préchauffage de Location (±%{accuracy} m)",
     "oneRuleEnabled": "1 règle activée",
     "nRulesEnabled": "%{count} règles activées",
     "endRecordingConfirm": "Êtes-vous sûr de vouloir terminer cette session d'enregistrement ?",
     "continueRecording": "Continuer l'enregistrement",
+    "recordingTapToWake": "Enregistrement en cours (touchez pour réactiver)",
     "endNow": "Terminer maintenant",
     "renameRecording": "Renommer l'enregistrement",
     "saveAndExport": "Enregistrer et exporter",
@@ -379,6 +399,11 @@
     "cameraControls": "Commandes de la caméra",
     "cameraControlsLarge": "Appuyez n'importe où sur l'aperçu pour faire la mise au point, pincez pour zoomer. Utilisez le curseur d'exposition pour ajuster la luminosité.",
     "cameraControlsSmall": "Appuyez n'importe où sur l'aperçu pour faire la mise au point, pincez pour zoomer. Développez la caméra pour voir les commandes d'exposition.",
+    "tapToExpand": "Appuyer pour ouvrir",
+    "keepAwakeAlert": "Garder actif",
+    "keepAwakeAlertMessage": "Ce capteur peut ne pas fonctionner de manière fiable lorsque l'écran est éteint. Voulez-vous garder l'écran allumé pendant l'enregistrement ? Vous pouvez toujours modifier cela plus tard dans les paramètres.",
+    "keepAwakeNo": "Non merci",
+    "keepAwakeYes": "Garder l'écran allumé et tamiser",
     "serverError": "Erreur du serveur",
     "serverErrorMessage": "Le serveur HTTP Push a répondu avec un message d'erreur : %{message}.",
     "serverErrorCode": "Le serveur HTTP Push a répondu avec le code 499 indiquant une erreur côté serveur",
@@ -398,6 +423,8 @@
     "uploadToCloud": "Téléchargez l'enregistrement sur Sensor Logger Cloud afin que l'investigateur de l'étude puisse le télécharger plus tard.",
     "uploadToBucket": "Téléchargez l'enregistrement dans un compartiment de stockage que l'investigateur a configuré.",
     "uploadNow": "Télécharger maintenant",
+    "uploadAndDelete": "Télécharger et Supprimer",
+    "uploadAndDeleteMessage": "Cet enregistrement sera supprimé de votre appareil après le téléchargement réussi.",
     "uploadInstructions": "Instructions de téléchargement",
     "uploadInstructionsDefault": "L'investigateur de l'étude n'a fourni aucune instruction de téléchargement. Vous pouvez contacter l'investigateur de l'étude pour plus d'informations.",
     "unknownDelivery": "Mécanisme de livraison inconnu",
@@ -410,9 +437,18 @@
     "clear": "Effacer",
     "scanning": "Analyse",
     "scan": "Scanner",
+    "potentialConfigIssues": "Problèmes de configuration potentiels",
+    "tapToScanDevices": "Appuyez pour rechercher des appareils individuels",
+    "sensorEnabled": "Activé",
+    "sensorDisabled": "Désactivé",
+    "allBluetoothSensors": "Tous les capteurs Bluetooth",
+    "bluetoothUpgradeMessage": "Mettez à niveau pour débloquer l'enregistrement de tous les capteurs Bluetooth en même temps, ou scannez et activez des capteurs individuels gratuitement.",
+    "recoveredStudyTitle": "Enregistrement récupéré",
+    "recoveredStudyMessage": "Nous avons trouvé un enregistrement de votre dernière session d'Étude.",
     "hintBar": {
       "studyActive": "Étude active",
       "studyActiveMessage": "Participation à \"%{studyName}\". Les paramètres sont prescrits. Appuyez pour plus d'informations.",
+      "studySettingsLocked": "La configuration ici est prescrite par l'investigateur. Quittez l'étude pour modifier ces paramètres.",
       "exporting": "Exportation de l'enregistrement...",
       "uploading": "Téléchargement de l'enregistrement : %{progress}%",
       "keepAppOpen": "Gardez l'application ouverte jusqu'à ce que le téléchargement soit terminé."
@@ -425,20 +461,15 @@
       "otherSensors": "Autres capteurs",
       "deviceProperties": "Propriétés de l'appareil",
       "bluetoothBeacons": "Balises Bluetooth"
-    },
-    "tapToExpand": "Appuyer pour ouvrir",
-    "keepAwakeAlert": "Garder actif",
-    "keepAwakeAlertMessage": "Ce capteur peut ne pas fonctionner de manière fiable lorsque l'écran est éteint. Voulez-vous garder l'écran allumé pendant l'enregistrement ? Vous pouvez toujours modifier cela plus tard dans les paramètres.",
-    "keepAwakeNo": "Non merci",
-    "keepAwakeYes": "Garder l'écran allumé et tamiser",
-    "tapToScanDevices": "Appuyez pour rechercher des appareils individuels",
-    "allBluetoothSensors": "Tous les capteurs Bluetooth",
-    "bluetoothUpgradeMessage": "Mettez à niveau pour débloquer l'enregistrement de tous les capteurs Bluetooth en même temps, ou scannez et activez des capteurs individuels gratuitement."
+    }
   },
   "settings": {
     "language": "Langue",
     "troubleshooting": "Pour le dépannage, appuyez pour visiter tszheichoi.com/sensorloggerhelp",
     "resetToDefaults": "Réinitialiser aux valeurs par défaut",
+    "restoreSettingsTitle": "Restaurer les paramètres par défaut",
+    "restoreSettingsMessage": "Voulez-vous vraiment restaurer tous les paramètres par défaut ? Les données collectées ne seront pas affectées.",
+    "restore": "Restaurer",
     "sendPhotos": "Envoyer les images",
     "sendPhotosSubtitle": "Inclure les images dans les données lorsque la caméra est activée. Images encodées en chaîne base64 des octets JPEG. Le mode vidéo n'est pas pris en charge.",
     "skipWritingTitle": "Ne pas enregistrer localement",
@@ -452,12 +483,11 @@
       "microphone": "Microphone",
       "location": "Localisation",
       "bluetooth": "Bluetooth",
+      "customDecoders": "Décodeurs personnalisés",
       "additionalData": "Données supplémentaires",
       "camera": "Caméra",
       "checkpoint": "Point de contrôle",
       "standardisation": "Standardisation",
-      "standardisationFusion": "Standardisation et Fusion",
-      "sensorFusion": "Sensor Fusion",
       "httpPush": "HTTP Push",
       "mqttPublishing": "Publication MQTT",
       "mqttSubscription": "Abonnement MQTT",
@@ -467,7 +497,9 @@
       "annotationPresets": "Préréglages d'annotations",
       "exportShareRestore": "Exporter, partager et restaurer",
       "deviceSettings": "Paramètres de l'appareil",
-      "language": "Langue"
+      "language": "Langue",
+      "audioIndicator": "Indicateur Audio",
+      "fileServer": "Serveur de fichiers local"
     },
     "recordingMechanism": {
       "confirmBeforeEnding": "Confirmer avant de terminer",
@@ -479,6 +511,7 @@
       "keepAwakeOff": "Désactivé",
       "keepAwakeOn": "Activé",
       "keepAwakeOnDim": "Activé et atténué",
+      "keepAwakeOnBlack": "Activé et noir",
       "proximityLock": "Verrouillage de proximité",
       "proximityLockSubtitle": "Éteint l'écran, même si Garder actif est activé, pendant l'enregistrement lorsque le capteur de proximité est déclenché. Évitez les entrées accidentelles et économisez la batterie lorsque le téléphone est dans la poche. Se comporte sinon comme si l'écran était allumé.",
       "inlinePreview": "Aperçu en ligne",
@@ -517,11 +550,40 @@
     },
     "checkpoint": {
       "checkpoint": "Point de contrôle",
-      "checkpointSubtitle": "Après chaque 24 heures d'enregistrement continu, ces données seront automatiquement enregistrées en tant que nouvelle entrée dans l'onglet \"Enregistrements\" sans interruption. Cela aide à la collecte de données à long terme en organisant les enregistrements quotidiens."
+      "checkpointSubtitle": "Après chaque {{interval}} d'enregistrement continu, ces données seront automatiquement enregistrées en tant que nouvelle entrée sans interruption.",
+      "interval": "Intervalle de point de contrôle",
+      "hour": "1 heure",
+      "hours": "{{value}} heures",
+      "backupCallout": "À utiliser avec Sauvegarde pour découper et téléverser automatiquement les longs enregistrements, sans aucune étape manuelle."
+    },
+    "audioIndicator": {
+      "startStopTone": "Tonalité Début & Fin",
+      "startStopToneSubtitle": "Joue un son lorsque l'enregistrement commence et s'arrête.",
+      "previewStart": "Début d'Enregistrement",
+      "previewStop": "Fin d'Enregistrement",
+      "intervalTone": "Rappel d'Intervalle",
+      "intervalToneSubtitle": "Joue un son périodique pendant l'enregistrement comme rappel. Peut interférer avec le capteur microphone.",
+      "toneType": "Type de Tonalité",
+      "preview": "Aperçu du Son",
+      "sec": "{{value}}s",
+      "min": "{{value}}m",
+      "custom": "Personnalisé",
+      "change": "Modifier",
+      "everySeconds": "Toutes les {{value}} secondes",
+      "everyMinutes": "Toutes les {{value}} minutes",
+      "intervalPromptTitle": "Intervalle (secondes)",
+      "intervalPromptMessage": "Entrez un intervalle entre 1 et 86 400 secondes (24 heures).",
+      "invalidInterval": "Intervalle Invalide",
+      "invalidIntervalMessage": "Veuillez entrer un nombre entier entre 1 et 86 400."
     },
     "additionalData": {
       "uncalibratedValues": "Valeurs non calibrées",
-      "uncalibratedValuesSubtitle": "Enregistre les valeurs brutes de l'accéléromètre, du gyroscope et du magnétomètre. Utile pour effectuer un post-traitement de niveau inférieur ou une fusion de capteurs personnalisée. Les données calibrées sont toujours enregistrées.",
+      "uncalibratedValuesSubtitle": "Choisissez quels flux de l'accéléromètre, du gyroscope et du magnétomètre sont enregistrés. Non Calibré enregistre les valeurs brutes pour le post-traitement de bas niveau ou la fusion personnalisée. Les autres capteurs et les flux fusionnés comme l'orientation et la gravité ne sont pas affectés.",
+      "calibratedOnly": "Calibré Seul",
+      "both": "Les Deux",
+      "uncalibratedOnly": "Non Calibré Seul",
+      "uncalibratedOnlyWarning": "Les flux calibrés ne sont pas enregistrés. La plupart des outils attendent ces fichiers.",
+      "uncalibratedUnavailableWarning": "Cet appareil n'a pas d'accéléromètre non calibré, donc aucune donnée d'accéléromètre ne sera enregistrée. Choisissez Les Deux ou Calibré Seul.",
       "additionalLocationData": "Données de localisation supplémentaires",
       "additionalLocationDataSubtitle": "Par défaut, seule la localisation fusionnée est enregistrée. Enregistre des mesures supplémentaires uniquement GPS et uniquement réseau.",
       "learnMoreLocation": "En savoir plus sur les données de localisation",
@@ -546,13 +608,26 @@
       "imageQualityMedium": "Moyenne",
       "imageQualityHigh": "Élevée",
       "cameraMode": "Mode caméra",
-      "cameraModeSubtitle": "Capturer des images à intervalles réguliers, ou en continu sous forme de vidéo avec audio.",
+      "cameraModeSubtitle": "Images capture des photos en pleine qualité. Instantané contourne le pipeline de traitement d'image standard pour des captures plus rapides. Vidéo enregistre en continu dans un seul fichier vidéo. Pour activer le son en mode vidéo, activez aussi le capteur Microphone. Ajustez les intervalles d'image et d'instantané dans Fréquences d'Échantillonnage.",
       "cameraModeImages": "Images",
       "cameraModeVideo": "Vidéo",
+      "cameraModeSnapshot": "Instantané",
+      "notSupportedInSnapshot": "Non pris en charge en mode instantané.",
       "captureDepth": "Capturer la profondeur",
       "captureDepthImage": "Image",
       "captureDepthImageDepth": "Image + Profondeur",
       "depthNotSupportedInVideo": "Les données de profondeur ne sont pas prises en charge en mode vidéo.",
+      "captureDepthDescription": "Les images sont capturées avec des données de profondeur intégrées dans le fichier image.",
+      "captureDepthCamera": "La caméra sélectionnée est %{camera}.",
+      "captureDepthSupported": "Cet appareil prend en charge les données de profondeur.",
+      "captureDepthNotSupported": "Cet appareil ne prend pas en charge les données de profondeur.",
+      "maxVideoFps": "FPS vidéo max.",
+      "maxVideoFpsSubtitle": "Fréquence d'images cible pour l'enregistrement vidéo. Les FPS réels dépendent de l'appareil et de la résolution.",
+      "maxVideoFps15": "15",
+      "maxVideoFps30": "30",
+      "maxVideoFps60": "60",
+      "maxVideoFpsWarning": "Les FPS (%{fps}) ne sont pas pris en charge par cet appareil pour la qualité d'image (%{quality}). La plage prise en charge est %{min}-%{max}.",
+      "maxVideoFpsResolutionNote": "Cet appareil prend en charge %{fps} FPS, mais nécessite la qualité d'image : %{qualities}.",
       "cameraLensOrder": "Préférence d'objectif",
       "cameraLensOrderSubtitle": "Glissez pour réorganiser. Le premier objectif disponible sur l'appareil sera utilisé. Vous pouvez également pincer pour zoomer numériquement dans le viseur pendant l'enregistrement."
     },
@@ -569,7 +644,9 @@
       "coordinatesTo01": "À 0,1°",
       "coordinatesDrop": "Supprimer",
       "optimizeForNavigation": "Optimiser pour la navigation",
-      "optimizeForNavigationSubtitle": "Définit le capteur de localisation en mode navigation, qui utilise des capteurs supplémentaires pour améliorer la précision."
+      "optimizeForNavigationSubtitle": "Définit le capteur de localisation en mode navigation, qui utilise des capteurs supplémentaires pour améliorer la précision.",
+      "prewarmLocation": "Préchauffage",
+      "prewarmLocationSubtitle": "Préchauffe automatiquement le capteur Location en mode haute précision, afin qu'une position soit prête dès le démarrage d'un enregistrement."
     },
     "bluetooth": {
       "scanningDuration": "Durée d'analyse",
@@ -579,17 +656,34 @@
       "rssiNoLimit": "Sans limite",
       "rssiAbove70": "> -70dBm",
       "rssiAbove60": "> -60dBm",
+      "gattDeviceInfo": "Recherche d'informations sur l'appareil",
+      "gattDeviceInfoSubtitle": "Se connecte brièvement aux appareils à proximité pour lire leur fabricant et leur modèle. Non requis pour le décodage, et peut interrompre les données de certains appareils.",
+      "gattDeviceInfoOff": "Désactivé",
+      "gattDeviceInfoScan": "Pendant le scan",
+      "gattDeviceInfoAlways": "Toujours",
       "decodeValues": "Décoder les valeurs",
-      "decodeValuesSubtitle": "Si pris en charge, décode les données annoncées et diffusées. Voir github.com/tszheichoi/sensor-ble pour les appareils pris en charge."
+      "decodeValuesSubtitle": "Si pris en charge, décode les données annoncées et diffusées.",
+      "supportedDevicesLink": "Appareils pris en charge",
+      "customDecodersHeader": "Décodeurs Bluetooth personnalisés",
+      "customDecodersDescription": "Ajoutez la prise en charge de nouvelles balises BLE en fournissant l’URL d’un fichier décodeur compatible Sensor-BLE.",
+      "addCustomDecoderTitle": "Ajouter un décodeur",
+      "addCustomDecoderMessage": "Entrez l’URL du fichier décodeur .js :",
+      "deleteDecoderTitle": "Supprimer le décodeur",
+      "deleteDecoderMessage": "Êtes-vous sûr de vouloir supprimer le décodeur personnalisé \"{{name}}\" ?",
+      "decoderAddedSuccess": "Décodeur chargé et enregistré avec succès !",
+      "decoderRefreshedSuccess": "Décodeur mis à jour avec la dernière version !",
+      "decoderNoUrl": "Ce décodeur n’a pas d’URL enregistrée pour la mise à jour. Supprimez-le et ajoutez-le à nouveau via son URL.",
+      "decoderRenameConflict": "Le fichier mis à jour renomme ce décodeur en \"{{name}}\", mais un décodeur portant ce nom existe déjà. Supprimez d’abord le décodeur en conflit.",
+      "fetchErrorTitle": "Erreur de récupération",
+      "validationErrorTitle": "Échec de la validation"
     },
     "export": {
-      "copyExportCode": "Copier le code d'exportation",
-      "showQrCode": "Afficher le QR code",
-      "hideQrCode": "Masquer le QR code",
+      "copyDeepLink": "Copier le lien profond",
       "restoreFromClipboard": "Restaurer depuis le presse-papiers",
       "cannotExportInStudy": "Vous ne pouvez pas exporter ou restaurer les paramètres pendant une étude.",
       "explanatoryText": "Les paramètres et l'ensemble actuellement activé de capteurs peuvent être exportés à l'aide du code généré. Ce code peut être utilisé pour restaurer ces paramètres sur le même appareil ou un autre appareil. Vous pouvez partager le code avec d'autres afin qu'ils aient les mêmes paramètres lorsqu'ils collectent des données. Il suffit de leur transmettre le code ou de leur demander de scanner le QR code sur leurs téléphones. Notez que cela exclut les capteurs Bluetooth en raison de leur nature dépendante de l'appareil.",
-      "restoreFailedError": "Échec de la restauration des paramètres depuis le presse-papiers, vérifiez que le presse-papiers est correct."
+      "restoreFailedError": "Échec de la restauration des paramètres depuis le presse-papiers, vérifiez que le presse-papiers est correct.",
+      "qrCodeTooLarge": "Cette configuration est trop volumineuse pour être affichée sous forme de QR code. Utilisez plutôt « Copier le lien profond » pour la partager."
     },
     "annotationPresets": {
       "addAnnotationPreset": "Ajouter un préréglage d'annotation",
@@ -638,11 +732,9 @@
     },
     "standardisation": {
       "title": "Standardiser les unités et les cadres",
-      "subtitle": "Différentes plateformes peuvent rapporter des valeurs dans différentes unités et systèmes de coordonnées, ce qui rend l'analyse multiplateforme difficile. Activez pour harmoniser les définitions entre les plateformes.",
-      "learnMore": "Qu'est-ce que cela affecte ?"
+      "subtitle": "Différentes plateformes peuvent rapporter des valeurs dans différentes unités et systèmes de coordonnées, ce qui rend l'analyse multiplateforme difficile. Activez pour harmoniser les définitions entre les plateformes. Pour également standardiser les algorithmes de traitement des données et les filtres, découvrez Sensor Zoo."
     },
     "sensorFusion": {
-      "description": "Différentes plateformes estiment la gravité, l'accélération utilisateur et l'orientation en utilisant des hypothèses et algorithmes différents. Choisissez un filtre personnalisé pour standardiser le traitement des capteurs entre plateformes avec un algorithme open source et transparent. L'utilisation de filtres personnalisés nécessite les conditions suivantes :",
       "viewComparison": "Voir la comparaison en direct",
       "waitingForData": "En attente des données capteur..."
     },
@@ -670,20 +762,17 @@
     },
     "dataStreaming": {
       "title": "Diffusion de données",
-      "description": "Utilisez HTTP et MQTT pour transmettre des données."
+      "description": "Transmettez des données via HTTP et MQTT, ou servez des captures à votre ordinateur."
     },
     "sensorConfiguration": {
       "title": "Configuration des capteurs",
       "description": "Paramètres pour les caméras, les microphones, le GPS, le bluetooth et les données non calibrées."
     },
     "standardisation": {
-      "description": "Standardiser les unités et coordonnées, et configurer des algorithmes de fusion de capteurs personnalisés."
+      "description": "Standardiser les unités et les coordonnées."
     },
-    "standardisationFusion": {
-      "description": "Standardiser les unités et coordonnées, et configurer des algorithmes de fusion de capteurs personnalisés."
-    },
-    "sensorFusion": {
-      "description": "Algorithmes de fusion de capteurs personnalisés pour la gravité, l'orientation et l'accélération utilisateur."
+    "sensorZoo": {
+      "description": "Algorithmes et filtres standardisés avec des implémentations open source personnalisées."
     },
     "samplingFrequencies": {
       "description": "Contrôler la fréquence d'échantillonnage des mesures."
@@ -806,6 +895,15 @@
       "message": "Le code d'étude fourni par l'investigateur de l'étude doit comporter entre 6 et 8 caractères."
     },
     "viewStudy": "Voir l'étude"
+  },
+  "sandbox": {
+    "description": "Jouez à des mini-jeux et réalisez des expériences de physique avec des données de capteurs en temps réel. Ouvrez le lien ci-dessous sur un autre appareil, téléphone ou ordinateur, et scannez le code QR ici.",
+    "openInBrowser": "Ouvrir dans le navigateur",
+    "scanQrCode": "Scanner le code QR",
+    "scanQrCodeSubtext": "Scannez un code QR Sandbox pour rejoindre une session",
+    "unavailable": "Indisponible",
+    "cameraPermissionRequired": "L'autorisation de la caméra est requise pour scanner les codes QR.",
+    "noCameraAvailable": "Aucune caméra disponible sur cet appareil."
   },
   "studyDetail": {
     "stats": {
@@ -1075,7 +1173,7 @@
       "subtitle": "De la montre appariée",
       "description": "Enregistre les lectures liées au mouvement de votre montre à votre poignet. Cela inclut le taux de rotation (en x, y et z), le vecteur de gravité (en x, y et z), l'accélération (en x, y et z) et l'attitude en quaternion.",
       "frequency": "Non configurable, généralement à 100 Hz",
-      "units": "Mêmes unités que les capteurs correspondants sur le téléphone.",
+      "units": "L'accélération et le vecteur de gravité sont rapportés en gravité standard (g), contrairement au téléphone qui utilise le m/s². Lorsque « Standardiser les unités et les cadres » est activé, les deux sont convertis en m/s² pour correspondre au téléphone. Toutes les autres valeurs correspondent aux capteurs correspondants sur le téléphone. Le flux d'accéléromètre non calibré de la montre suit les mêmes unités.",
       "warning": "Ces capteurs fonctionneront toujours si l'application de la montre est au premier plan avec l'écran de la montre allumé. Si vous voulez un enregistrement en arrière-plan, vous devez également activer le capteur de fréquence cardiaque et accorder les autorisations pertinentes. Cela active indirectement l'enregistrement en arrière-plan des données de mouvement du poignet."
     },
     "watchLocation": {
@@ -1090,7 +1188,7 @@
       "description": "Enregistre les lectures du baromètre de votre montre à votre poignet.",
       "frequencyIos": "Environ toutes les 2,5 secondes (0,4 Hz). Non configurable.",
       "frequencyAndroid": "Dépend du modèle de l'appareil. Non configurable.",
-      "units": "Mêmes unités que les capteurs correspondants sur le téléphone.",
+      "units": "La pression est rapportée en kPa, contrairement au téléphone qui utilise le mbar. L'altitude relative est en mètres, comme sur le téléphone. Lorsque « Standardiser les unités et les cadres » est activé, la pression est convertie en mbar pour correspondre au téléphone.",
       "warning": "Ces capteurs fonctionneront toujours si l'application de la montre est au premier plan avec l'écran de la montre allumé. Si vous voulez un enregistrement en arrière-plan, vous devez également activer le capteur de fréquence cardiaque et accorder les autorisations pertinentes. Cela active indirectement l'enregistrement en arrière-plan des données du baromètre."
     },
     "watchMagnetometer": {
@@ -1108,6 +1206,13 @@
       "frequencyAndroid": "Dépend du modèle de l'appareil. Non configurable.",
       "units": "Rapporté en degrés.",
       "warning": "Les lectures peuvent être influencées par tout champ magnétique local fort. Ces capteurs fonctionneront toujours si l'application de la montre est au premier plan avec l'écran de la montre allumé. Si vous voulez un enregistrement en arrière-plan, vous devez également activer le capteur de fréquence cardiaque et accorder les autorisations pertinentes."
+    },
+    "watchMicrophone": {
+      "subtitle": "De la montre appariée",
+      "description": "Enregistre l'audio et le niveau sonore (dBFS) depuis le micro intégré de votre montre.",
+      "frequency": "Audio en mono AAC 16kHz. Niveau sonore (dBFS) échantillonné à 10Hz. Non configurable.",
+      "units": "Niveau sonore en dBFS. Audio au format .mp4.",
+      "warning": "Ces capteurs fonctionneront toujours si l'application de la montre est au premier plan avec l'écran de la montre allumé. Si vous voulez un enregistrement en arrière-plan, vous devez également activer le capteur de fréquence cardiaque et accorder les autorisations pertinentes. Cela active indirectement l'enregistrement en arrière-plan des données du micro."
     },
     "microphone": {
       "subtitle": "Audio et niveau",
@@ -1133,20 +1238,20 @@
       "subtitle": "Mouvement des AirPods",
       "description": "Enregistre les lectures de mouvement de vos écouteurs sans fil Bluetooth AirPods. Vous pouvez l'utiliser pour des applications telles que le suivi de la tête. Cela inclut l'accélération (en x, y et z), le vecteur de gravité (en x, y et z), le taux de rotation (en x, y et z) et l'attitude. En raison de limitations, un seul écouteur enregistre les données de mouvement à la fois. L'écouteur actif est indiqué par le champ sensorLocation.",
       "frequency": "Non configurable et variable, jusqu'à 25 Hz sur les derniers modèles et 15 Hz sur les modèles plus anciens.",
-      "units": "Mêmes unités que les capteurs correspondants sur le téléphone.",
+      "units": "L'accélération est rapportée en gravité standard (g) tandis que le vecteur de gravité est déjà en m/s², les deux diffèrent donc. Lorsque « Standardiser les unités et les cadres » est activé, l'accélération est également convertie en m/s² afin que les deux correspondent au téléphone. Toutes les autres valeurs correspondent aux capteurs correspondants sur le téléphone.",
       "warning": "Vous devez porter vos AirPods appariés -- vous pouvez porter les deux ou un seul des écouteurs. Si vous désactivez 'Détection automatique des oreilles' dans les paramètres des AirPods, il est possible d'enregistrer le mouvement des AirPods lorsqu'ils ne sont pas dans vos oreilles tant qu'ils sont connectés à votre téléphone."
     },
     "battery": {
       "subtitle": "Niveau de batterie",
-      "description": "Mesure le niveau de batterie de l'appareil. Enregistre également l'état de la batterie (en charge, pleine, etc.). Une valeur négative signifie que l'état de la batterie est inconnu.",
+      "description": "Mesure le niveau de la batterie de l'appareil. Enregistre également l'état de la batterie (en charge, pleine, etc.) et l'état du mode économie d'énergie. Sur les appareils pris en charge, cela enregistre également la tension de la batterie, le courant de charge et l'état de santé général de la batterie.",
       "frequency": "Échantillonne à 1 Hz, non configurable.",
-      "units": "Rapporté en fraction, par exemple 0,5 est 50 %."
+      "units": "Niveau sous forme de fraction (por ex. 0,5 pour 50%), état sous forme de chaîne. Là où c'est pris en charge, la tension est rapportée en volts, le courant en mA et l'état de santé sous forme de chaîne."
     },
     "batteryTemp": {
       "subtitle": "Température de la batterie",
       "description": "Mesure la température de la batterie de l'appareil.",
       "frequency": "Échantillonne à 1 Hz, non configurable.",
-      "units": "Rapporté en celsius."
+      "units": "Rapporté en degrés Celsius."
     },
     "brightness": {
       "subtitle": "Luminosité de l'écran",
@@ -1184,6 +1289,9 @@
       "connectable": "est connectable",
       "notConnectable": "n'est pas connectable",
       "deviceWarning": "Les données Bluetooth ne sont enregistrées que lorsque l'application est ouverte et l'écran allumé. Vous devrez peut-être appairer cet appareil dans les paramètres de votre téléphone pour afficher plus d'informations, comme son nom. Toutes les virgules dans les noms sont remplacées par des tirets; dans les exports CSV, les listes séparées par des virgules sont délimitées par des barres verticales.",
+      "statusActive": "Actif",
+      "statusIdle": "Inactif",
+      "statusOffline": "Hors ligne",
       "missingPermissions": "Autorisations manquantes",
       "bluetoothPermissionMessage": "Vous devez accorder les autorisations Bluetooth dans les paramètres pour utiliser cette fonctionnalité."
     }
@@ -1245,6 +1353,158 @@
     "altitude": "Altitude",
     "map": "Carte",
     "coords": "Coord.",
-    "address": "Adresse"
+    "address": "Adresse",
+    "wkbrew": "WKBrew",
+    "wkbrewEncoding": "Création du lien",
+    "wkbrewEncodingNotReady": "Encodage de la trace, cela peut prendre un moment.",
+    "wkbrewExplanation": "WKBrew est un outil gratuit pour visualiser, partager et convertir des géométries. Le lien ci-dessous encode la trace GPS de cet enregistrement entièrement dans l'URL, sans rien stocker ailleurs. Ouvrez-le dans n'importe quel navigateur pour visualiser la trace ou la convertir en GeoJSON, WKT et plus encore.",
+    "wkbrewCopyLink": "Copier le lien",
+    "wkbrewOpen": "Ouvrir dans navigateur",
+    "wkbrewSimplified": "Pour respecter la limite de longueur d'URL de WKBrew, le lien encode une trace simplifiée de %{used} points sur %{total} enregistrés.",
+    "wkbrewLimitedFootnote": "La résolution du graphique est actuellement réduite, le lien encode donc la trace affichée et non chaque point enregistré.",
+    "summary": "Résumé",
+    "variableFormatTitle": "Données à format variable",
+    "variableFormatSubtitle": "Ce capteur rapporte des champs variables qui ne peuvent pas être tracés. Veuillez exporter en JSON pour visualiser les données."
+  },
+  "deepLinks": {
+    "annotationTitle": "Annotation",
+    "notRecording": "Aucune capture en cours. Démarrez une capture avant d'annoter.",
+    "noAnnotationText": "Veuillez fournir un texte d'annotation, par ex. sensorlogger://annotate/pothole",
+    "annotationBanner": "Annotation ajoutée : %{text}",
+    "featureEnabledTitle": "Fonctionnalité activée",
+    "featureEnabledMessage": "La fonctionnalité '%{flag}' a été activée.",
+    "unknownFlagTitle": "Fonctionnalité inconnue",
+    "unknownFlagMessage": "La fonctionnalité '%{flag}' n'est pas prise en charge par cette version de Sensor Logger."
+  },
+  "cloudScreen": {
+    "notVerifiedYet": "Pas encore vérifié",
+    "notVerifiedYetMessage": "Votre e-mail n’est pas encore vérifié. Cliquez d’abord sur le lien dans votre boîte de réception, puis réessayez.",
+    "upgradeStorage": "Augmenter le stockage",
+    "cloudStorage": "Stockage cloud",
+    "bannerDescription": "Un service cloud complémentaire à Sensor Logger pour héberger vos Studies, Stories et sauvegardes.",
+    "cloudStorageDescription": "Hébergez en toute sécurité vos Studies (les enregistrements que vos participants envoient), Stories et sauvegardes (les enregistrements que vous envoyez vous-même).",
+    "backups": "Sauvegardes",
+    "enableBackups": "Activer les sauvegardes",
+    "enableBackupsDescription": "Sauvegardez automatiquement vos enregistrements et téléchargez-les plus tard sur le web ou sur un autre appareil. Vous pouvez également réimporter des enregistrements précédemment sauvegardés sur cet appareil.",
+    "storageFull": "Stockage plein",
+    "storageFullMessage": "Vous avez atteint votre limite de stockage cloud. Veuillez mettre à niveau votre abonnement de stockage pour activer les sauvegardes.",
+    "emailNotVerified": "E-mail non vérifié",
+    "emailNotVerifiedMessage": "Veuillez vérifier votre adresse e-mail avant d'activer les sauvegardes. Vous utiliserez cet e-mail pour accéder à vos sauvegardes depuis d'autres appareils.",
+    "checkingEmail": "Vérification de l'état de votre e-mail...",
+    "verificationSent": "Code de vérification envoyé à %{email}. Veuillez vérifier votre boîte de réception et saisir le code à 6 chiffres ci-dessous pour vérifier.",
+    "checkVerification": "Vérifier le code",
+    "changeEmail": "Modifier l'e-mail",
+    "emailForBackups": "E-mail pour les sauvegardes",
+    "enterEmail": "Saisissez votre e-mail",
+    "sendVerification": "Envoyer le code de vérification",
+    "freshInstallInfo": "Si vous avez déjà acheté Sensor Logger et qu'il s'agit d'une nouvelle installation, vous devrez peut-être restaurer vos achats pour voir vos sauvegardes précédentes.",
+    "manageBackups": "Gérer les sauvegardes",
+    "useMobileData": "Utiliser les données mobiles",
+    "useMobileDataDescription": "Autoriser les sauvegardes à utiliser les données mobiles lorsque le Wi-Fi n'est pas disponible.",
+    "missingEmail": "E-mail manquant",
+    "missingEmailMessage": "Veuillez d'abord saisir une adresse e-mail de sauvegarde.",
+    "accessBackupsOnWeb": "Accédez à vos enregistrements n'importe où en visitant sensorlogger.app/backups avec votre e-mail.",
+    "accessBackupsOnWebFull": "Accédez à vos enregistrements n'importe où en ligne, via API ou agent, en visitant sensorlogger.app/backups avec votre e-mail.",
+    "verificationCode": "Code de vérification",
+    "enterVerificationCode": "Saisir le code à 6 chiffres",
+    "invalidCode": "Code invalide",
+    "invalidCodeMessage": "Veuillez saisir un code de vérification valide à 6 chiffres."
+  },
+  "backupsScreen": {
+    "downloadIncomplete": "Téléchargement incomplet. Vérifiez votre connexion et réessayez.",
+    "fetchFailedTitle": "Échec du chargement des sauvegardes",
+    "fetchFailedSubtitle": "Vérifiez votre connexion et appuyez sur actualiser pour réessayer.",
+    "keepAppOpen": "Gardez Sensor Logger ouvert pour terminer la sauvegarde.",
+    "wifiOnlyNote": "Les sauvegardes ne s’envoient qu’en Wi-Fi.",
+    "waitingForWifi": "Vous êtes en données mobiles, les sauvegardes sont donc en pause. Elles reprendront automatiquement en Wi-Fi.",
+    "waitingForConnection": "Aucune connexion internet. Les sauvegardes reprendront automatiquement dès que vous serez de nouveau en ligne.",
+    "sortOptions": {
+      "largest": "Plus volumineux",
+      "smallest": "Moins volumineux",
+      "thisDeviceFirst": "Cet appareil d’abord",
+      "otherDevicesFirst": "Autres appareils d’abord"
+    },
+    "downloadFailed": "Échec du téléchargement",
+    "invalidLocalPath": "Chemin local de sauvegarde non valide.",
+    "genericDownloadError": "Une erreur est survenue lors du téléchargement de l'enregistrement.",
+    "deleteBackup": "Supprimer la sauvegarde",
+    "deleteBackupConfirmation": "Êtes-vous sûr de vouloir supprimer définitivement \"%{name}\" du cloud ? Cette action ne peut pas être annulée.",
+    "fromThisDevice": "Depuis cet appareil",
+    "fromAnotherDevice": "Depuis un autre appareil",
+    "pendingUpload": "Envoi en attente",
+    "quotaExceeded": "Limite de stockage dépassée",
+    "uploadingStatus": "Téléchargement en cours...",
+    "syncingMetadata": "Synchronisation des métadonnées",
+    "backedUp": "Sauvegardé",
+    "activityQueue": "File d'attente d'activités",
+    "activityQueueWithCount": "File d'attente d'activités (%{count})",
+    "loadingBackups": "Chargement des sauvegardes",
+    "fetchingBackups": "Récupération de vos sauvegardes...",
+    "noBackupsFound": "Aucune sauvegarde trouvée",
+    "noBackupsFoundSubtitle": "Vos sauvegardes apparaîtront ici une fois envoyées.",
+    "backupsDisabled": "Sauvegardes désactivées",
+    "backupsDisabledSubtitle": "Activez les sauvegardes dans l'onglet Cloud pour voir votre file d'attente d'envois en attente et synchroniser automatiquement vos enregistrements.",
+    "everythingBackedUp": "Tout est sauvegardé",
+    "everythingBackedUpSubtitle": "Tous vos enregistrements locaux ont été envoyés et synchronisés avec succès."
+  },
+  "healthCheck": {
+    "title": "Bilan de santé",
+    "locationTitle": "Localisation en arrière-plan",
+    "locationStatusAlways": "Autorisé",
+    "locationStatusWarning": "Restreint",
+    "locationDescription": "L'accès à la localisation doit être défini sur 'Toujours autoriser' pour que l'application puisse enregistrer des données en arrière-plan.",
+    "storageTitle": "Stockage",
+    "storageStatusOk": "Suffisant",
+    "storageStatusWarning": "Faible",
+    "storageDescription": "Garantit qu'il y a assez d'espace sur votre appareil (>2 Go libres) pour de longues sessions d'enregistrement.",
+    "batteryOptTitle": "Optimisation de la batterie",
+    "batteryOptStatusOk": "Non restreint",
+    "batteryOptStatusWarning": "Optimisé",
+    "batteryOptDescription": "Définir l'optimisation de la batterie sur 'Non restreint' empêche le système d'arrêter prématurément les enregistrements en arrière-plan.",
+    "batteryTitle": "Niveau de batterie",
+    "batteryStatusOk": "Bon",
+    "batteryStatusWarning": "Faible",
+    "batteryStatusCharging": "En charge",
+    "batteryDescription": "Assurez-vous que le niveau de votre batterie est élevé ou branchez votre appareil pour garantir un fonctionnement continu.",
+    "keepAwakeTitle": "Garder l'écran allumé",
+    "keepAwakeDescription": "Certains capteurs (comme le Bluetooth et l'appareil photo) nécessitent que l'écran reste actif pour enregistrer les données en continu.",
+    "keepAwakeStatusEnabled": "Activé",
+    "keepAwakeStatusDisabled": "Désactivé (Requis)",
+    "keepAwakeStatusNotRequired": "Désactivé (Non requis)",
+    "lowPowerTitle": "Mode économie d'énergie",
+    "lowPowerDescription": "Le mode économie d'énergie restreint les processus en arrière-plan et l'enregistrement des capteurs. Désactivez-le dans les paramètres système pour de meilleurs résultats.",
+    "lowPowerStatusOn": "Activé",
+    "lowPowerStatusOff": "Désactivé",
+    "fixButton": "Corriger",
+    "grantButton": "Autoriser",
+    "enableButton": "Activer",
+    "openSettingsButton": "Ouvrir les paramètres",
+    "checking": "Vérification...",
+    "unknown": "Inconnu",
+    "freeSpace": "{{size}} libre"
+  },
+  "fileServer": {
+    "intro": "Parcourez et téléchargez vos captures depuis un ordinateur sur le même réseau. Les données vont directement de ce téléphone à votre ordinateur.",
+    "start": "Démarrer le serveur local",
+    "stop": "Arrêter le serveur",
+    "port": "Port",
+    "portPromptMessage": "Saisissez un port entre %{min} et %{max}.",
+    "invalidPortTitle": "Port invalide",
+    "stats": "%{requests} requêtes · %{sent} envoyés · %{connections} connectés",
+    "noWifi": "Connectez ce téléphone au Wi-Fi, ou activez son point d'accès et connectez-y votre ordinateur.",
+    "address_wifi": "Wi-Fi",
+    "address_hotspot": "Point d'accès",
+    "address_usb": "USB",
+    "address_ethernet": "Ethernet",
+    "startError": "Impossible de démarrer le serveur.",
+    "stoppedInBackground": "Le serveur s'est arrêté lorsque l'application est passée en arrière-plan.",
+    "ipChanged": "L'adresse réseau de ce téléphone a changé. Redémarrez le serveur pour obtenir un nouveau lien.",
+    "goodToKnow": "Bon à savoir",
+    "tipSameNetwork": "Votre ordinateur doit être sur le même réseau que ce téléphone.",
+    "tipPrivateLink": "Le lien contient un code privé. Il change à chaque démarrage du serveur.",
+    "tipForeground": "Gardez cet écran ouvert pendant le transfert. Il reste allumé automatiquement.",
+    "tipIsolation": "Certains réseaux pour invités et réseaux d'entreprise empêchent les appareils de communiquer. Utilisez plutôt le partage de connexion de ce téléphone.",
+    "settingsDescription": "Parcourez et téléchargez des captures depuis un ordinateur sur votre réseau.",
+    "starting": "Démarrage…"
   }
 }
