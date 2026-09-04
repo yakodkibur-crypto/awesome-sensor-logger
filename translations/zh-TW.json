@@ -40,7 +40,9 @@
     "rulesGallery": "規則庫",
     "rulesHelp": "有關規則的幫助",
     "rulesSettings": "設定規則",
-    "sensorFusion": "感測器融合"
+    "ruleTrigger": "規則觸發器",
+    "healthCheck": "健康檢查",
+    "fileServer": "檔案伺服器"
   },
   "quickActions": {
     "toggleRecording": "切換記錄",
@@ -59,6 +61,7 @@
     "tags": "標籤",
     "export": "匯出",
     "select": "選擇",
+    "selectAll": "全選",
     "add": "新增",
     "later": "稍後",
     "continue": "繼續",
@@ -66,7 +69,9 @@
     "openSettings": "打開設定",
     "upgrade": "升級",
     "error": "錯誤",
-    "discard": "放棄"
+    "discard": "放棄",
+    "upload": "上傳",
+    "success": "成功"
   },
   "license": {
     "activated": "許可證已啟動",
@@ -76,7 +81,7 @@
     "requiredField": "此欄必需填寫，不能留空"
   },
   "api": {
-    "noInternet": "您未連接到互聯網。",
+    "noInternet": "您未連接到網際網絡。",
     "genericError": "發生錯誤。請稍後再試。",
     "uploadError": "上傳過程中發生錯誤：%{error}"
   },
@@ -85,8 +90,8 @@
     "recordingsTab": "數據記錄",
     "create": "新增",
     "upload": "上傳",
-    "connectToInternet": "連接到網際網路",
-    "noConnectionSubtitle": "沒有網路連線無法載入故事和數據記錄。",
+    "connectToInternet": "連接到網際網絡",
+    "noConnectionSubtitle": "沒有網絡連線無法載入故事和數據記錄。",
     "whatAreStories": "什麼是故事？",
     "whatBullet1": "將數據記錄以圖表方式呈現",
     "whatBullet2": "透過網頁輕鬆分享",
@@ -139,7 +144,7 @@
     "howDoesItWorkDescription": "將此數據記錄上傳到 Sensor Logger Cloud。上傳後，您將獲得一個連結，可在網頁上查看和建立故事。除非您將連結分享給他人，否則只有您本人可以存取上傳的數據記錄和建立的故事。",
     "viewExamples": "查看範例",
     "viewExamplesDescription": "點擊查看故事範例庫，獲取靈感。",
-    "freeFootnote": "故事免費使用。每位使用者可獲得 100MB 的免費 Sensor Logger Cloud 儲存空間。如需上傳更多內容，請考慮升級到付費方案。",
+    "freeFootnote": "故事免費使用。每位使用者可獲得少量免費的 Sensor Logger Cloud 儲存空間。如需上傳更多內容，請考慮升級到付費方案。",
     "whatsNext": "接下來做什麼？",
     "whatsNextDescription": "已建立一個附帶此數據記錄的新故事。請在任意瀏覽器中訪問此連結以繼續操作，您可以在那裡編輯和建立故事。 ",
     "viewStory": "查看故事",
@@ -242,6 +247,7 @@
     "generateNewLink": "產生新連結"
   },
   "recordings": {
+    "backup": "備份",
     "noRecordings": "無數據記錄",
     "createRecordings": "使用記錄器建立數據記錄。",
     "noMatchingTags": "找不到相關標籤",
@@ -270,14 +276,14 @@
     "sectionUpgrades": "升級",
     "sectionResources": "資源",
     "sectionReferences": "參考",
-    "sectionSupport": "支持",
+    "sectionSupport": "支援",
     "sectionInfo": "資訊",
     "theme": "主題",
     "colours": "顏色",
     "subscribe": "訂閱",
     "subscribeSubtext": "付費功能",
     "cloud": "Sensor Logger Cloud",
-    "cloudSubtext": "研究和故事的儲存",
+    "cloudSubtext": "用於研究、故事和備份",
     "appIcon": "應用圖標",
     "appIconSubtext": "更改圖標",
     "language": "語言",
@@ -294,20 +300,28 @@
     "privacySubtext": "簡而言之：您的數據是私密的",
     "aboutItem": "關於",
     "aboutSubtext": "Sensor Logger 網站",
+    "loggerLabsSubtext": "探索其他應用程式",
     "unitReference": "單位參考",
     "unitSubtext": "單位指南",
     "coordinateReference": "座標參考",
     "coordinateSubtext": "軸定義指南",
     "samplingReference": "採樣參考",
     "samplingSubtext": "採樣率指南",
-    "emailSupport": "電子郵件支持",
+    "deepLinksReference": "深層連結參考",
+    "deepLinksSubtextIos": "透過 iOS 捷徑自動化",
+    "deepLinksSubtextAndroid": "輕鬆實現自動化",
+    "sandboxSubtext": "小遊戲和實驗",
+    "zooSubtext": "開源演算法",
+    "emailSupport": "電子郵件支援",
     "emailSubtext": "適用於 Pro 和 Ultimate 用戶",
     "versionBuild": "版本 %{version} 構建 %{build}",
     "update": "更新",
     "moreInspiration": "更多靈感",
     "physicist": "物理學家",
     "reservedColours": "保留顏色",
-    "reservedColoursMessage": "此顏色為訂閱用戶保留。訂閱 Sensor Logger 以解鎖此顏色。"
+    "reservedColoursMessage": "此顏色為訂閱用戶保留。訂閱 Sensor Logger 以解鎖此顏色。",
+    "healthCheck": "健康檢查",
+    "healthCheckSubtext": "診斷記錄問題"
   },
   "sensorSettings": {
     "waitingForData": "等待數據",
@@ -316,17 +330,19 @@
     "noPlottableDataSubtitle": "此藍牙數據不包含任何可繪製字段。",
     "selectData": "選擇數據",
     "samples": "樣本",
-    "connectingDevice": "正在連接設備以獲取額外數據。",
-    "totalAccelerationWarning": "Sensor Logger顯示總加速度（包括重力），因為您的設備缺少記錄不含重力加速度的感測器。",
-    "compassCalibrationWarning": "需要在\"設定\">\"隱私與安全\">\"定位服務\">\"系統服務\"中啟用\"指南針校準\"和\"運動校準與距離\"，否則數據將報告為0。",
+    "connectingDevice": "正在連接裝置以獲取額外數據。",
+    "totalAccelerationWarning": "Sensor Logger顯示總加速度（包括重力），因為您的裝置缺少記錄不含重力加速度的感測器。",
+    "compassCalibrationWarning": "需要在\"設定\">\"隱私與安全\">\"定位服務\">\"系統服務\"中啟用\"指南針校準\"和\"運動校準與距離\"，否則數據將報告為0或檔案將為空。",
     "latestReadings": "最新讀數",
     "waitingForSensor": "等待感測器數據...",
     "liveReadings": "此感測器的即時讀數。",
     "decodedData": "解碼數據",
     "waitingForAdditional": "等待額外數據...",
     "decodedInfo": "已解碼資訊。點擊複製。",
+    "deviceInformation": "裝置資訊",
+    "deviceInformationDescription": "從已連接的裝置讀取。",
     "sensorInformation": "感測器資訊",
-    "sensorInfoDescription": "設備製造商提供的感測器資訊。點擊複製。",
+    "sensorInfoDescription": "裝置製造商提供的感測器資訊。點擊複製。",
     "bluetoothResources": "藍牙資源",
     "analysisResources": "分析資源",
     "cameraPermission": "等待相機。如果問題持續，請在設定中檢查 Sensor Logger 的相機權限。",
@@ -344,7 +360,7 @@
   },
   "plotsScreen": {
     "annotationHint": "要在記錄過程中新增標註，請點擊日誌螢幕上的鉛筆圖標。按住可控制持續時間。",
-    "timeSeriesPartial": "僅顯示部分時間序列。要顯示更多數據點，請點擊此處降低解析度",
+    "timeSeriesPartial": "僅顯示部分時間序列。要顯示更多數據點，請點擊此處降低解像度",
     "exportPlot": "匯出圖表",
     "secondsElapsed": "經過秒數",
     "buildDashboard": "建立故事",
@@ -361,19 +377,21 @@
     "noSensorDataExtended": "此感測器未回報任何數據。可能是因為缺少權限、取樣頻率過低或此裝置不支援該感測器。",
     "noAnnotation": "沒有標註",
     "nothingTriggered": "未觸發規則或已停用記錄",
-    "nothingTriggeredSubtitle": "此次記錄期間未觸發任何規則。規則在每個新數據點上評估，且至少每分鐘評估一次。您可能也已停用規則記錄——請查看規則引擎的進階設定。",
+    "nothingTriggeredSubtitle": "此次記錄期間未觸發任何規則。規則在每個新數據點上評估，且至少每分鐘評估一次。您可能也已停用規則記錄，請查看規則引擎的進階設定。",
     "showingUpTo100": "最多顯示 100 個項目，請匯出查看全部。",
     "copied": "已複製",
     "noPlottableData": "沒有可繪製數據",
     "noPlottableDataSubtitle": "此藍牙數據不包含任何可繪製欄位。",
+    "variableFormatTitle": "可變格式數據",
+    "variableFormatSubtitle": "此感測器報告的可變欄位無法繪製。請匯出為 JSON 以查看數據。",
     "selectData": "選擇數據",
     "displayInDegrees": "以角度顯示",
     "proportionalScale": "等比例縮放",
     "location": "位置",
     "noLocation": "此次記錄期間未收到位置數據。",
-    "loadingMap": "正在載入地圖，需要網路連線。",
+    "loadingMap": "正在載入地圖，需要網絡連線。",
     "reverseGeocoding": "反向地理編碼",
-    "reverseGeocodingNotReady": "尚未準備好，需要網路連線。",
+    "reverseGeocodingNotReady": "尚未準備好，需要網絡連線。",
     "reverseGeocodingFootnote": "反向地理編碼基於記錄的第一個座標。",
     "noComment": "無文字",
     "maxRate": "最高速率",
@@ -388,7 +406,16 @@
     "altitude": "海拔",
     "map": "地圖",
     "coords": "座標",
-    "address": "地址"
+    "address": "地址",
+    "wkbrew": "WKBrew",
+    "wkbrewEncoding": "正在產生連結",
+    "wkbrewEncodingNotReady": "正在編碼軌跡,可能需要片刻。",
+    "wkbrewExplanation": "WKBrew 是一款免費的幾何資料檢視、分享與轉換工具。下方連結將本次記錄的 GPS 軌跡完整編碼在 URL 中,不會在其他任何地方儲存資料。在任何瀏覽器中開啟即可檢視軌跡,或將其轉換為 GeoJSON、WKT 等格式。",
+    "wkbrewCopyLink": "複製連結",
+    "wkbrewOpen": "在瀏覽器中開啟",
+    "wkbrewSimplified": "為符合 WKBrew 的 URL 長度限制,該連結編碼了簡化後的軌跡,包含 %{total} 個記錄點中的 %{used} 個。",
+    "wkbrewLimitedFootnote": "目前繪圖解析度已降低,因此連結編碼的是所顯示的軌跡,而非每個記錄點。",
+    "summary": "摘要"
   },
   "logger": {
     "startRecording": "開始記錄",
@@ -398,17 +425,21 @@
     "seconds": "秒",
     "note": "注意：",
     "httpPush": "HTTP 推送",
-    "skipWriting": "跳過寫入",
+    "skipWriting": "僅串流，不儲存本機錄音",
     "mqtt": "MQTT",
     "mqttPush": "MQTT 推送",
     "mqttSubscribe": "MQTT 訂閱",
     "coordinatesCloaked": "座標已隱藏",
-    "checkpointEnabled": "檢查點已啟用",
+    "checkpointEnabledHour": "檢查點已啟用（每小時）",
+    "checkpointEnabledHours": "檢查點已啟用（每%{value}小時）",
     "ntpEnabled": "NTP 已啟用",
+    "locationPrewarming": "Location 預熱（等待中）",
+    "locationPrewarmingAccuracy": "Location 預熱 (±%{accuracy} m)",
     "oneRuleEnabled": "1 條規則已啟用",
     "nRulesEnabled": "%{count} 條規則已啟用",
     "endRecordingConfirm": "確定要結束此記錄嗎？",
     "continueRecording": "繼續記錄",
+    "recordingTapToWake": "記錄中（點擊喚醒）",
     "endNow": "立即結束",
     "renameRecording": "重新命名數據記錄",
     "saveAndExport": "保存並匯出",
@@ -430,11 +461,13 @@
     "tapToExpand": "點擊展開和控制",
     "keepAwakeAlert": "螢幕常亮",
     "keepAwakeAlertMessage": "此感測器在螢幕關閉時可能無法正常運作。您是否希望在記錄期間保持螢幕常亮？您可以稍後在設定中更改此選項。",
+    "keepAwakeNo": "不用了",
+    "keepAwakeYes": "保持螢幕常亮並調暗",
     "serverError": "伺服器錯誤",
     "serverErrorMessage": "HTTP推送伺服器響應錯誤消息：%{message}。",
     "serverErrorCode": "HTTP推送伺服器響應代碼499，表示伺服器端錯誤",
     "maxRecordingsReached": "已達儲存數據記錄數量上限",
-    "maxRecordingsMessage": "Sensor Logger免費版最多可儲存10個本設備數據記錄。要繼續免費使用，請匯出並刪除一些現有數據記錄。或升級到付費訂閱以解鎖無限數據記錄儲存等功能。",
+    "maxRecordingsMessage": "Sensor Logger免費版最多可儲存10個本裝置數據記錄。要繼續免費使用，請匯出並刪除一些現有數據記錄。或升級到付費訂閱以解鎖無限數據記錄儲存等功能。",
     "noSensorsEnabled": "未啟用感測器",
     "noSensorsMessage": "此數據記錄未啟動任何感測器。請打開要記錄數據的感測器。",
     "watchDisconnected": "手錶未連接",
@@ -442,13 +475,15 @@
     "batteryLevelLow": "電池電量低",
     "batteryLevelMessage": "電池電量為 %{level}%。Sensor Logger在記錄期間可能消耗大量電量。",
     "lowStorageSpace": "儲存空間不足",
-    "lowStorageMessage": "此設備剩餘儲存空間有限，建議釋放一些空間。",
-    "notConnectedInternet": "未連接到互聯網",
-    "notConnectedMessage": "此數據記錄僅保存在本設備。要為研究提供數據，請稍後從數據記錄頁面上傳。",
+    "lowStorageMessage": "此裝置剩餘儲存空間有限，建議釋放一些空間。",
+    "notConnectedInternet": "未連接到網際網絡",
+    "notConnectedMessage": "此數據記錄僅保存在本裝置。要為研究提供數據，請稍後從數據記錄頁面上傳。",
     "uploadRecording": "上傳數據記錄",
     "uploadToCloud": "將數據記錄上傳到 Sensor Logger Cloud，以便研究人員稍後下載。",
     "uploadToBucket": "將數據記錄上傳到研究人員設定的儲存桶。",
     "uploadNow": "立即上傳",
+    "uploadAndDelete": "上傳並刪除",
+    "uploadAndDeleteMessage": "上傳成功後，此數據記錄將從您的裝置中刪除。",
     "uploadInstructions": "上傳說明",
     "uploadInstructionsDefault": "研究人員未提供上傳說明。您可以聯繫研究人員瞭解更多資訊。",
     "unknownDelivery": "未知傳送機制",
@@ -461,12 +496,21 @@
     "clear": "清除",
     "scanning": "掃描中",
     "scan": "掃描",
+    "potentialConfigIssues": "潛在的設定問題",
+    "tapToScanDevices": "點擊掃描個別裝置",
+    "sensorEnabled": "已啟用",
+    "sensorDisabled": "已停用",
+    "allBluetoothSensors": "所有藍牙感測器",
+    "bluetoothUpgradeMessage": "升級以解鎖同時記錄所有藍牙感測器，或免費掃描並啟用個別感測器。",
+    "recoveredStudyTitle": "已復元的記錄",
+    "recoveredStudyMessage": "我們發現了您上次研究會話的記錄。",
     "hintBar": {
       "studyActive": "研究活動中",
       "studyActiveMessage": "參與 %{studyName}。點擊瞭解更多相關設定。",
+      "studySettingsLocked": "此處的設定由研究者指定。退出研究以變更這些設定。",
       "exporting": "正在匯出記錄...",
       "uploading": "正在上傳記錄：%{progress}%",
-      "keepAppOpen": "保持應用程序打開，直到上傳完成。"
+      "keepAppOpen": "保持應用程式打開，直到上傳完成。"
     },
     "sectionTitles": {
       "inertialSensors": "慣性感測器",
@@ -474,19 +518,17 @@
       "vision": "視覺",
       "watch": "手錶",
       "otherSensors": "其他感測器",
-      "deviceProperties": "設備屬性",
+      "deviceProperties": "裝置屬性",
       "bluetoothBeacons": "藍牙裝置"
-    },
-    "keepAwakeNo": "不用了",
-    "keepAwakeYes": "保持螢幕常亮並調暗",
-    "tapToScanDevices": "點擊掃描個別裝置",
-    "allBluetoothSensors": "所有藍牙感測器",
-    "bluetoothUpgradeMessage": "升級以解鎖同時記錄所有藍牙感測器，或免費掃描並啟用個別感測器。"
+    }
   },
   "settings": {
     "language": "語言",
     "troubleshooting": "如需排除故障，點擊訪問 tszheichoi.com/sensorloggerhelp",
     "resetToDefaults": "重置為預設值",
+    "restoreSettingsTitle": "恢復預設設定",
+    "restoreSettingsMessage": "確定要將所有設定恢復為預設值嗎？已收集的資料不會受到影響。",
+    "restore": "恢復",
     "sendPhotos": "傳送影像",
     "sendPhotosSubtitle": "啟用相機時將影像包含在資料中。影像以 JPEG 位元組的 base64 字串編碼。不支援錄影模式。",
     "skipWritingTitle": "不儲存至本機",
@@ -500,12 +542,11 @@
       "microphone": "麥克風",
       "location": "位置",
       "bluetooth": "藍牙",
+      "customDecoders": "自訂解碼器",
       "additionalData": "附加數據",
       "camera": "相機",
       "checkpoint": "檢查點",
       "standardisation": "標準化",
-      "standardisationFusion": "標準化與融合",
-      "sensorFusion": "感測器融合",
       "httpPush": "HTTP推送",
       "mqttPublishing": "MQTT發佈",
       "mqttSubscription": "MQTT訂閱",
@@ -514,40 +555,43 @@
       "sensorSections": "感測器部分",
       "annotationPresets": "預設標註",
       "exportShareRestore": "匯出、分享和恢復",
-      "deviceSettings": "設備設定",
-      "language": "語言"
+      "deviceSettings": "裝置設定",
+      "language": "語言",
+      "audioIndicator": "音訊指示器",
+      "fileServer": "本機檔案伺服器"
     },
     "recordingMechanism": {
       "confirmBeforeEnding": "結束前確認",
       "confirmBeforeEndingSubtitle": "點擊\"結束記錄\"按鈕時顯示對話框，防止意外操作。",
-      "smartName": "智能命名",
+      "smartName": "智慧命名",
       "smartNameSubtitle": "如果啟用位置感測器，根據位置自動命名數據記錄。",
       "keepAwake": "螢幕常亮",
-      "keepAwakeSubtitle": "保持屏幕開啟，防止設備鎖定。對於可能無法在後台工作的相機和藍牙數據記錄很有用。",
+      "keepAwakeSubtitle": "保持螢幕開啟，防止裝置鎖定。對於可能無法在後台工作的相機和藍牙數據記錄很有用。",
       "keepAwakeOff": "關閉",
       "keepAwakeOn": "開啟",
       "keepAwakeOnDim": "開啟並調暗",
+      "keepAwakeOnBlack": "開啟並全黑",
       "proximityLock": "接近鎖定",
-      "proximityLockSubtitle": "記錄期間觸發接近感測器時關閉屏幕，即使保持喚醒已啟用。避免意外操作並節省電量。",
+      "proximityLockSubtitle": "記錄期間觸發接近感測器時關閉螢幕，即使保持喚醒已啟用。避免意外操作並節省電量。",
       "inlinePreview": "即時預覽",
-      "inlinePreviewSubtitle": "記錄期間顯示即時感測器數據。可能影響資源有限設備的性能。",
+      "inlinePreviewSubtitle": "記錄期間顯示即時感測器數據。可能影響資源有限裝置的效能。",
       "inlinePreviewHistory": "預覽歷史",
-      "inlinePreviewHistorySubtitle": "控制內聯預覽中顯示的資料量。較長的歷史記錄可能會降低性能。",
+      "inlinePreviewHistorySubtitle": "控制內聯預覽中顯示的資料量。較長的歷史記錄可能會降低效能。",
       "inlinePreviewHistory50": "短",
       "inlinePreviewHistory100": "中",
       "inlinePreviewHistory200": "長",
       "startRecordingOnBoot": "啟動時開始記錄",
-      "startRecordingOnBootSubtitle": "設備啟動時開始記錄。適用於長期數據收集。",
+      "startRecordingOnBootSubtitle": "裝置啟動時開始記錄。適用於長期數據收集。",
       "extraPermissionRequired": "需要額外權限",
-      "extraPermissionMessage": "要啟動時開始記錄，必須授予\"顯示在頂部\"權限。請在下一個屏幕上授予權限。"
+      "extraPermissionMessage": "要啟動時開始記錄，必須授予\"顯示在頂部\"權限。請在下一個螢幕上授予權限。"
     },
     "workflow": {
       "workflow": "工作流",
-      "workflowSubtitle": "經典模式下，數據在後台保存。集成模式下，將提示重新命名和匯出。數據始終會保存。",
+      "workflowSubtitle": "經典模式下，數據在後台保存。整合模式下，將提示重新命名和匯出。數據始終會保存。",
       "workflowClassic": "經典",
-      "workflowIntegrated": "集成",
+      "workflowIntegrated": "整合",
       "cacheNames": "暫存名稱",
-      "cacheNamesSubtitle": "在集成工作流中命名數據記錄時，暫存名稱和位置，以便在約100米內的未來數據記錄預設使用它。",
+      "cacheNamesSubtitle": "在整合工作流中命名數據記錄時，暫存名稱和位置，以便在約100米內的未來數據記錄預設使用它。",
       "cannotChangeInStudy": "在研究中時無法更改工作流設定。"
     },
     "timestamps": {
@@ -565,11 +609,40 @@
     },
     "checkpoint": {
       "checkpoint": "檢查點",
-      "checkpointSubtitle": "每24小時連續記錄後，數據將自動保存為\"數據記錄\"標籤中的新條目，無中斷。有助於通過組織每日數據記錄進行長期數據收集。"
+      "checkpointSubtitle": "每{{interval}}連續記錄後，資料將自動儲存為新條目，無中斷。",
+      "interval": "檢查點間隔",
+      "hour": "1小時",
+      "hours": "{{value}}小時",
+      "backupCallout": "與備份一起使用，可自動分段並上傳長時間記錄，無需手動操作。"
+    },
+    "audioIndicator": {
+      "startStopTone": "開始與停止提示音",
+      "startStopToneSubtitle": "錄製開始和停止時播放提示音。",
+      "previewStart": "錄製開始",
+      "previewStop": "錄製結束",
+      "intervalTone": "間隔提醒",
+      "intervalToneSubtitle": "錄製期間定期播放提示音作為提醒。可能會干擾麥克風感測器。",
+      "toneType": "提示音類型",
+      "preview": "預覽提示音",
+      "sec": "{{value}}秒",
+      "min": "{{value}}分",
+      "custom": "自訂",
+      "change": "變更",
+      "everySeconds": "每 {{value}} 秒",
+      "everyMinutes": "每 {{value}} 分鐘",
+      "intervalPromptTitle": "間隔（秒）",
+      "intervalPromptMessage": "請輸入 1 到 86,400 秒（24 小時）之間的間隔。",
+      "invalidInterval": "無效的間隔",
+      "invalidIntervalMessage": "請輸入 1 到 86,400 之間的整數。"
     },
     "additionalData": {
       "uncalibratedValues": "未校準值",
-      "uncalibratedValuesSubtitle": "記錄加速度計、陀螺儀和磁力計的原始值。適用於執行較低級別的後處理或自定感測器融合。始終記錄校準數據。",
+      "uncalibratedValuesSubtitle": "選擇儲存加速度計、陀螺儀和磁力計的哪些資料流。未校準記錄原始值，適用於底層後處理或自訂融合。其他感測器以及方向、重力等融合資料流不受影響。",
+      "calibratedOnly": "僅已校準",
+      "both": "兩者",
+      "uncalibratedOnly": "僅未校準",
+      "uncalibratedOnlyWarning": "已校準資料流將不會儲存。大多數工具需要這些檔案。",
+      "uncalibratedUnavailableWarning": "此裝置沒有未校準的加速度計，因此不會記錄任何加速度計資料。請選擇兩者或僅已校準。",
       "additionalLocationData": "額外位置數據",
       "additionalLocationDataSubtitle": "預設情況下，僅記錄融合位置。記錄來自僅GPS和僅網絡的額外測量。",
       "learnMoreLocation": "瞭解更多位置數據",
@@ -587,26 +660,39 @@
       "cameraFlashOn": "開啟",
       "cameraFlashOff": "關閉",
       "cameraFlashAuto": "自動",
-      "imageQuality": "圖像質量",
-      "imageQualitySubtitle": "更高質量佔用更多儲存空間。",
+      "imageQuality": "影像品質",
+      "imageQualitySubtitle": "更高品質佔用更多儲存空間。",
       "imageQualityLowest": "最低",
       "imageQualityLow": "低",
       "imageQualityMedium": "中等",
       "imageQualityHigh": "高",
       "cameraMode": "相機模式",
-      "cameraModeSubtitle": "是定期擷取圖像，還是連續擷取帶音頻的視頻。",
-      "cameraModeImages": "圖像",
-      "cameraModeVideo": "視頻",
+      "cameraModeSubtitle": "影像拍攝全品質照片。快照略過標準影像處理流程，以實現更快擷取。影片連續錄製為單個影片檔案。要在影片模式下啟用聲音，還需開啟麥克風感測器。在取樣頻率中調整影像和快照間隔。",
+      "cameraModeImages": "影像",
+      "cameraModeVideo": "影片",
+      "cameraModeSnapshot": "快照",
+      "notSupportedInSnapshot": "在快照模式下不支援。",
       "captureDepth": "擷取深度",
-      "captureDepthImage": "圖像",
-      "captureDepthImageDepth": "圖像+深度",
-      "depthNotSupportedInVideo": "視頻模式不支持深度數據。",
+      "captureDepthImage": "影像",
+      "captureDepthImageDepth": "影像+深度",
+      "depthNotSupportedInVideo": "影片模式不支援深度數據。",
+      "captureDepthDescription": "拍攝的影像包含嵌入的深度資料。",
+      "captureDepthCamera": "所選相機為%{camera}。",
+      "captureDepthSupported": "此裝置支援深度資料。",
+      "captureDepthNotSupported": "此裝置不支援深度資料。",
+      "maxVideoFps": "最高影片幀率",
+      "maxVideoFpsSubtitle": "影片錄製的目標幀率。實際幀率取決於裝置和解像度。",
+      "maxVideoFps15": "15",
+      "maxVideoFps30": "30",
+      "maxVideoFps60": "60",
+      "maxVideoFpsWarning": "此裝置不支援此影像品質 (%{quality}) 的 FPS (%{fps})。支援的範圍為 %{min}-%{max}。",
+      "maxVideoFpsResolutionNote": "此裝置支援 %{fps} FPS，但需要影像品質：%{qualities}。",
       "cameraLensOrder": "鏡頭優先順序",
-      "cameraLensOrderSubtitle": "拖動以重新排序。將使用設備上第一個可用的鏡頭。記錄期間還可以在取景器中捏合進行數位變焦。"
+      "cameraLensOrderSubtitle": "拖動以重新排序。將使用裝置上第一個可用的鏡頭。記錄期間還可以在取景器中捏合進行數位變焦。"
     },
     "microphone": {
-      "microphoneQuality": "麥克風質量",
-      "microphoneQualitySubtitle": "無損質量最高，但建立較大文件。僅響度僅記錄dBFS中的音頻響度，不記錄音頻。",
+      "microphoneQuality": "麥克風品質",
+      "microphoneQualitySubtitle": "無損品質最高，但建立較大檔案。僅響度僅記錄dBFS中的音頻響度，不記錄音頻。",
       "viewMicrophoneReference": "查看麥克風參考"
     },
     "location": {
@@ -617,27 +703,46 @@
       "coordinatesTo01": "到0.1°",
       "coordinatesDrop": "刪除",
       "optimizeForNavigation": "優化導航",
-      "optimizeForNavigationSubtitle": "將位置感測器設定為導航模式，使用額外感測器提高精準度。"
+      "optimizeForNavigationSubtitle": "將位置感測器設定為導航模式，使用額外感測器提高精準度。",
+      "prewarmLocation": "預熱",
+      "prewarmLocationSubtitle": "自動以高精度模式預熱 Location 感測器，以便開始記錄時立即取得定位。"
     },
     "bluetooth": {
       "scanningDuration": "掃描持續時間",
-      "scanningDurationSubtitle": "刷新列表時掃描附近藍牙設備的秒數。",
+      "scanningDurationSubtitle": "刷新列表時掃描附近藍牙裝置的秒數。",
       "rssiThreshold": "RSSI臨界值",
-      "rssiThresholdSubtitle": "設備掃描期間的最小信號強度。RSSI越接近0越強。-70 dBm被認為是良好的信號強度。",
+      "rssiThresholdSubtitle": "裝置掃描期間的最小信號強度。RSSI越接近0越強。-70 dBm被認為是良好的信號強度。",
       "rssiNoLimit": "無限制",
       "rssiAbove70": "> -70dBm",
       "rssiAbove60": "> -60dBm",
+      "gattDeviceInfo": "裝置資訊查詢",
+      "gattDeviceInfoSubtitle": "短暫連接附近的裝置以讀取其製造商與型號。解碼並不需要此功能，且可能會中斷部分裝置的資料傳輸。",
+      "gattDeviceInfoOff": "關閉",
+      "gattDeviceInfoScan": "掃描時",
+      "gattDeviceInfoAlways": "永遠",
       "decodeValues": "解碼值",
-      "decodeValuesSubtitle": "如果支持，解碼廣播和流式數據。查看github.com/tszheichoi/sensor-ble瞭解支持的設備。"
+      "decodeValuesSubtitle": "如果支援，解碼廣播和流式數據。",
+      "supportedDevicesLink": "支援的裝置",
+      "customDecodersHeader": "自訂 Bluetooth 解碼器",
+      "customDecodersDescription": "透過提供與 Sensor-BLE 相容的解碼器檔案 URL 來新增對新 BLE 信標的支援。",
+      "addCustomDecoderTitle": "新增解碼器",
+      "addCustomDecoderMessage": "請輸入 .js 解碼器檔案的 URL：",
+      "deleteDecoderTitle": "刪除解碼器",
+      "deleteDecoderMessage": "確定要刪除自訂解碼器「{{name}}」嗎？",
+      "decoderAddedSuccess": "解碼器已成功載入並註冊！",
+      "decoderRefreshedSuccess": "解碼器已更新至最新版本！",
+      "decoderNoUrl": "該解碼器沒有儲存可用於重新整理的 URL。請將其刪除並透過 URL 重新新增。",
+      "decoderRenameConflict": "更新的檔案將此解碼器重命名為「{{name}}」，但已存在同名解碼器。請先刪除衝突的解碼器。",
+      "fetchErrorTitle": "取得失敗",
+      "validationErrorTitle": "驗證失敗"
     },
     "export": {
-      "copyExportCode": "複製匯出代碼",
-      "showQrCode": "顯示二維碼",
-      "hideQrCode": "隱藏二維碼",
+      "copyDeepLink": "複製深層連結",
       "restoreFromClipboard": "從剪貼板恢復",
       "cannotExportInStudy": "在研究中時無法匯出或恢復設定。",
-      "explanatoryText": "可以使用生成的代碼匯出設定和當前切換的感測器集。此代碼可用於在同一設備或另一設備上恢復這些設定。您可以與他人共享代碼，以便他們在收集數據時具有相同的設定。只需將代碼轉發給他們或讓他們在手機上掃描二維碼即可。請注意，由於藍牙感測器依賴於設備，因此不包括藍牙感測器。",
-      "restoreFailedError": "無法從剪貼板恢復設定，請檢查剪貼板是否正確。"
+      "explanatoryText": "可以使用生成的代碼匯出設定和當前切換的感測器集。此代碼可用於在同一裝置或另一裝置上恢復這些設定。您可以與他人共享代碼，以便他們在收集數據時具有相同的設定。只需將代碼轉發給他們或讓他們在手機上掃描二維碼即可。請注意，由於藍牙感測器依賴於裝置，因此不包括藍牙感測器。",
+      "restoreFailedError": "無法從剪貼板恢復設定，請檢查剪貼板是否正確。",
+      "qrCodeTooLarge": "此設定太大，無法顯示為二維碼。請改用「複製深層連結」進行分享。"
     },
     "annotationPresets": {
       "addAnnotationPreset": "新增標註預設",
@@ -650,21 +755,21 @@
       "presetTooLongMessage": "請將標註文本保持在100個字符以下。",
       "addPreset": "新增預設",
       "subscribeToAddMorePresets": "訂閱以新增更多預設",
-      "subscribeToAddMorePresetsMessage": "免費用戶最多隻能有3個標註預設。您始終可以在記錄期間新增無限數量的自定標註。考慮升級到任何級別以新增最多100個預設。",
+      "subscribeToAddMorePresetsMessage": "免費用戶最多只能有3個標註預設。您始終可以在記錄期間新增無限數量的自定標註。考慮升級到任何級別以新增最多100個預設。",
       "okay": "確定",
       "upgradeButton": "升級",
       "maximumPresetsReached": "已達到最大預設數",
-      "maximumPresetsReachedMessage": "您最多隻能有100個標註預設。如果需要更多，請聯繫我們。",
+      "maximumPresetsReachedMessage": "您最多只能有100個標註預設。如果需要更多，請聯繫我們。",
       "deleteAnnotationPreset": "刪除標註預設",
       "deleteAnnotationPresetMessage": "確定要刪除此標註預設嗎？",
       "infoText": "建立標註預設，以便在記錄過程中快速新增帶時間戳的標註。您始終可以在記錄過程中新增自訂標註。這對於標記記錄過程中的重要事件或活動非常有用，便於後期處理、篩選和分析。拖動可重新排序預設。"
     },
     "samplingFrequencies": {
-      "infoText": "每個感測器的採樣頻率取決於設備。實際採樣率可能比這些值慢。建議檢查輸出以確定實際採樣頻率。",
-      "cameraWarning": "頻繁的圖像採樣可能會導致性能問題。將圖像質量設定為\"最低\"可能會有所幫助。或者，更改為視頻模式，可以繞過採樣限制。",
-      "bluetoothWarning": "當許多藍牙設備處於活動狀態時，頻繁的藍牙採樣可能會導致性能問題。",
+      "infoText": "每個感測器的採樣頻率取決於裝置。實際採樣率可能比這些值慢。建議檢查輸出以確定實際採樣頻率。",
+      "cameraWarning": "頻繁的影像採樣可能會導致效能問題。將影像品質設定為\"最低\"可能會有所幫助。或者，更改為影片模式，可以繞過採樣限制。",
+      "bluetoothWarning": "當許多藍牙裝置處於活動狀態時，頻繁的藍牙採樣可能會導致效能問題。",
       "ruleEngineCallout": "使用規則引擎在記錄過程中動態更改採樣。",
-      "maxLabel": "在設備限制範圍內儘可能頻繁地採樣",
+      "maxLabel": "在裝置限制範圍內儘可能頻繁地採樣",
       "upToHz": "最高 %{frequency} Hz",
       "upToSec": "最多每 %{seconds} 秒",
       "upToMin": "最多每 %{minutes} 分鐘",
@@ -686,11 +791,9 @@
     },
     "standardisation": {
       "title": "標準化單位和座標系",
-      "subtitle": "不同平台可能以不同的單位和座標系報告值，這使得跨平台分析變得困難。啟用以協調各平台的定義。",
-      "learnMore": "這會影響什麼？"
+      "subtitle": "不同平台可能以不同的單位和座標系報告值，這使得跨平台分析變得困難。啟用以協調各平台的定義。 若要同時標準化資料處理演算法和濾波器，請查看 Sensor Zoo。"
     },
     "sensorFusion": {
-      "description": "不同平台使用不同的假設和演算法來估算重力、使用者加速度和方向。選擇自訂濾波器，使感測器處理在各平台間使用開源、非黑箱演算法進行標準化。使用自訂濾波器需要滿足以下所有條件：",
       "viewComparison": "檢視即時比較",
       "waitingForData": "等待感測器資料..."
     },
@@ -699,7 +802,7 @@
     },
     "samplingReference": {
       "contributeAnonymously": "匿名提供",
-      "contributeAnonymouslySubtitle": "通過偶爾匿名提供您設備型號的採樣率，幫助其他用戶瞭解實際採樣率。僅共享已啟用感測器的高級聚合統計資訊。",
+      "contributeAnonymouslySubtitle": "通過偶爾匿名提供您裝置型號的採樣率，幫助其他用戶瞭解實際採樣率。僅共享已啟用感測器的進階聚合統計資訊。",
       "viewSamplingReference": "要查看採樣參考，請點擊訪問 %{url}。"
     }
   },
@@ -718,20 +821,17 @@
     },
     "dataStreaming": {
       "title": "數據流",
-      "description": "使用 HTTP 和 MQTT 推送數據。"
+      "description": "使用 HTTP 和 MQTT 推送數據，或將數據記錄提供給你的電腦。"
     },
     "sensorConfiguration": {
       "title": "感測器配置",
       "description": "相機、麥克風、GPS、藍牙和未校準數據的設定。"
     },
     "standardisation": {
-      "description": "標準化單位和座標，並設定自訂感測器融合演算法。"
+      "description": "標準化單位和座標。"
     },
-    "standardisationFusion": {
-      "description": "標準化單位和座標，並設定自訂感測器融合演算法。"
-    },
-    "sensorFusion": {
-      "description": "用於重力、方向和使用者加速度的自訂感測器融合演算法。"
+    "sensorZoo": {
+      "description": "具有自訂開源實作的標準化演算法和濾波器。"
     },
     "samplingFrequencies": {
       "description": "控制測量的採樣頻率。"
@@ -747,7 +847,7 @@
       "description": "標註的預設。"
     },
     "deviceSettings": {
-      "description": "設備的高級設定。"
+      "description": "裝置的進階設定。"
     },
     "exportShareRestore": {
       "description": "使用二維碼共享設定。"
@@ -755,10 +855,10 @@
   },
   "exportFormats": {
     "csvZip": {
-      "description": "將所有數據按感測器匯出為CSV，並打包成zip文件。"
+      "description": "將所有數據按感測器匯出為CSV，並打包成zip檔案。"
     },
     "json": {
-      "description": "將數據打包到單個json文件中，不包括音頻和圖像。"
+      "description": "將數據打包到單個json檔案中，不包括音頻和影像。"
     },
     "combinedCsv": {
       "description": "重新採樣、合併並聚合到單個CSV中，對齊所有時間戳。"
@@ -767,7 +867,7 @@
       "description": "匯出為.xlsx。每個感測器最多10K行，組織成工作表。"
     },
     "kml": {
-      "description": "將GPS數據匯出為KML文件。僅包括位置數據。"
+      "description": "將GPS數據匯出為KML檔案。僅包括位置數據。"
     },
     "sqlite": {
       "description": "匯出到SQLite數據庫，按感測器組織成表。包括元數據和標籤。"
@@ -777,7 +877,7 @@
     "untitled": "無標題",
     "untitledRecording": "無標題數據記錄",
     "renameRecording": "重新命名數據記錄",
-    "fileCount": "找到此數據記錄的 %{count} 個文件",
+    "fileCount": "找到此數據記錄的 %{count} 個檔案",
     "alerts": {
       "missingLocationData": {
         "title": "缺少位置數據",
@@ -855,6 +955,15 @@
     },
     "viewStudy": "查看研究"
   },
+  "sandbox": {
+    "description": "使用即時感測器資料玩迷你遊戲並進行物理實驗。在另一台裝置、手機或電腦上開啟下方連結，然後在此掃描二維碼。",
+    "openInBrowser": "在瀏覽器中開啟",
+    "scanQrCode": "掃描二維碼",
+    "scanQrCodeSubtext": "掃描 Sandbox 二維碼以加入會話",
+    "unavailable": "無法使用",
+    "cameraPermissionRequired": "掃描二維碼需要相機權限。",
+    "noCameraAvailable": "此裝置沒有可用的相機。"
+  },
   "studyDetail": {
     "stats": {
       "daysRemaining": "剩餘天數",
@@ -864,10 +973,10 @@
       "participantsExplanation": "已加入您研究的參與者人數。您最多可以有 %{count} 名參與者。",
       "recordings": "數據記錄",
       "recordingsExplanation": "您的參與者成功上傳到雲的數據記錄總數。",
-      "byobRecordingsExplanation": "由於您已配置自己的數據儲存桶，Sensor Logger無法跟蹤上傳的數據記錄數量。請檢查您的儲存桶以查看已上傳多少數據記錄。",
+      "byobRecordingsExplanation": "由於您已配置自己的數據儲存桶，Sensor Logger無法追蹤上傳的數據記錄數量。請檢查您的儲存桶以查看已上傳多少數據記錄。",
       "storage": "儲存",
       "storageExplanation": "您已為此研究使用 %{studyStorage} GB，所有研究的總儲存空間為 %{totalStorage} GB。最大值為 %{maxStorage} GB。",
-      "loadingStats": "正在加載研究統計數據，需要互聯網連接。"
+      "loadingStats": "正在加載研究統計數據，需要網際網絡連接。"
     },
     "alerts": {
       "deleteStudyTitle": "刪除研究",
@@ -888,8 +997,8 @@
     "modifyContact": "修改研究調查員聯繫方式",
     "modifyInvestigatorName": "修改調查員姓名",
     "enabledSensors": "已啟用感測器",
-    "enabledSensorsInfo": "將為此研究啟用的感測器。如果在您的設備上不可用，某些感測器可能會被禁用。",
-    "fileFormat": "文件格式",
+    "enabledSensorsInfo": "將為此研究啟用的感測器。如果在您的裝置上不可用，某些感測器可能會被禁用。",
+    "fileFormat": "檔案格式",
     "fileFormatInfo": "在發送給調查員之前，您的數據將以此格式儲存。",
     "studySize": "研究規模",
     "sharingMethod": "共享方式",
@@ -902,7 +1011,7 @@
     "questionnaireInfo": "調查員可以使用問卷收集其他資訊。可以在加入研究時和每次記錄結束時提問。",
     "numberOfRules": "規則數量",
     "rulesInfo": "規則是調查員設計的自動化，用於根據特定條件收集數據。",
-    "webhookInfo": "Web鉤子允許調查員在參與者上傳記錄時接收實時通知，並可選擇提供PDF或markdown格式的分析報告。",
+    "webhookInfo": "Webhook允許調查員在參與者上傳記錄時接收實時通知，並可選擇提供PDF或markdown格式的分析報告。",
     "notificationsAndReminders": "通知和提醒",
     "notificationsInfo": "調查員可以使用通知來提醒您記錄或上傳數據。調查員配置發送這些通知的頻率和時間。您可以隨時選擇退出這些通知，而不會影響您參與研究。",
     "createdAt": "建立於",
@@ -934,11 +1043,11 @@
     "sizeXL": "至XL（最多2K名參與者）",
     "changeStudySize": "更改研究規模",
     "changeStudySizeMessage": "更改研究規模以允許更多或更少的參與者加入。如果您將規模減小到少於當前研究中的參與者人數，則新參與者將無法加入。",
-    "shareLink": "分享鏈接",
+    "shareLink": "分享連結",
     "shareQr": "分享二維碼",
     "shareCode": "分享代碼",
-    "shareLinkInstruction1": "與參與者分享鏈接 ",
-    "shareLinkInstruction2": " 。如果他們尚未安裝該應用程序，系統將要求他們安裝。",
+    "shareLinkInstruction1": "與參與者分享連結 ",
+    "shareLinkInstruction2": " 。如果他們尚未安裝該應用程式，系統將要求他們安裝。",
     "downloadSensorLogger": "下載Sensor Logger：www.tszheichoi.com/sensorlogger",
     "scanQrInstruction": "打開相機應用，掃描下面的二維碼並按照說明操作。",
     "openStudiesTabInstruction": "打開Sensor Logger到“研究”選項卡，然後點擊“建立/加入”按鈕。然後點擊“加入研究”。",
@@ -982,9 +1091,9 @@
       "studyEndedMessage4": "無法加入。請聯繫研究調查員。",
       "studyEndedMessage5": "參與者無法再提供數據。您可以延長研究持續時間或刪除研究。",
       "viewingAsInvestigator": "作為調查員查看",
-      "viewingAsInvestigatorMessage": "您可以從“研究”屏幕作為參與者查看研究。",
+      "viewingAsInvestigatorMessage": "您可以從“研究”螢幕作為參與者查看研究。",
       "viewingAsParticipant": "作為參與者查看",
-      "viewingAsParticipantMessage": "您擁有此研究。從“研究”屏幕作為調查員查看它。"
+      "viewingAsParticipantMessage": "您擁有此研究。從“研究”螢幕作為調查員查看它。"
     },
     "descriptionInfo": "調查員描述的研究目的是什麼。",
     "contactInfo": "調查員的聯繫資訊。如果您想了解有關研究的更多資訊、瞭解如何使用您的數據或請求刪除您的數據，可以使用此資訊聯繫調查員。",
@@ -995,22 +1104,22 @@
     "downsample": "下採樣",
     "upsample": "上採樣",
     "namingPatternReset": "命名模式已重置",
-    "namingPatternResetMessage": "由於您選擇的文件格式不執行任何聚合，命名模式已重置為預設值。",
-    "advancedExportFormats": "高級匯出格式",
+    "namingPatternResetMessage": "由於您選擇的檔案格式不執行任何聚合，命名模式已重置為預設值。",
+    "advancedExportFormats": "進階匯出格式",
     "advancedExportFormatsMessage": "匯出組合CSV、Excel、KML或SQLite僅適用於付費訂閱者。",
     "incompatibleNamingPattern": "不兼容的命名模式",
-    "incompatibleNamingPatternMessage": "由於您選擇的文件格式不執行任何聚合，因此無法選擇包含聚合器的命名模式。",
-    "customFileNames": "自定文件名",
-    "customFileNamesMessage": "自定文件名僅適用於付費訂閱者。",
+    "incompatibleNamingPatternMessage": "由於您選擇的檔案格式不執行任何聚合，因此無法選擇包含聚合器的命名模式。",
+    "customFileNames": "自定檔案名",
+    "customFileNamesMessage": "自定檔案名僅適用於付費訂閱者。",
     "help": "幫助",
-    "footerNote": "本地時間是在匯出時確定的，而不是在記錄時確定的。匯出會被暫存。通過定期使用數據記錄屏幕上的\"清除匯出暫存\"按鈕來減少儲存使用，而不會有任何數據丟失的風險。",
+    "footerNote": "本地時間是在匯出時確定的，而不是在記錄時確定的。匯出會被暫存。通過定期使用數據記錄螢幕上的\"清除匯出暫存\"按鈕來減少儲存使用，而不會有任何數據丟失的風險。",
     "exportRecording": "匯出數據記錄",
     "exportRecordings": "匯出 %{count} 個數據記錄",
     "tokens": {
       "name": "名稱",
       "local": "本地",
       "utc": "UTC",
-      "device": "設備",
+      "device": "裝置",
       "platform": "平台",
       "epoch": "紀元",
       "aggregators": "聚合器"
@@ -1047,7 +1156,7 @@
     "whatAreStudies": "什麼是研究？",
     "bullet1": "在小組中收集數據進行研究",
     "bullet2": "從朋友那裡收集數據記錄以供愛好使用",
-    "bullet3": "在各個設備上一致地記錄",
+    "bullet3": "在各個裝置上一致地記錄",
     "foundStudies": "找到 %{count} 個研究。%{activeText}",
     "activeText": " 一個研究已啟動。",
     "cloudStorageExplanation": "所有研究和故事的雲儲存。升級訂閱以增加。",
@@ -1062,34 +1171,34 @@
     "microphoneConfiguration": "麥克風配置",
     "accelerometer": {
       "subtitle": "線性加速度",
-      "description": "測量設備座標系中的加速度。重力的影響已被移除。此後處理由操作系統執行，而非本應用程序。當可用時，將記錄一個名為總加速度的附加文件，其中包含線性加速度和重力加速度矢量的總和。",
-      "units": "以m/s²報告。始終在設備座標系(x, y, z)中。假設g為9.80665m/s²。"
+      "description": "測量裝置座標系中的加速度。重力的影響已被移除。此後處理由作業系統執行，而非本應用程式。當可用時，將記錄一個名為總加速度的附加檔案，其中包含線性加速度和重力加速度矢量的總和。",
+      "units": "以m/s²報告。始終在裝置座標系(x, y, z)中。假設g為9.80665m/s²。"
     },
     "gravity": {
       "subtitle": "重力向量",
       "description": "測量由於重力引起的加速度。這是重力加速度矢量對總加速度矢量的貢獻。",
-      "units": "以m/s²報告。始終在設備座標系(x, y, z)中。假設g為9.80665m/s²。"
+      "units": "以m/s²報告。始終在裝置座標系(x, y, z)中。假設g為9.80665m/s²。"
     },
     "gyroscope": {
       "subtitle": "旋轉速率",
-      "description": "測量設備座標系中的設備旋轉速率。",
+      "description": "測量裝置座標系中的裝置旋轉速率。",
       "units": "角速度以弧度每秒報告，格式為(x, y, z)。"
     },
     "orientation": {
-      "subtitle": "設備方向",
-      "description": "測量設備相對於設備座標系的俯仰、橫滾和偏航。當可用時，四元數也會被記錄。",
+      "subtitle": "裝置方向",
+      "description": "測量裝置相對於裝置座標系的俯仰、橫滾和偏航。當可用時，四元數也會被記錄。",
       "units": "俯仰、橫滾和偏航以弧度報告。四元數以(qx, qy, qz, qw)的形式報告。",
       "warning": "當可用時，建議您使用四元數而不是俯仰、橫滾和偏航。"
     },
     "magnetometer": {
       "subtitle": "磁場",
-      "description": "測量設備座標系中的局部磁場矢量。",
+      "description": "測量裝置座標系中的局部磁場矢量。",
       "units": "以微特斯拉報告。",
       "warning": "讀數可能受到任何強局部磁場的影響。"
     },
     "compass": {
       "subtitle": "磁方位",
-      "description": "測量相對於設備的指南針航向，由局部磁場匯出。不支持設備傾斜補償，因此設備必須保持平放。",
+      "description": "測量相對於裝置的指南針航向，由局部磁場匯出。不支援裝置傾斜補償，因此裝置必須保持平放。",
       "units": "以度數報告。",
       "warning": "讀數可能受到任何強局部磁場的影響。"
     },
@@ -1105,63 +1214,70 @@
       "warning": "GPS感測器的精準度取決於信號強度。"
     },
     "camera": {
-      "subtitle": "圖像或視頻",
-      "description": "根據設定中的相機模式，以設定的間隔擷取圖像或從設備相機連續擷取視頻。如果模式設定為圖像，擷取的圖像將帶有時間戳並與其他測量同步。如果模式設定為視頻，將建立一個單獨的視頻文件。預設不包含音訊，但如果同時啟用麥克風感測器，則會記錄音訊。請參閱文檔了解如何將視頻時間戳與其他感測器數據對齊。無論哪種情況，您可以選擇前置或後置攝像頭，如果您的設備支持多個鏡頭，還可以設定鏡頭偏好（廣角、超廣角、長焦）。",
-      "units": "JPG格式(圖像模式)或MP4格式(視頻模式)。",
-      "warning": "要擷取圖像或視頻，攝像頭取景器必須在屏幕上可見，並且手機屏幕必須處於開啟狀態。當擷取圖像時，您的設備可能會播放快門聲。將設備靜音以防止這種情況，特別是當麥克風感測器啟用時。"
+      "subtitle": "影像或影片",
+      "description": "根據設定中的相機模式，以設定的間隔擷取影像或從裝置相機連續擷取影片。如果模式設定為影像，擷取的影像將帶有時間戳並與其他測量同步。如果模式設定為影片，將建立一個單獨的影片檔案。預設不包含音訊，但如果同時啟用麥克風感測器，則會記錄音訊。請參閱文檔了解如何將影片時間戳與其他感測器數據對齊。無論哪種情況，您可以選擇前置或後置攝像頭，如果您的裝置支援多個鏡頭，還可以設定鏡頭偏好（廣角、超廣角、長焦）。",
+      "units": "JPG格式(影像模式)或MP4格式(影片模式)。",
+      "warning": "要擷取影像或影片，攝像頭取景器必須在螢幕上可見，並且手機螢幕必須處於開啟狀態。當擷取影像時，您的裝置可能會播放快門聲。將裝置靜音以防止這種情況，特別是當麥克風感測器啟用時。"
     },
     "heartRate": {
       "subtitle": "來自配對手錶",
-      "description": "從配套手錶應用程序測量BPM心率。記錄開始時手錶應用程序必須在前台才能開始心率測量。隨後手錶應用程序可以進入後台，測量將繼續。",
+      "description": "從配套手錶應用程式測量BPM心率。記錄開始時手錶應用程式必須在前台才能開始心率測量。隨後手錶應用程式可以進入後台，測量將繼續。",
       "frequency": "不可配置。採樣率可能不可預測。第一次測量到達之前可能有很長的延遲。",
       "units": "每分鐘心跳數(BPM)。",
       "warning": "要使此感測器工作，您需要授予手錶上的心率測量權限。",
       "warningIos": " 這可以在手錶上的設定 > 健康 > 應用 > Sensor Logger中完成。",
-      "warningEnd": " 此應用程序只會監控心率感測器，不會讀取手機上的其他健康數據。它也不會寫入任何健康數據。"
+      "warningEnd": " 此應用程式只會監控心率感測器，不會讀取手機上的其他健康數據。它也不會寫入任何健康數據。"
     },
     "wristMotion": {
       "subtitle": "來自配對手錶",
       "description": "記錄手腕上手錶的運動相關讀數。這包括旋轉速率(x, y和z)、重力矢量(x, y和z)、加速度(x, y和z)和四元數姿態。",
       "frequency": "不可配置，通常為100Hz",
-      "units": "與手機上相應感測器相同的單位。",
-      "warning": "如果手錶應用程序在前台且手錶屏幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。這間接啟用了手腕運動數據的後台記錄。"
+      "units": "加速度和重力向量以標準重力 (g) 報告，與手機使用的 m/s² 不同。啟用「標準化單位和座標系」後，兩者都將轉換為 m/s² 以與手機一致。所有其他值與手機上相應感測器相同。手錶的未校準加速度計資料流採用相同的單位。",
+      "warning": "如果手錶應用程式在前台且手錶螢幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。這間接啟用了手腕運動數據的後台記錄。"
     },
     "watchLocation": {
       "subtitle": "來自配對手錶",
       "description": "記錄手腕上手錶的位置讀數。",
       "frequency": "不可配置。",
       "units": "與手機上相應感測器相同的單位。",
-      "warning": "如果手錶應用程序在前台且手錶屏幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。這間接啟用了位置數據的後台記錄。"
+      "warning": "如果手錶應用程式在前台且手錶螢幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。這間接啟用了位置數據的後台記錄。"
     },
     "watchBarometer": {
       "subtitle": "來自配對手錶",
       "description": "記錄手腕上手錶的氣壓計讀數。",
       "frequencyIos": "大約每2.5秒一次(0.4Hz)。不可配置。",
-      "frequencyAndroid": "取決於設備型號。不可配置。",
-      "units": "與手機上相應感測器相同的單位。",
-      "warning": "如果手錶應用程序在前台且手錶屏幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。這間接啟用了氣壓計數據的後台記錄。"
+      "frequencyAndroid": "取決於裝置型號。不可配置。",
+      "units": "壓力以 kPa 報告，與手機使用的毫巴不同。相對高度以米為單位，與手機相同。啟用「標準化單位和座標系」後，壓力將轉換為毫巴以與手機一致。",
+      "warning": "如果手錶應用程式在前台且手錶螢幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。這間接啟用了氣壓計數據的後台記錄。"
     },
     "watchMagnetometer": {
       "subtitle": "來自配對手錶",
       "description": "記錄手腕上手錶的磁力計讀數。",
       "frequencyIos": "不可配置，通常為100Hz。",
-      "frequencyAndroid": "取決於設備型號。不可配置。",
+      "frequencyAndroid": "取決於裝置型號。不可配置。",
       "units": "與手機上相應感測器相同的單位。",
-      "warning": "如果手錶應用程序在前台且手錶屏幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。這間接啟用了磁力計數據的後台記錄。"
+      "warning": "如果手錶應用程式在前台且手錶螢幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。這間接啟用了磁力計數據的後台記錄。"
     },
     "watchCompass": {
       "subtitle": "來自配對手錶",
       "description": "測量相對於手錶的指南針航向。",
       "frequencyIos": "不可配置。",
-      "frequencyAndroid": "取決於設備型號。不可配置。",
+      "frequencyAndroid": "取決於裝置型號。不可配置。",
       "units": "以度數報告。",
-      "warning": "讀數可能受到任何強局部磁場的影響。如果手錶應用程序在前台且手錶屏幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。"
+      "warning": "讀數可能受到任何強局部磁場的影響。如果手錶應用程式在前台且手錶螢幕開啟，這些感測器將始終工作。如果您想要後台記錄，還必須啟用心率感測器並授予相關權限。"
+    },
+    "watchMicrophone": {
+      "subtitle": "來自配對手錶",
+      "description": "記錄手錶內置麥克風的音訊和強度 (dBFS)。",
+      "frequency": "音訊為 16kHz 單聲道 AAC。強度 (dBFS) 採樣率為 10Hz。不可配置。",
+      "units": "強度單位為 dBFS。音訊格式為 .mp4。",
+      "warning": "如果手錶應用程式在前台且手錶螢幕開啟，這些感測器將始終工作。如果您需要背景記錄，您還必須啟用心率感測器並授予相關權限。這將間接啟用麥克風資料的背景記錄。"
     },
     "microphone": {
       "subtitle": "音頻和電平",
       "description": "返回與其他測量時間戳同步的音頻錄音。還返回dBFS(相對於滿量程的分貝)響度測量，其中0 dBFS的級別是最大可能的數字級別。有關更多資訊，請參見wikipedia.org/wiki/DBFS。",
       "frequency": "您可以使用開始記錄按鈕旁邊的齒輪圖標在有損和無損之間更改壓縮。響度的採樣頻率無法調整。",
-      "units": "以dbFS表示響度。音頻格式為.mp4，採樣率根據配置而變化。",
+      "units": "以dBFS表示響度。音頻格式為.mp4，採樣率根據配置而變化。",
       "warning": "請注意，Sensor Logger始終使用手機上的麥克風，而不是任何連接的耳機。"
     },
     "light": {
@@ -1172,39 +1288,39 @@
     },
     "pedometer": {
       "subtitle": "步數統計",
-      "description": "記錄自記錄會話開始以來所走的步數。這是由操作系統計算的，而非Sensor Logger。",
+      "description": "記錄自記錄會話開始以來所走的步數。這是由作業系統計算的，而非Sensor Logger。",
       "frequency": "不可配置。",
       "units": "以步數測量。",
       "warning": "在計數步數之前可能會有幾秒鐘的延遲。因此，請確保您的記錄時間足夠長，以擷取您想要計數的所有步數。"
     },
     "headphone": {
       "subtitle": "AirPods 移動",
-      "description": "記錄來自AirPods無線藍牙耳塞的運動讀數。您可以將其用於頭部跟蹤等應用。這包括加速度(x, y和z)、重力矢量(x, y和z)、旋轉速率(x, y和z)和姿態。由於限制，一次只有一個耳塞記錄運動數據。活動耳塞由sensorLocation字段指示。",
+      "description": "記錄來自AirPods無線藍牙耳塞的運動讀數。您可以將其用於頭部追蹤等應用。這包括加速度(x, y和z)、重力矢量(x, y和z)、旋轉速率(x, y和z)和姿態。由於限制，一次只有一個耳塞記錄運動數據。活動耳塞由sensorLocation字段指示。",
       "frequency": "不可配置且可變，最新型號最高25Hz，較舊型號15Hz。",
-      "units": "與手機上相應感測器相同的單位。",
-      "warning": "您必須佩戴配對的AirPods——您可以同時佩戴兩個或只佩戴一個耳塞。如果您在AirPods設定中關閉'自動耳朵檢測'，只要它們連接到您的手機，就可以在不在耳朵中時記錄AirPods的運動。"
+      "units": "加速度以標準重力 (g) 報告，而重力向量已經是 m/s²，因此兩者不同。啟用「標準化單位和座標系」後，加速度也將轉換為 m/s²，使兩者與手機一致。所有其他值與手機上相應感測器相同。",
+      "warning": "您必須佩戴配對的AirPods，您可以同時佩戴兩個或只佩戴一個耳塞。如果您在AirPods設定中關閉'自動耳朵檢測'，只要它們連接到您的手機，就可以在不在耳朵中時記錄AirPods的運動。"
     },
     "battery": {
       "subtitle": "電池電量",
-      "description": "測量設備的電池電量。還記錄電池狀態(充電中、已充滿等)。負值表示電池狀態未知。",
+      "description": "測量裝置的電池電量。同時記錄電池狀態（充電中、已充滿等）和低電量模式狀態。在支援的裝置上，還會額外記錄電池電壓、充電電流和整體電池健康狀況。",
       "frequency": "以1Hz採樣，不可配置。",
-      "units": "以分數報告，例如0.5為50%。"
+      "units": "電量百分比小數（例如 0.5 代表 50%），狀態為字串。在支援的裝置上，電壓單位為伏特，電流單位為毫安培（mA），健康狀況為字串。"
     },
     "batteryTemp": {
       "subtitle": "電池溫度",
-      "description": "測量設備的電池溫度。",
+      "description": "測量裝置的電池溫度。",
       "frequency": "以1Hz採樣，不可配置。",
       "units": "以攝氏度報告。"
     },
     "brightness": {
-      "subtitle": "屏幕亮度",
-      "description": "測量設備屏幕的亮度。這對於確定屏幕是開啟還是關閉很有用。如果啟用了自動亮度，在支持的設備上，這些值也可以作為環境亮度的代理。",
+      "subtitle": "螢幕亮度",
+      "description": "測量裝置螢幕的亮度。這對於確定螢幕是開啟還是關閉很有用。如果啟用了自動亮度，在支援的裝置上，這些值也可以作為環境亮度的代理。",
       "frequency": "以1Hz採樣，不可配置。",
       "units": "以分數報告，例如0.5為50%。"
     },
     "network": {
-      "subtitle": "網絡類型和質量",
-      "description": "報告有關網絡連接類型及其質量的資訊。這包括網絡類型(例如WiFi、蜂窩)等。如果GPS感測器不可用，這也可用作設備位置的代理。",
+      "subtitle": "網絡類型和品質",
+      "description": "報告有關網絡連接類型及其品質的資訊。這包括網絡類型(例如WiFi、蜂窩)等。如果GPS感測器不可用，這也可用作裝置位置的代理。",
       "frequency": "以2Hz採樣，不可配置。",
       "units": "類型可以是none、unknown、cellular、wifi、Bluetooth、ethernet、wimax、vpn或other之一。強度是0到100之間的數字。IP地址是外部IP地址。可以是IPv4或IPv6。頻率是網絡頻率。例如，2.4GHz將返回2457。蜂窩代數可以是2g、3g、4g、5g或null之一。"
     },
@@ -1216,7 +1332,7 @@
     },
     "activity": {
       "subtitle": "步行、跑步、駕駛",
-      "description": "跟蹤自記錄會話開始以來的運動活動，如步行、跑步、騎自行車或駕駛。這是由操作系統估算的，而不是Sensor Logger。",
+      "description": "追蹤自記錄會話開始以來的運動活動，如步行、跑步、騎自行車或駕駛。這是由作業系統估算的，而不是Sensor Logger。",
       "frequency": "事件驅動，這意味著只有在活動發生變化時才會記錄新數據。不可配置。",
       "units": "活動類型可以是步行、跑步、騎自行車、汽車、靜止、傾斜或未知之一。置信度可以是低、中、高或未知之一。"
     },
@@ -1232,6 +1348,9 @@
       "connectable": "可連線",
       "notConnectable": "不可連線",
       "deviceWarning": "藍牙數據僅在應用程式開啟且螢幕亮起時記錄。您可能需要在手機設定中配對此裝置才能查看更多資訊，例如其名稱。名稱中的所有逗號都替換為破折號；在CSV匯出中，逗號分隔的列表用豎線分隔。",
+      "statusActive": "活躍",
+      "statusIdle": "閒置",
+      "statusOffline": "離線",
       "missingPermissions": "缺少權限",
       "bluetoothPermissionMessage": "您需要在設定中授予藍牙權限才能使用此功能。"
     }
@@ -1246,5 +1365,146 @@
     "feedbackMessage": "我們注意到您已取消訂閱Sensor Logger。我們很想聽聽您對如何改進Sensor Logger的反饋。您願意提供反饋嗎？",
     "noThanks": "不用了，謝謝",
     "provideFeedback": "提供反饋"
+  },
+  "deepLinks": {
+    "annotationTitle": "標註",
+    "notRecording": "沒有正在進行的記錄。請先開始記錄再新增標註。",
+    "noAnnotationText": "請提供標註文本，例如 sensorlogger://annotate/pothole",
+    "annotationBanner": "已新增標註: %{text}",
+    "featureEnabledTitle": "功能已啟用",
+    "featureEnabledMessage": "已啟用「%{flag}」功能。",
+    "unknownFlagTitle": "未知功能",
+    "unknownFlagMessage": "此版本的 Sensor Logger 不支援「%{flag}」功能。"
+  },
+  "cloudScreen": {
+    "notVerifiedYet": "尚未驗證",
+    "notVerifiedYetMessage": "您的電子郵件尚未驗證。請先點擊收件匣中的連結，然後再試一次。",
+    "upgradeStorage": "升級儲存空間",
+    "cloudStorage": "雲端儲存",
+    "bannerDescription": "Sensor Logger 的配套雲端服務，用於託管 Studies、Stories 和備份。",
+    "cloudStorageDescription": "安全託管您的 Studies（即參與者上傳的數據記錄）、Stories 和備份（即您自己上傳的數據記錄）。",
+    "backups": "備份",
+    "enableBackups": "啟用備份",
+    "enableBackupsDescription": "自動備份您的數據記錄，稍後可在網頁或其他裝置上下載。您還可以將先前備份的數據記錄重新匯入此裝置。",
+    "storageFull": "儲存空間已滿",
+    "storageFullMessage": "您的雲端儲存空間已達上限。請升級您的儲存訂閱以啟用備份。",
+    "emailNotVerified": "電子郵件未驗證",
+    "emailNotVerifiedMessage": "啟用備份前請先驗證您的電子郵件地址。您將使用此電子郵件在其他裝置上存取您的備份。",
+    "checkingEmail": "正在檢查電子郵件驗證狀態...",
+    "verificationSent": "驗證碼已發送到 %{email}。請檢查您的收件匣並在下方輸入 6 位數驗證碼進行驗證。",
+    "checkVerification": "驗證此驗證碼",
+    "changeEmail": "更改信箱",
+    "emailForBackups": "用於備份的電子郵件",
+    "enterEmail": "輸入您的電子郵件",
+    "sendVerification": "傳送驗證碼",
+    "freshInstallInfo": "如果您已購買過 Sensor Logger 並且這是全新安裝，您可能需要恢復購買才能查看先前的備份。",
+    "manageBackups": "管理備份",
+    "useMobileData": "使用流動數據",
+    "useMobileDataDescription": "允許在沒有 Wi-Fi 時使用流動數據進行備份。",
+    "missingEmail": "缺少電子郵件",
+    "missingEmailMessage": "請先輸入備份電子郵件地址。",
+    "accessBackupsOnWeb": "使用您的電子郵件存取 sensorlogger.app/backups，即可在任何地方存取您的數據記錄。",
+    "accessBackupsOnWebFull": "使用您的電子郵件存取 sensorlogger.app/backups，即可在任何地方透過網頁、API 或智慧代理存取您的數據記錄。",
+    "verificationCode": "驗證碼",
+    "enterVerificationCode": "輸入 6 位數驗證碼",
+    "invalidCode": "無效的驗證碼",
+    "invalidCodeMessage": "請輸入有效的 6 位數驗證碼。"
+  },
+  "backupsScreen": {
+    "downloadIncomplete": "下載不完整。請檢查網絡連線後再試一次。",
+    "fetchFailedTitle": "無法載入備份",
+    "fetchFailedSubtitle": "請檢查網絡連線，然後點擊重新整理再試一次。",
+    "keepAppOpen": "請保持 Sensor Logger 開啟以完成備份。",
+    "wifiOnlyNote": "備份僅在 Wi-Fi 下上傳。",
+    "waitingForWifi": "目前使用流動數據，備份已暫停。連接 Wi-Fi 後將自動繼續。",
+    "waitingForConnection": "無網絡連線。恢復連線後備份將自動繼續。",
+    "sortOptions": {
+      "largest": "從大到小",
+      "smallest": "從小到大",
+      "thisDeviceFirst": "本裝置優先",
+      "otherDevicesFirst": "其他裝置優先"
+    },
+    "downloadFailed": "下載失敗",
+    "invalidLocalPath": "備份本地路徑無效。",
+    "genericDownloadError": "下載數據記錄時出錯。",
+    "deleteBackup": "刪除備份",
+    "deleteBackupConfirmation": "您確定要從雲端永久刪除「%{name}」嗎？此操作無法撤銷。",
+    "fromThisDevice": "來自此裝置",
+    "fromAnotherDevice": "來自其他裝置",
+    "pendingUpload": "等待上傳",
+    "quotaExceeded": "已超過儲存空間配額",
+    "uploadingStatus": "正在上傳...",
+    "syncingMetadata": "正在同步中繼資料",
+    "backedUp": "已備份",
+    "activityQueue": "傳輸清單",
+    "activityQueueWithCount": "傳輸清單 (%{count})",
+    "loadingBackups": "正在載入備份",
+    "fetchingBackups": "正在獲取您的備份...",
+    "noBackupsFound": "未找到備份",
+    "noBackupsFoundSubtitle": "上傳後，您的備份將顯示在這裡。",
+    "backupsDisabled": "備份已停用",
+    "backupsDisabledSubtitle": "在「雲端」分頁中啟用備份，以查看等待上傳佇列並自動同步數據記錄。",
+    "everythingBackedUp": "全部已備份",
+    "everythingBackedUpSubtitle": "您的所有本地數據記錄已成功上傳並同步。"
+  },
+  "healthCheck": {
+    "title": "健康檢查",
+    "locationTitle": "背景定位",
+    "locationStatusAlways": "已允許",
+    "locationStatusWarning": "受限",
+    "locationDescription": "定位權限必須設定為「一律允許」，應用程式才能在背景記錄資料。",
+    "storageTitle": "儲存空間",
+    "storageStatusOk": "充足",
+    "storageStatusWarning": "不足",
+    "storageDescription": "確保您的裝置有足夠的空間（>2GB 可用空間）進行長時間的記錄。",
+    "batteryOptTitle": "電池最佳化",
+    "batteryOptStatusOk": "未受限",
+    "batteryOptStatusWarning": "已最佳化",
+    "batteryOptDescription": "將電池最佳化設定為「未受限」，可防止系統在背景提前停止記錄。",
+    "batteryTitle": "電量水準",
+    "batteryStatusOk": "良好",
+    "batteryStatusWarning": "偏低",
+    "batteryStatusCharging": "充電中",
+    "batteryDescription": "確保您的電量充足，或將裝置接上電源以確保連續運作。",
+    "keepAwakeTitle": "螢幕常亮",
+    "keepAwakeDescription": "某些感測器（如藍牙和相機）需要保持螢幕常亮才能持續記錄數據。",
+    "keepAwakeStatusEnabled": "已啟用",
+    "keepAwakeStatusDisabled": "已停用（需要）",
+    "keepAwakeStatusNotRequired": "已停用（不需要）",
+    "lowPowerTitle": "低電量模式",
+    "lowPowerDescription": "低電量模式會限制背景程式和感測器記錄。請在系統設定中將其關閉以獲得最佳效果。",
+    "lowPowerStatusOn": "已啟用",
+    "lowPowerStatusOff": "已停用",
+    "fixButton": "修復",
+    "grantButton": "授權",
+    "enableButton": "啟用",
+    "openSettingsButton": "開啟設定",
+    "checking": "檢查中...",
+    "unknown": "未知",
+    "freeSpace": "剩餘 {{size}}"
+  },
+  "fileServer": {
+    "intro": "從同一網絡上的電腦瀏覽和下載您的數據記錄。數據直接由此手機傳送到您的電腦。",
+    "start": "啟動本機伺服器",
+    "stop": "停止伺服器",
+    "port": "連接埠",
+    "portPromptMessage": "請輸入 %{min} 到 %{max} 之間的連接埠號碼。",
+    "invalidPortTitle": "連接埠無效",
+    "stats": "%{requests} 個請求 · 已傳送 %{sent} · %{connections} 個連線",
+    "noWifi": "請將此手機連接 Wi-Fi，或開啟熱點並將電腦連接到該熱點。",
+    "address_wifi": "Wi-Fi",
+    "address_hotspot": "熱點",
+    "address_usb": "USB",
+    "address_ethernet": "以太網",
+    "startError": "無法啟動伺服器。",
+    "stoppedInBackground": "應用程式進入背景時伺服器已停止。",
+    "ipChanged": "此手機的網絡地址已變更。請重新啟動伺服器以取得新連結。",
+    "goodToKnow": "須知事項",
+    "tipSameNetwork": "您的電腦必須與此手機連接同一個網絡。",
+    "tipPrivateLink": "連結包含一組私人代碼，每次啟動伺服器都會變更。",
+    "tipForeground": "傳輸期間請保持此螢幕開啟，螢幕會自動保持喚醒。",
+    "tipIsolation": "部分訪客和辦公室網絡會阻止裝置互相通訊，此時請改用此手機的個人熱點。",
+    "settingsDescription": "從您網絡上的電腦瀏覽和下載數據記錄。",
+    "starting": "啟動中…"
   }
 }

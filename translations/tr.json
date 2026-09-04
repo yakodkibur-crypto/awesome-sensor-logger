@@ -39,7 +39,10 @@
     "rulesEditor": "Kural Düzenleyici",
     "rulesGallery": "Kural Galerisi",
     "rulesHelp": "Kural Yardımı",
-    "rulesSettings": "Kural Ayarları"
+    "rulesSettings": "Kural Ayarları",
+    "ruleTrigger": "Kural Tetikleyici",
+    "healthCheck": "Sağlık Kontrolü",
+    "fileServer": "Dosya Sunucusu"
   },
   "quickActions": {
     "toggleRecording": "Kaydı Aç/Kapat",
@@ -58,6 +61,7 @@
     "tags": "Etiketler",
     "export": "Dışa Aktar",
     "select": "Seç",
+    "selectAll": "Tümü",
     "add": "Ekle",
     "later": "Daha Sonra",
     "continue": "Devam",
@@ -65,7 +69,9 @@
     "openSettings": "Ayarları Aç",
     "upgrade": "Yükselt",
     "error": "Hata",
-    "discard": "Vazgeç"
+    "discard": "Vazgeç",
+    "upload": "Yükle",
+    "success": "Başarılı"
   },
   "license": {
     "activated": "Lisans Etkinleştirildi",
@@ -138,7 +144,7 @@
     "howDoesItWorkDescription": "Bu kaydı Sensor Logger Cloud'a yükleyin. Yüklendikten sonra, Hikayeyi web'de görüntülemek ve oluşturmak için bir bağlantınız olacak. Bağlantıyı başkalarıyla paylaşmadığınız sürece, yüklenen kayda ve oluşturulan Hikayeye yalnızca siz erişebilirsiniz.",
     "viewExamples": "Örnekleri Görüntüle",
     "viewExamplesDescription": "İlham almak için örnek Hikaye galerisini görüntülemek üzere dokunun.",
-    "freeFootnote": "Hikaye ücretsiz kullanılabilir. Her kullanıcı 100MB ücretsiz Sensor Logger Cloud depolama alanı alır. Daha fazla yüklemek isterseniz, ücretli katmanlardan birine yükseltmeyi düşünün.",
+    "freeFootnote": "Hikaye ücretsiz kullanılabilir. Her kullanıcı az miktarda ücretsiz Sensor Logger Cloud depolama alanı alır. Daha fazla yüklemek isterseniz, ücretli katmanlardan birine yükseltmeyi düşünün.",
     "whatsNext": "Sırada Ne Var?",
     "whatsNextDescription": "Bu kayıt eklenmiş yeni bir Hikaye oluşturuldu. Devam etmek için bu bağlantıyı herhangi bir tarayıcıda ziyaret edin. Hikayenizi orada düzenler ve oluşturursunuz. ",
     "viewStory": "Hikayeyi Görüntüle",
@@ -241,6 +247,7 @@
     "generateNewLink": "Yeni Bağlantı Oluştur"
   },
   "recordings": {
+    "backup": "Yedekle",
     "noRecordings": "Kayıt Yok",
     "createRecordings": "Kaydedici kullanarak kayıt oluşturun.",
     "noMatchingTags": "Seçilen etiketlerle eşleşen kayıt yok.",
@@ -276,7 +283,7 @@
     "subscribe": "Abone Ol",
     "subscribeSubtext": "Ek ücretli özellikler",
     "cloud": "Sensor Logger Cloud",
-    "cloudSubtext": "Çalışmalar ve Hikayeler için depolama",
+    "cloudSubtext": "Çalışmalar, Hikayeler ve Yedekleme için",
     "appIcon": "Uygulama Simgesi",
     "appIconSubtext": "Simgeyi Değiştir",
     "language": "Dil",
@@ -293,12 +300,18 @@
     "privacySubtext": "Özet: Verileriniz gizli kalır",
     "aboutItem": "Hakkında",
     "aboutSubtext": "Sensor Logger web sitesi",
+    "loggerLabsSubtext": "Diğer uygulamaları keşfedin",
     "unitReference": "Birim Referansı",
     "unitSubtext": "Birimler rehberi",
     "coordinateReference": "Koordinat Referansı",
     "coordinateSubtext": "Eksen tanımları rehberi",
     "samplingReference": "Örnekleme Referansı",
     "samplingSubtext": "Örnekleme hızları rehberi",
+    "deepLinksReference": "Derin bağlantı referansı",
+    "deepLinksSubtextIos": "iOS Kısayolları ile otomatikleştirin",
+    "deepLinksSubtextAndroid": "Kolay otomasyon için",
+    "sandboxSubtext": "Mini oyunlar ve deneyler",
+    "zooSubtext": "Açık kaynak algoritmalar",
     "emailSupport": "E-posta Desteği",
     "emailSubtext": "Pro ve Ultimate kullanıcılar için",
     "versionBuild": "Sürüm %{version} Yapı %{build}",
@@ -306,7 +319,9 @@
     "moreInspiration": "Daha Fazla İlham",
     "physicist": "Fizikçi",
     "reservedColours": "Ayrılmış Renkler",
-    "reservedColoursMessage": "Bu renk abonelere ayrılmıştır. Bu rengin kilidini açmak için Sensor Logger'a abone olun."
+    "reservedColoursMessage": "Bu renk abonelere ayrılmıştır. Bu rengin kilidini açmak için Sensor Logger'a abone olun.",
+    "healthCheck": "Sağlık Kontrolü",
+    "healthCheckSubtext": "Kayıt Sorunlarını Teşhis Et"
   },
   "sensorSettings": {
     "waitingForData": "Veri Bekleniyor",
@@ -317,13 +332,15 @@
     "samples": "Örnekler",
     "connectingDevice": "Ek veri için cihaza bağlanılıyor.",
     "totalAccelerationWarning": "Sensor Logger toplam ivmeyi (yerçekimi dahil) gösteriyor çünkü cihazınızda yerçekimsiz ivme kaydetmek için gerekli sensörler bulunmuyor.",
-    "compassCalibrationWarning": "Hem 'Pusula Kalibrasyonu' hem de 'Hareket Kalibrasyonu ve Mesafe' Ayarlar > Gizlilik ve Güvenlik > Konum Servisleri > Sistem Servisleri'nde etkinleştirilmelidir, aksi takdirde veri 0 olarak raporlanır.",
+    "compassCalibrationWarning": "Hem 'Pusula Kalibrasyonu' hem de 'Hareket Kalibrasyonu ve Mesafe' Ayarlar > Gizlilik ve Güvenlik > Konum Servisleri > Sistem Servisleri'nde etkinleştirilmelidir, aksi takdirde veri 0 olarak raporlanır veya dosyalar boş olur.",
     "latestReadings": "Son Okumalar",
     "waitingForSensor": "Sensörden veri alınması bekleniyor...",
     "liveReadings": "Bu sensörden canlı okumalar aşağıda gösterilmektedir.",
     "decodedData": "Çözümlenmiş Veri",
     "waitingForAdditional": "Sensörden ek veri bekleniyor...",
     "decodedInfo": "Aşağıdaki bilgiler çözümlendi. Kopyalamak için dokunun.",
+    "deviceInformation": "Cihaz Bilgisi",
+    "deviceInformationDescription": "Bağlı cihazdan okundu.",
     "sensorInformation": "Sensör Bilgisi",
     "sensorInfoDescription": "Cihaz üreticisi bu sensör hakkında aşağıdaki bilgileri sağlamıştır. Kopyalamak için dokunun.",
     "bluetoothResources": "Bluetooth Kaynakları",
@@ -365,6 +382,8 @@
     "copied": "Kopyalandı",
     "noPlottableData": "Çizilebilir Veri Yok",
     "noPlottableDataSubtitle": "Bu Bluetooth verisi çizilebilir alan içermiyor.",
+    "variableFormatTitle": "Değişken Formatlı Veri",
+    "variableFormatSubtitle": "Bu sensör çizilemeyecek değişken alanlar raporluyor. Verileri görüntülemek için lütfen JSON olarak dışa aktarın.",
     "selectData": "Veri Seç",
     "displayInDegrees": "Derece Olarak Göster",
     "proportionalScale": "Orantılı Ölçek",
@@ -387,7 +406,16 @@
     "altitude": "Yükseklik",
     "map": "Harita",
     "coords": "Koordinatlar",
-    "address": "Adres"
+    "address": "Adres",
+    "wkbrew": "WKBrew",
+    "wkbrewEncoding": "Bağlantı oluşturuluyor",
+    "wkbrewEncodingNotReady": "İz kodlanıyor, bu biraz sürebilir.",
+    "wkbrewExplanation": "WKBrew, geometri görüntülemek, paylaşmak ve dönüştürmek için ücretsiz bir araçtır. Aşağıdaki bağlantı, bu kaydın GPS izini tamamen URL içinde kodlar ve başka hiçbir yerde veri saklanmaz. İzi görüntülemek veya GeoJSON, WKT ve daha fazlasına dönüştürmek için bağlantıyı herhangi bir tarayıcıda açın.",
+    "wkbrewCopyLink": "Bağlantıyı Kopyala",
+    "wkbrewOpen": "Tarayıcıda Aç",
+    "wkbrewSimplified": "WKBrew'in URL uzunluk sınırına uyması için bağlantı, kaydedilen %{total} noktadan %{used} tanesiyle basitleştirilmiş bir izi kodlar.",
+    "wkbrewLimitedFootnote": "Grafik çözünürlüğü şu anda düşürülmüş durumda, bu nedenle bağlantı kaydedilen her noktayı değil, görüntülenen izi kodlar.",
+    "summary": "Özet"
   },
   "logger": {
     "startRecording": "Kaydı Başlat",
@@ -397,17 +425,21 @@
     "seconds": "saniye",
     "note": "Not:",
     "httpPush": "HTTP Push",
-    "skipWriting": "Yazmayı Atla",
+    "skipWriting": "Yalnızca Akış, Yerel Kayıt Yok",
     "mqtt": "MQTT",
     "mqttPush": "MQTT Push",
     "mqttSubscribe": "MQTT Abone Ol",
     "coordinatesCloaked": "Koordinatlar Gizlendi",
-    "checkpointEnabled": "Kontrol Noktası Etkin",
+    "checkpointEnabledHour": "Kontrol Noktası Etkin (Saatte Bir)",
+    "checkpointEnabledHours": "Kontrol Noktası Etkin (%{value} Saatte Bir)",
     "ntpEnabled": "NTP Etkin",
+    "locationPrewarming": "Location Ön Isıtma (Bekleniyor)",
+    "locationPrewarmingAccuracy": "Location Ön Isıtma (±%{accuracy} m)",
     "oneRuleEnabled": "1 Kural Etkin",
     "nRulesEnabled": "%{count} Kural Etkin",
     "endRecordingConfirm": "Bu kayıt oturumunu bitirmek istediğinizden emin misiniz?",
     "continueRecording": "Kaydı Sürdür",
+    "recordingTapToWake": "Kayıt yapılıyor (uyandırmak için dokunun)",
     "endNow": "Şimdi Bitir",
     "renameRecording": "Kaydı Yeniden Adlandır",
     "saveAndExport": "Kaydet ve Dışa Aktar",
@@ -450,6 +482,8 @@
     "uploadToCloud": "Çalışma araştırmacısının daha sonra indirebilmesi için kaydı Sensor Logger Cloud'a yükleyin.",
     "uploadToBucket": "Kaydı araştırmacının kurduğu depolama Bucket'ına yükleyin.",
     "uploadNow": "Şimdi Yükle",
+    "uploadAndDelete": "Yükle ve Sil",
+    "uploadAndDeleteMessage": "Bu kayıt başarıyla yüklendikten sonra cihazınızdan silinecektir.",
     "uploadInstructions": "Yükleme Talimatları",
     "uploadInstructionsDefault": "Çalışma araştırmacısı yükleme talimatı sağlamamıştır. Daha fazla bilgi için çalışma araştırmacısıyla iletişime geçebilirsiniz.",
     "unknownDelivery": "Bilinmeyen Teslim Mekanizması",
@@ -462,12 +496,18 @@
     "clear": "Temizle",
     "scanning": "Taranıyor",
     "scan": "Tara",
+    "potentialConfigIssues": "Olası Yapılandırma Sorunları",
     "tapToScanDevices": "Tek tek cihazları taramak için dokunun",
+    "sensorEnabled": "Etkin",
+    "sensorDisabled": "Devre Dışı",
     "allBluetoothSensors": "Tüm Bluetooth Sensörleri",
     "bluetoothUpgradeMessage": "Tüm Bluetooth sensörlerini aynı anda kaydetmenin kilidini açmak için yükseltin veya tek tek sensörleri ücretsiz tarayın ve etkinleştirin.",
+    "recoveredStudyTitle": "Kurtarılan Kayıt",
+    "recoveredStudyMessage": "Son Çalışma oturumunuzdan bir kayıt bulduk.",
     "hintBar": {
       "studyActive": "Çalışma Aktif",
       "studyActiveMessage": "\"%{studyName}\" çalışmasına katılım. Ayarlar belirlenmiş. Daha fazlası için dokunun.",
+      "studySettingsLocked": "Buradaki yapılandırma araştırmacı tarafından belirlenmiştir. Bunları değiştirmek için çalışmadan ayrılın.",
       "exporting": "Kayıt Dışa Aktarılıyor...",
       "uploading": "Kayıt Yükleniyor: %{progress}%",
       "keepAppOpen": "Yükleme tamamlanana kadar uygulamayı açık tutun."
@@ -486,6 +526,9 @@
     "language": "Dil",
     "troubleshooting": "Sorun giderme için tszheichoi.com/sensorloggerhelp adresini ziyaret etmek üzere dokunun",
     "resetToDefaults": "Varsayılanlara Sıfırla",
+    "restoreSettingsTitle": "Ayarları Varsayılanlara Geri Yükle",
+    "restoreSettingsMessage": "Tüm ayarları varsayılan değerlerine geri yüklemek istediğinizden emin misiniz? Topladığınız veriler bundan etkilenmeyecektir.",
+    "restore": "Geri Yükle",
     "sendPhotos": "Görüntü Gönder",
     "sendPhotosSubtitle": "Kamera etkinken yüke görüntüleri dahil edin. Görüntüler JPEG baytlarının base64 dizesi olarak kodlanır. Video modu desteklenmez.",
     "skipWritingTitle": "Yazmayı Atla",
@@ -499,6 +542,7 @@
       "microphone": "Mikrofon",
       "location": "Konum",
       "bluetooth": "Bluetooth",
+      "customDecoders": "Özel Kod Çözücüler",
       "additionalData": "Ek Veri",
       "camera": "Kamera",
       "checkpoint": "Kontrol Noktası",
@@ -512,7 +556,9 @@
       "annotationPresets": "Açıklama Ön Ayarları",
       "exportShareRestore": "Dışa Aktar, Paylaş ve Geri Yükle",
       "deviceSettings": "Cihaz Ayarları",
-      "language": "Dil"
+      "language": "Dil",
+      "audioIndicator": "Ses Göstergesi",
+      "fileServer": "Yerel Dosya Sunucusu"
     },
     "recordingMechanism": {
       "confirmBeforeEnding": "Bitirmeden Önce Onayla",
@@ -524,6 +570,7 @@
       "keepAwakeOff": "Kapalı",
       "keepAwakeOn": "Açık",
       "keepAwakeOnDim": "Açık ve Kısık",
+      "keepAwakeOnBlack": "Açık ve Siyah",
       "proximityLock": "Yakınlık Kilidi",
       "proximityLockSubtitle": "Yakınlık sensörü tetiklendiğinde kayıt sırasında, Uyanık Tut açık olsa bile, ekranı kapatır. Telefon cepteyken yanlışlıkla girişleri önler ve pil tasarrufu sağlar. Aksi takdirde ekran açıkmış gibi davranır.",
       "inlinePreview": "Satır İçi Önizleme",
@@ -562,11 +609,40 @@
     },
     "checkpoint": {
       "checkpoint": "Kontrol Noktası",
-      "checkpointSubtitle": "Her 24 saatlik kesintisiz kayıttan sonra, veriler otomatik olarak \"Kayıtlar\" sekmesinde yeni bir giriş olarak kesintisiz şekilde kaydedilir. Bu, günlük kayıtları düzenleyerek uzun süreli veri toplamaya yardımcı olur."
+      "checkpointSubtitle": "Her {{interval}}lik kesintisiz kayıttan sonra, veriler kesintiye uğramadan otomatik olarak yeni bir giriş olarak kaydedilir.",
+      "interval": "Kontrol Noktası Aralığı",
+      "hour": "1 saat",
+      "hours": "{{value}} saat",
+      "backupCallout": "Uzun kayıtları otomatik olarak bölüp yüklemek için Yedekleme ile birlikte kullanın; manuel adım gerekmez."
+    },
+    "audioIndicator": {
+      "startStopTone": "Başlatma ve Durdurma Sesi",
+      "startStopToneSubtitle": "Kayıt başladığında ve durduğunda bir ses çalar.",
+      "previewStart": "Kayıt Başlangıcı",
+      "previewStop": "Kayıt Sonu",
+      "intervalTone": "Aralık Hatırlatıcı",
+      "intervalToneSubtitle": "Kayıt sırasında hatırlatıcı olarak periyodik bir ton çalar. Mikrofon sensörüne müdahale edebilir.",
+      "toneType": "Ton Türü",
+      "preview": "Tonu Önizle",
+      "sec": "{{value}}s",
+      "min": "{{value}}m",
+      "custom": "Özel",
+      "change": "Değiştir",
+      "everySeconds": "Her {{value}} saniyede",
+      "everyMinutes": "Her {{value}} dakikada",
+      "intervalPromptTitle": "Aralık (saniye)",
+      "intervalPromptMessage": "1 ile 86.400 saniye (24 saat) arasında bir aralık girin.",
+      "invalidInterval": "Geçersiz Aralık",
+      "invalidIntervalMessage": "Lütfen 1 ile 86.400 arasında bir tam sayı girin."
     },
     "additionalData": {
       "uncalibratedValues": "Kalibre Edilmemiş Değerler",
-      "uncalibratedValuesSubtitle": "İvmeölçer, jiroskop ve manyetometreden ham değerleri kaydeder. Daha düşük seviye sonradan işleme veya özel sensör füzyonu için faydalıdır. Kalibre edilmiş veri her zaman kaydedilir.",
+      "uncalibratedValuesSubtitle": "İvmeölçer, jiroskop ve manyetometrenin hangi akışlarının kaydedileceğini seçin. Kalibre Edilmemiş, düşük seviyeli son işleme veya özel füzyon için ham değerleri kaydeder. Diğer sensörler ve yönelim ile yerçekimi gibi füzyon akışları etkilenmez.",
+      "calibratedOnly": "Yalnız Kalibre",
+      "both": "Her İkisi",
+      "uncalibratedOnly": "Yalnız Kalibre Edilmemiş",
+      "uncalibratedOnlyWarning": "Kalibre akışlar kaydedilmez. Çoğu araç bu dosyaları bekler.",
+      "uncalibratedUnavailableWarning": "Bu cihazda kalibre edilmemiş ivmeölçer yok, bu nedenle hiç ivmeölçer verisi kaydedilmez. Her İkisi veya Yalnız Kalibre seçin.",
       "additionalLocationData": "Ek Konum Verisi",
       "additionalLocationDataSubtitle": "Varsayılan olarak yalnızca birleştirilmiş konum kaydedilir. Yalnızca GPS'den ve yalnızca ağdan ek ölçümler kaydeder.",
       "learnMoreLocation": "Konum Verisi Hakkında Daha Fazla Bilgi",
@@ -591,13 +667,26 @@
       "imageQualityMedium": "Orta",
       "imageQualityHigh": "Yüksek",
       "cameraMode": "Kamera Modu",
-      "cameraModeSubtitle": "Örnekleme Frekansları altında tanımlanan düzenli aralıklarla görüntü yakalar veya tek bir video olarak sürekli kaydeder. Video modunda sesi etkinleştirmek için Mikrofon sensörünü de açın.",
+      "cameraModeSubtitle": "Görüntüler tam kalitede fotoğraflar çeker. Anlık Görüntü, daha hızlı çekimler için standart görüntü işleme hattını atlar. Video tek bir video dosyası olarak sürekli kaydeder. Video modunda sesi etkinleştirmek için Mikrofon sensörünü de açın. Görüntü ve anlık görüntü aralıklarını Örnekleme Frekansları altında ayarlayın.",
       "cameraModeImages": "Görüntüler",
       "cameraModeVideo": "Video",
+      "cameraModeSnapshot": "Anlık Görüntü",
+      "notSupportedInSnapshot": "Anlık görüntü modunda desteklenmez.",
       "captureDepth": "Derinlik Yakalama",
       "captureDepthImage": "Görüntü",
       "captureDepthImageDepth": "Görüntü + Derinlik",
       "depthNotSupportedInVideo": "Video modunda derinlik verisi desteklenmez.",
+      "captureDepthDescription": "Görüntüler, dosyaya gömülü derinlik verileriyle çekilir.",
+      "captureDepthCamera": "Seçili kamera %{camera}.",
+      "captureDepthSupported": "Bu cihaz derinlik verisini destekler.",
+      "captureDepthNotSupported": "Bu cihaz derinlik verisini desteklemez.",
+      "maxVideoFps": "Maks. Video FPS",
+      "maxVideoFpsSubtitle": "Video kaydı için hedef kare hızı. Gerçek FPS cihaza ve çözünürlüğe bağlıdır.",
+      "maxVideoFps15": "15",
+      "maxVideoFps30": "30",
+      "maxVideoFps60": "60",
+      "maxVideoFpsWarning": "Bu cihazda Görüntü Kalitesi (%{quality}) için FPS (%{fps}) desteklenmiyor. Desteklenen aralık %{min}-%{max}'dir.",
+      "maxVideoFpsResolutionNote": "Bu cihaz %{fps} FPS'yi destekliyor, ancak şu Görüntü Kalitesini gerektiriyor: %{qualities}.",
       "cameraLensOrder": "Lens Tercihi",
       "cameraLensOrderSubtitle": "Yeniden sıralamak için sürükleyin. Cihazdaki ilk kullanılabilir lens kullanılacaktır. Kayıt sırasında vizörde dijital yakınlaştırma için kıstırabilirsiniz."
     },
@@ -614,7 +703,9 @@
       "coordinatesTo01": "0,1°'ye",
       "coordinatesDrop": "Bırak",
       "optimizeForNavigation": "Navigasyon için Optimize Et",
-      "optimizeForNavigationSubtitle": "Konum sensörünü navigasyon moduna ayarlar, doğruluğu artırmak için ek sensörler kullanır."
+      "optimizeForNavigationSubtitle": "Konum sensörünü navigasyon moduna ayarlar, doğruluğu artırmak için ek sensörler kullanır.",
+      "prewarmLocation": "Ön Isıtma",
+      "prewarmLocationSubtitle": "Kayıt başladığında konum hemen hazır olsun diye Location sensörünü yüksek doğruluk modunda otomatik olarak ön ısıtır."
     },
     "bluetooth": {
       "scanningDuration": "Tarama Süresi",
@@ -624,17 +715,34 @@
       "rssiNoLimit": "Sınır Yok",
       "rssiAbove70": "> -70dBm",
       "rssiAbove60": "> -60dBm",
+      "gattDeviceInfo": "Cihaz Bilgisi Sorgulama",
+      "gattDeviceInfoSubtitle": "Üretici ve modelini okumak için yakındaki cihazlara kısa süreliğine bağlanır. Kod çözme için gerekli değildir ve bazı cihazlardan gelen verileri kesintiye uğratabilir.",
+      "gattDeviceInfoOff": "Kapalı",
+      "gattDeviceInfoScan": "Tarama Sırasında",
+      "gattDeviceInfoAlways": "Her Zaman",
       "decodeValues": "Değerleri Çöz",
-      "decodeValuesSubtitle": "Destekleniyorsa, yayınlanan ve aktarılan verileri çözer. Desteklenen cihazlar için github.com/tszheichoi/sensor-ble adresine bakın."
+      "decodeValuesSubtitle": "Destekleniyorsa, yayınlanan ve aktarılan verileri çözer.",
+      "supportedDevicesLink": "Desteklenen cihazlar",
+      "customDecodersHeader": "Özel Bluetooth Dekoderleri",
+      "customDecodersDescription": "Sensor-BLE uyumlu bir dekoder dosyasının URL'sini sağlayarak yeni BLE işaretçileri için destek ekleyin.",
+      "addCustomDecoderTitle": "Dekoder Ekle",
+      "addCustomDecoderMessage": ".js dekoder dosyasının URL'sini girin:",
+      "deleteDecoderTitle": "Dekoderi Sil",
+      "deleteDecoderMessage": "\"{{name}}\" özel dekoderini silmek istediğinizden emin misiniz?",
+      "decoderAddedSuccess": "Dekoder başarıyla yüklendi ve kaydoldu!",
+      "decoderRefreshedSuccess": "Dekoder en son sürüme güncellendi!",
+      "decoderNoUrl": "Bu dekoderin yenilenebileceği kayıtlı bir URL'si yok. Kaldırıp URL ile tekrar ekleyin.",
+      "decoderRenameConflict": "Güncellenen dosya bu dekoderin adını \"{{name}}\" olarak değiştiriyor, ancak bu ada sahip bir dekoder zaten var. Önce çakışan dekoderi kaldırın.",
+      "fetchErrorTitle": "Alınma Hatası",
+      "validationErrorTitle": "Doğrulama Başarısız"
     },
     "export": {
-      "copyExportCode": "Dışa Aktarma Kodunu Kopyala",
-      "showQrCode": "QR Kodunu Göster",
-      "hideQrCode": "QR Kodunu Gizle",
+      "copyDeepLink": "Derin bağlantıyı kopyala",
       "restoreFromClipboard": "Panodan Geri Yükle",
       "cannotExportInStudy": "Bir çalışma sırasında ayarları dışa aktaramaz veya geri yükleyemezsiniz.",
       "explanatoryText": "Ayarlar ve şu anda açık olan sensör seti oluşturulan kod kullanılarak dışa aktarılabilir. Bu kod, bu ayarları aynı cihazda veya başka bir cihazda geri yüklemek için kullanılabilir. Kodu başkalarıyla paylaşarak veri toplarken aynı ayarlara sahip olmalarını sağlayabilirsiniz. Kodu onlara iletin veya telefonlarında QR kodunu taramalarını isteyin. Cihaza bağımlı yapısı nedeniyle Bluetooth sensörleri dahil değildir.",
-      "restoreFailedError": "Panodan ayarlar geri yüklenemedi, panonun doğru olup olmadığını kontrol edin."
+      "restoreFailedError": "Panodan ayarlar geri yüklenemedi, panonun doğru olup olmadığını kontrol edin.",
+      "qrCodeTooLarge": "Bu yapılandırma QR kodu olarak gösterilemeyecek kadar büyük. Paylaşmak için bunun yerine \"Derin bağlantıyı kopyala\" seçeneğini kullanın."
     },
     "annotationPresets": {
       "addAnnotationPreset": "Açıklama Ön Ayarı Ekle",
@@ -683,8 +791,11 @@
     },
     "standardisation": {
       "title": "Birimleri ve Çerçeveleri Standartlaştır",
-      "subtitle": "Farklı platformlar değerleri farklı birimlerde ve koordinat sistemlerinde raporlayabilir, bu da çapraz platform analizini zorlaştırır. Platformlar arasında tanımları uyumlu hale getirmek için açın.",
-      "learnMore": "Platformlar arasındaki birim ve koordinat farklılıkları ve hangi sensörlerin etkilendiği hakkında daha fazla bilgi edinin."
+      "subtitle": "Farklı platformlar değerleri farklı birimlerde ve koordinat sistemlerinde raporlayabilir, bu da çapraz platform analizini zorlaştırır. Platformlar arasında tanımları uyumlu hale getirmek için açın. Veri işleme algoritmalarını ve filtreleri de standartlaştırmak için Sensor Zoo'ya göz atın."
+    },
+    "sensorFusion": {
+      "viewComparison": "Canlı Karşılaştırmayı Görüntüle",
+      "waitingForData": "Sensör verileri bekleniyor..."
     },
     "orderSensors": {
       "infoText": "Sensörlerin görüntülenme sırasını değiştirmek için sürükleyin. Bluetooth işaretçileri her zaman altta görünür."
@@ -696,26 +807,71 @@
     }
   },
   "settingsSections": {
-    "language": { "description": "Tercih edilen dil.", "contribute": "Çeviri hataları varsa veya yeni diller katkıda bulunmak istiyorsanız iletişime geçmekten çekinmeyin.", "reviewAndContribute": "Çevirileri İncele ve Katkıda Bulun" },
-    "recordingWorkflow": { "description": "Kayıt oturumu sırasında, bitirirken ve sonrasında ne olur." },
-    "ruleEngine": { "title": "Kural Motoru", "description": "Ölçümlere, zamana, konuma ve daha fazlasına dayalı sensörleri tetikleyen otomasyon kuralları." },
-    "dataStreaming": { "title": "Veri Aktarımı", "description": "Veri göndermek için HTTP ve MQTT kullanın." },
-    "sensorConfiguration": { "title": "Sensör Yapılandırması", "description": "Kameralar, mikrofonlar, GPS, bluetooth ve kalibre edilmemiş veri ayarları." },
-    "standardisation": { "description": "Cihazlar arasında birimleri ve koordinatları standartlaştırın." },
-    "samplingFrequencies": { "description": "Ölçümlerin ne sıklıkla örnekleneceğini kontrol edin." },
-    "timestamps": { "description": "Saat ve format seçeneklerini ayarlayın." },
-    "sensorSections": { "description": "Sensör bölümlerinin sırasını değiştirin." },
-    "annotations": { "title": "Açıklamalar", "description": "Açıklamalar için ön ayarlar." },
-    "deviceSettings": { "description": "Cihaz için gelişmiş ayarlar." },
-    "exportShareRestore": { "description": "Ayarları paylaşmak için QR kodu kullanın." }
+    "language": {
+      "description": "Tercih edilen dil.",
+      "contribute": "Çeviri hataları varsa veya yeni diller katkıda bulunmak istiyorsanız iletişime geçmekten çekinmeyin.",
+      "reviewAndContribute": "Çevirileri İncele ve Katkıda Bulun"
+    },
+    "recordingWorkflow": {
+      "description": "Kayıt oturumu sırasında, bitirirken ve sonrasında ne olur."
+    },
+    "ruleEngine": {
+      "title": "Kural Motoru",
+      "description": "Ölçümlere, zamana, konuma ve daha fazlasına dayalı sensörleri tetikleyen otomasyon kuralları."
+    },
+    "dataStreaming": {
+      "title": "Veri Aktarımı",
+      "description": "HTTP ve MQTT ile veri gönderin veya kayıtları bilgisayarınıza sunun."
+    },
+    "sensorConfiguration": {
+      "title": "Sensör Yapılandırması",
+      "description": "Kameralar, mikrofonlar, GPS, bluetooth ve kalibre edilmemiş veri ayarları."
+    },
+    "standardisation": {
+      "description": "Birimleri ve koordinatları standartlaştırın."
+    },
+    "sensorZoo": {
+      "description": "Özel açık kaynak uygulamalarla standartlaştırılmış algoritmalar ve filtreler."
+    },
+    "samplingFrequencies": {
+      "description": "Ölçümlerin ne sıklıkla örnekleneceğini kontrol edin."
+    },
+    "timestamps": {
+      "description": "Saat ve format seçeneklerini ayarlayın."
+    },
+    "sensorSections": {
+      "description": "Sensör bölümlerinin sırasını değiştirin."
+    },
+    "annotations": {
+      "title": "Açıklamalar",
+      "description": "Açıklamalar için ön ayarlar."
+    },
+    "deviceSettings": {
+      "description": "Cihaz için gelişmiş ayarlar."
+    },
+    "exportShareRestore": {
+      "description": "Ayarları paylaşmak için QR kodu kullanın."
+    }
   },
   "exportFormats": {
-    "csvZip": { "description": "Tüm verileri sensör başına CSV'ye aktarır ve bir zip dosyasına paketler." },
-    "json": { "description": "Verileri ses ve görüntüler hariç tek bir json dosyasına paketler." },
-    "combinedCsv": { "description": "Tüm zaman damgalarını hizalayarak yeniden örnekler, birleştirir ve tek bir CSV'de toplar." },
-    "excelSheets": { "description": ".xlsx olarak dışa aktar. Sensör başına maks 10K satır, çalışma sayfalarına düzenlenmiş." },
-    "kml": { "description": "GPS verilerini KML dosyasına aktarır. Yalnızca konum verilerini içerir." },
-    "sqlite": { "description": "Sensöre göre tablolara düzenlenmiş SQLite veritabanına aktarır. Meta veri ve etiketleri içerir." }
+    "csvZip": {
+      "description": "Tüm verileri sensör başına CSV'ye aktarır ve bir zip dosyasına paketler."
+    },
+    "json": {
+      "description": "Verileri ses ve görüntüler hariç tek bir json dosyasına paketler."
+    },
+    "combinedCsv": {
+      "description": "Tüm zaman damgalarını hizalayarak yeniden örnekler, birleştirir ve tek bir CSV'de toplar."
+    },
+    "excelSheets": {
+      "description": ".xlsx olarak dışa aktar. Sensör başına maks 10K satır, çalışma sayfalarına düzenlenmiş."
+    },
+    "kml": {
+      "description": "GPS verilerini KML dosyasına aktarır. Yalnızca konum verilerini içerir."
+    },
+    "sqlite": {
+      "description": "Sensöre göre tablolara düzenlenmiş SQLite veritabanına aktarır. Meta veri ve etiketleri içerir."
+    }
   },
   "detailsScreen": {
     "untitled": "Başlıksız",
@@ -723,11 +879,28 @@
     "renameRecording": "Kaydı Yeniden Adlandır",
     "fileCount": "Bu kayıt için %{count} dosya bulundu",
     "alerts": {
-      "missingLocationData": { "title": "Eksik Konum Verisi", "message": "Bir veya daha fazla kayıt konum verisi içermiyor ve bu nedenle KML'ye aktarılamaz." },
-      "feedback": { "title": "Geri Bildirim", "message": "Sensor Logger'ı kullandığınız için teşekkürler! Herhangi bir geri bildiriminizi duymak isteriz.", "noThanks": "Hayır Teşekkürler", "provideFeedback": "Geri Bildirim Ver" },
-      "failedToExport": { "title": "Dışa aktarma başarısız", "message": "Dışa aktarma sırasında bir hata oluştu" },
-      "confirmDeletion": { "title": "Silmeyi Onayla", "message": "%{title} silmek istediğinizden emin misiniz?" },
-      "alreadyUploaded": { "title": "Zaten Yüklendi", "message": "Bu kayıt zaten yüklenmiş." }
+      "missingLocationData": {
+        "title": "Eksik Konum Verisi",
+        "message": "Bir veya daha fazla kayıt konum verisi içermiyor ve bu nedenle KML'ye aktarılamaz."
+      },
+      "feedback": {
+        "title": "Geri Bildirim",
+        "message": "Sensor Logger'ı kullandığınız için teşekkürler! Herhangi bir geri bildiriminizi duymak isteriz.",
+        "noThanks": "Hayır Teşekkürler",
+        "provideFeedback": "Geri Bildirim Ver"
+      },
+      "failedToExport": {
+        "title": "Dışa aktarma başarısız",
+        "message": "Dışa aktarma sırasında bir hata oluştu"
+      },
+      "confirmDeletion": {
+        "title": "Silmeyi Onayla",
+        "message": "%{title} silmek istediğinizden emin misiniz?"
+      },
+      "alreadyUploaded": {
+        "title": "Zaten Yüklendi",
+        "message": "Bu kayıt zaten yüklenmiş."
+      }
     },
     "hintBar": {
       "partOfStudy": "Çalışmanın Parçası",
@@ -736,25 +909,60 @@
       "uploadToCloud": "Lütfen bu kaydı Sensor Logger Cloud'a yükleyin. Daha fazlası için dokunun.",
       "studyNoLongerExists": "Bu kaydı artık var olmayan bir çalışma için yaptınız."
     },
-    "buttons": { "rename": "Yeniden Adlandır", "upload": "Yükle", "analysisResources": "Analiz Kaynakları" },
-    "actionSheet": { "freeTutorials": "Ücretsiz Öğreticiler ve Örnek Kod", "unitsDocumentation": "Birimler ve Belgeler", "buildDashboards": "Panolar Oluştur" }
+    "buttons": {
+      "rename": "Yeniden Adlandır",
+      "upload": "Yükle",
+      "analysisResources": "Analiz Kaynakları"
+    },
+    "actionSheet": {
+      "freeTutorials": "Ücretsiz Öğreticiler ve Örnek Kod",
+      "unitsDocumentation": "Birimler ve Belgeler",
+      "buildDashboards": "Panolar Oluştur"
+    }
   },
   "addStudy": {
-    "investigator": { "title": "Araştırmacıyım", "subtitle": "Başkalarının veri kaydedip benimle paylaşabilmesi için yeni bir çalışma oluşturmak istiyorum.", "callToAction": "Çalışma Oluştur" },
-    "participant": { "title": "Katılımcıyım", "subtitle": "Verilerimi bir araştırmacıyla kaydedip paylaşabilmek için bir çalışmaya katılmak istiyorum.", "callToAction": "Çalışma Bul" },
-    "studyActiveAlert": { "title": "Çalışma Aktif", "message": "Şu anda aktif bir çalışmanız var. Yeni bir tane oluşturmadan önce onu devre dışı bırakmalısınız.", "deactivate": "Devre Dışı Bırak ve Devam Et" },
+    "investigator": {
+      "title": "Araştırmacıyım",
+      "subtitle": "Başkalarının veri kaydedip benimle paylaşabilmesi için yeni bir çalışma oluşturmak istiyorum.",
+      "callToAction": "Çalışma Oluştur"
+    },
+    "participant": {
+      "title": "Katılımcıyım",
+      "subtitle": "Verilerimi bir araştırmacıyla kaydedip paylaşabilmek için bir çalışmaya katılmak istiyorum.",
+      "callToAction": "Çalışma Bul"
+    },
+    "studyActiveAlert": {
+      "title": "Çalışma Aktif",
+      "message": "Şu anda aktif bir çalışmanız var. Yeni bir tane oluşturmadan önce onu devre dışı bırakmalısınız.",
+      "deactivate": "Devre Dışı Bırak ve Devam Et"
+    },
     "tip": "Çalışma araştırmacısı tarafından sağlanan QR kodunu tarayarak bir çalışmaya katılın."
   },
   "joinStudy": {
     "instruction": "Bir çalışmaya katılmak için çalışma araştırmacınızdan sekiz haneli veya QR kodu isteyin.",
     "byCode": "Kodla",
     "byQrCode": "QR Koduyla",
-    "cameraPermissionsAlert": { "title": "Kamera İzinleri", "message": "QR kodları taramak için ayarlarda kamera izinlerini vermeniz gerekiyor." },
+    "cameraPermissionsAlert": {
+      "title": "Kamera İzinleri",
+      "message": "QR kodları taramak için ayarlarda kamera izinlerini vermeniz gerekiyor."
+    },
     "enterCode": "Kodu Girin",
     "scanAnotherQrCode": "Başka QR Kodu Tara",
     "invalidQrCode": "Geçersiz QR kodu algılandı.",
-    "invalidCodeAlert": { "title": "Geçersiz Kod", "message": "Çalışma araştırmacısı tarafından sağlanan çalışma kodu 6 ile 8 karakter arasında olmalıdır." },
+    "invalidCodeAlert": {
+      "title": "Geçersiz Kod",
+      "message": "Çalışma araştırmacısı tarafından sağlanan çalışma kodu 6 ile 8 karakter arasında olmalıdır."
+    },
     "viewStudy": "Çalışmayı Görüntüle"
+  },
+  "sandbox": {
+    "description": "Gerçek zamanlı sensör verileriyle mini oyunlar oynayın ve fizik deneyleri yapın. Aşağıdaki bağlantıyı başka bir cihazda, telefonda veya bilgisayarda açın ve burada QR kodunu tarayın.",
+    "openInBrowser": "Tarayıcıda Aç",
+    "scanQrCode": "QR Kodu Tara",
+    "scanQrCodeSubtext": "Bir oturuma katılmak için Sandbox QR kodunu tarayın",
+    "unavailable": "Kullanılamıyor",
+    "cameraPermissionRequired": "QR kodlarını taramak için kamera izni gereklidir.",
+    "noCameraAvailable": "Bu cihazda kamera mevcut değil."
   },
   "studyDetail": {
     "stats": {
@@ -1011,6 +1219,9 @@
       "connectable": "bağlanılabilir",
       "notConnectable": "bağlanılamaz",
       "deviceWarning": "Bluetooth verileri yalnızca uygulama açıkken ve ekran açıkken kaydedilir. Daha fazla bilgi (adı gibi) görmek için bu cihazı telefonunuzun ayarlarında eşleştirmeniz gerekebilir. İsimlerdeki tüm virgüller tire ile değiştirilir; CSV dışa aktarmalarında virgülle ayrılmış listeler dikey çizgilerle sınırlandırılır.",
+      "statusActive": "Aktif",
+      "statusIdle": "Boşta",
+      "statusOffline": "Çevrimdışı",
       "missingPermissions": "Eksik İzinler",
       "bluetoothPermissionMessage": "Bu özelliği kullanmak için ayarlarda Bluetooth izinlerini vermeniz gerekiyor."
     },
@@ -1039,7 +1250,7 @@
       "subtitle": "Eşleştirilmiş Saatten",
       "description": "Bileğinizdeki saatinizden harekete ilişkin okumaları kaydeder. Bu, dönüş hızı (x, y ve z), yerçekimi vektörü (x, y ve z), ivme (x, y ve z) ve kuaterniyon cinsinden tutumu içerir.",
       "frequency": "Yapılandırılamaz, genellikle 100Hz",
-      "units": "Telefondaki karşılık gelen sensörlerle aynı birimler.",
+      "units": "İvme ve yerçekimi vektörü, m/s² kullanan telefonun aksine standart yerçekimi (g) cinsinden raporlanır. \"Birimleri ve Çerçeveleri Standartlaştır\" etkinleştirildiğinde ikisi de telefonla eşleşmesi için m/s²’ye dönüştürülür. Diğer tüm değerler telefondaki karşılık gelen sensörlerle aynıdır. Saatin kalibre edilmemiş ivmeölçer akışı da aynı birimleri izler.",
       "warning": "Bu sensörler, saat uygulaması ön planda ve saat ekranı açıkken her zaman çalışır. Arka planda kayıt istiyorsanız, kalp atış hızı sensörünü de etkinleştirmeli ve ilgili izinleri vermelisiniz. Bu dolaylı olarak bilek hareketi verilerinin arka planda kaydedilmesini sağlar."
     },
     "watchLocation": {
@@ -1054,7 +1265,7 @@
       "description": "Bileğinizdeki saatinizden barometre okumalarını kaydeder.",
       "frequencyIos": "Yaklaşık her 2,5 saniyede bir (0,4Hz). Yapılandırılamaz.",
       "frequencyAndroid": "Cihaz modeline bağlıdır. Yapılandırılamaz.",
-      "units": "Telefondaki karşılık gelen sensörlerle aynı birimler.",
+      "units": "Basınç, mbar kullanan telefonun aksine kPa cinsinden raporlanır. Bağıl yükseklik, telefonla aynı şekilde metre cinsindendir. \"Birimleri ve Çerçeveleri Standartlaştır\" etkinleştirildiğinde basınç, telefonla eşleşmesi için mbar’a dönüştürülür.",
       "warning": "Bu sensörler, saat uygulaması ön planda ve saat ekranı açıkken her zaman çalışır. Arka planda kayıt istiyorsanız, kalp atış hızı sensörünü de etkinleştirmeli ve ilgili izinleri vermelisiniz. Bu dolaylı olarak barometre verilerinin arka planda kaydedilmesini sağlar."
     },
     "watchMagnetometer": {
@@ -1072,6 +1283,13 @@
       "frequencyAndroid": "Cihaz modeline bağlıdır. Yapılandırılamaz.",
       "units": "Derece cinsinden raporlar.",
       "warning": "Okumalar herhangi bir güçlü yerel manyetik alandan etkilenebilir. Bu sensörler, saat uygulaması ön planda ve saat ekranı açıkken her zaman çalışır. Arka planda kayıt istiyorsanız, kalp atış hızı sensörünü de etkinleştirmeli ve ilgili izinleri vermelisiniz."
+    },
+    "watchMicrophone": {
+      "subtitle": "Eşleştirilmiş Saatten",
+      "description": "Saatinizin yerleşik mikrofonundan ses ve yüksekliği (dBFS) kaydeder.",
+      "frequency": "16kHz mono AAC formatında ses. 10Hz'de örneklenen yükseklik (dBFS). Yapılandırılamaz.",
+      "units": "dBFS cinsinden yükseklik. .mp4 formatında ses.",
+      "warning": "Saat uygulaması ön planda ve saat ekranı açıkken bu sensörler her zaman çalışır. Arka planda kayıt istiyorsanız nabız sensörünü de etkinleştirmeli ve ilgili izinleri vermelisiniz. Bu, dolaylı olarak mikrofon verilerinin arka planda kaydedilmesini sağlar."
     },
     "microphone": {
       "subtitle": "Ses ve Seviye",
@@ -1097,20 +1315,20 @@
       "subtitle": "AirPods Hareketi",
       "description": "AirPods kablosuz Bluetooth kulaklıklarınızdan hareket okumalarını kaydeder. Bunu baş takibi gibi uygulamalar için kullanabilirsiniz. Bu, ivme (x, y ve z), yerçekimi vektörü (x, y ve z), dönüş hızı (x, y ve z) ve tutumu içerir. Sınırlamalar nedeniyle aynı anda yalnızca bir kulaklık hareket verisi kaydeder. Aktif kulaklık sensorLocation alanıyla belirtilir.",
       "frequency": "Yapılandırılamaz ve değişkendir, en yeni modellerde 25Hz'e, eski modellerde 15Hz'e kadar.",
-      "units": "Telefondaki karşılık gelen sensörlerle aynı birimler.",
+      "units": "İvme standart yerçekimi (g) cinsinden raporlanırken yerçekimi vektörü zaten m/s² cinsindendir, bu nedenle ikisi farklıdır. \"Birimleri ve Çerçeveleri Standartlaştır\" etkinleştirildiğinde ivme de m/s²’ye dönüştürülür, böylece ikisi de telefonla eşleşir. Diğer tüm değerler telefondaki karşılık gelen sensörlerle aynıdır.",
       "warning": "Eşleştirilmiş AirPods'larınızı takıyor olmalısınız -- her iki kulaklığı veya yalnızca birini takabilirsiniz. AirPods ayarlarında 'Otomatik Kulak Algılama'yı kapatırsanız, AirPods'lar telefonunuza bağlı olduğu sürece kulaklarınızda olmadığında bile hareketini kaydetmek mümkündür."
     },
     "battery": {
       "subtitle": "Pil Seviyesi",
-      "description": "Cihazın pil seviyesini ölçer. Ayrıca pil durumunu (şarj oluyor, dolu vb.) kaydeder. Negatif değer pil durumunun bilinmediği anlamına gelir.",
+      "description": "Cihazın pil seviyesini ölçer. Ayrıca pil durumunu (şarj oluyor, dolu vb.) ve düşük güç modu durumunu kaydeder. Desteklenen cihazlarda, ayrıca pil voltajını, şarj akımını ve genel pil sağlığını kaydeder.",
       "frequency": "1Hz'de örnekler, yapılandırılamaz.",
-      "units": "Oran olarak raporlar, örneğin 0,5 %50'dir."
+      "units": "Ondalık seviye (örn. 0.5 %50'dir), durum dize olarak. Desteklenen yerlerde voltaj volt cinsinden, akım mA cinsinden ve sağlık durumu dize olarak bildirilir."
     },
     "batteryTemp": {
       "subtitle": "Pil Sıcaklığı",
       "description": "Cihazın pil sıcaklığını ölçer.",
       "frequency": "1Hz'de örnekler, yapılandırılamaz.",
-      "units": "Celsius cinsinden raporlar."
+      "units": "Santigrat cinsinden bildirilir."
     },
     "brightness": {
       "subtitle": "Ekran Parlaklığı",
@@ -1147,5 +1365,146 @@
     "feedbackMessage": "Sensor Logger aboneliğinizi iptal ettiğinizi fark ettik. Sensor Logger'ı nasıl geliştirebileceğimize dair geri bildirimlerinizi duymak isteriz. Geri bildirim vermek ister misiniz?",
     "noThanks": "Hayır Teşekkürler",
     "provideFeedback": "Geri Bildirim Ver"
+  },
+  "deepLinks": {
+    "annotationTitle": "Açıklama",
+    "notRecording": "Aktif kayıt yok. Açıklama eklemeden önce bir kayıt başlatın.",
+    "noAnnotationText": "Lütfen açıklama metni girin, örn. sensorlogger://annotate/pothole",
+    "annotationBanner": "Açıklama eklendi: %{text}",
+    "featureEnabledTitle": "Özellik Etkinleştirildi",
+    "featureEnabledMessage": "'%{flag}' özelliği etkinleştirildi.",
+    "unknownFlagTitle": "Bilinmeyen Özellik",
+    "unknownFlagMessage": "'%{flag}' özelliği Sensor Logger'ın bu sürümü tarafından desteklenmiyor."
+  },
+  "cloudScreen": {
+    "notVerifiedYet": "Henüz Doğrulanmadı",
+    "notVerifiedYetMessage": "E-postanız henüz doğrulanmadı. Önce gelen kutunuzdaki bağlantıya tıklayın, ardından tekrar deneyin.",
+    "upgradeStorage": "Depolamayı Yükselt",
+    "cloudStorage": "Bulut Depolama",
+    "bannerDescription": "Studies, Stories ve Yedekler'i barındırmak için Sensor Logger'a eşlik eden bir bulut hizmeti.",
+    "cloudStorageDescription": "Studies (yani katılımcılarınızın yüklediği kayıtlar), Stories ve Yedekler'inizi (yani kendi yüklediğiniz kayıtlar) güvenli bir şekilde barındırın.",
+    "backups": "Yedekler",
+    "enableBackups": "Yedeklemeyi Etkinleştir",
+    "enableBackupsDescription": "Kayıtlarınızı otomatik olarak yedekleyin ve daha sonra web'den veya başka bir cihazdan indirin. Ayrıca daha önce yedeklenmiş kayıtları bu cihaza yeniden aktarabilirsiniz.",
+    "storageFull": "Depolama Dolu",
+    "storageFullMessage": "Bulut depolama sınırınıza ulaştınız. Yedeklemeleri etkinleştirmek için lütfen depolama aboneliğinizi yükseltin.",
+    "emailNotVerified": "E-posta Doğrulanmadı",
+    "emailNotVerifiedMessage": "Yedeklemeleri etkinleştirmeden önce lütfen e-posta adresinizi doğrulayın. Diğer cihazlardan yedeklerinize erişmek için bu e-postayı kullanacaksınız.",
+    "checkingEmail": "E-posta doğrulama durumu kontrol ediliyor...",
+    "verificationSent": "Doğrulama kodu %{email} adresine gönderildi. Lütfen gelen kutunuzu kontrol edin ve doğrulamak için aşağıdaki 6 haneli kodu girin.",
+    "checkVerification": "Kodu Doğrula",
+    "changeEmail": "E-posta Değiştir",
+    "emailForBackups": "Yedeklemeler için E-posta",
+    "enterEmail": "E-postanızı girin",
+    "sendVerification": "Doğrulama Kodu Gönder",
+    "freshInstallInfo": "Sensor Logger'ı zaten satın aldıysanız ve bu yeni bir kurulumsa, önceki yedeklerinizi görmek için satın alma işlemlerinizi geri yüklemeniz gerekebilir.",
+    "manageBackups": "Yedekleri Yönet",
+    "useMobileData": "Mobil Veri Kullan",
+    "useMobileDataDescription": "Wi-Fi kullanılabilir olmadığında yedeklemelerin mobil veri kullanmasına izin verin.",
+    "missingEmail": "Eksik E-posta",
+    "missingEmailMessage": "Lütfen önce bir yedekleme e-posta adresi girin.",
+    "accessBackupsOnWeb": "E-postanızla sensorlogger.app/backups adresini ziyaret ederek kayıtlarınıza her yerden erişin.",
+    "accessBackupsOnWebFull": "E-postanızla sensorlogger.app/backups adresini ziyaret ederek kayıtlarınıza her yerden çevrimiçi olarak, API veya aracı üzerinden erişin.",
+    "verificationCode": "Doğrulama Kodu",
+    "enterVerificationCode": "6 haneli kodu girin",
+    "invalidCode": "Geçersiz Kod",
+    "invalidCodeMessage": "Lütfen geçerli bir 6 haneli doğrulama kodu girin."
+  },
+  "backupsScreen": {
+    "downloadIncomplete": "İndirme tamamlanmadı. Bağlantınızı kontrol edip tekrar deneyin.",
+    "fetchFailedTitle": "Yedekler yüklenemedi",
+    "fetchFailedSubtitle": "Bağlantınızı kontrol edin ve yenilemek için dokunarak tekrar deneyin.",
+    "keepAppOpen": "Yedeklemeyi tamamlamak için Sensor Logger’ı açık tutun.",
+    "wifiOnlyNote": "Yedeklemeler yalnızca Wi-Fi üzerinden yüklenir.",
+    "waitingForWifi": "Mobil veri kullanıyorsunuz, bu yüzden yedeklemeler duraklatıldı. Wi-Fi'ye bağlandığınızda otomatik olarak devam edecek.",
+    "waitingForConnection": "İnternet bağlantısı yok. Tekrar çevrimiçi olduğunuzda yedeklemeler otomatik olarak devam edecek.",
+    "sortOptions": {
+      "largest": "En büyük",
+      "smallest": "En küçük",
+      "thisDeviceFirst": "Önce bu cihaz",
+      "otherDevicesFirst": "Önce diğer cihazlar"
+    },
+    "downloadFailed": "İndirme Başarısız",
+    "invalidLocalPath": "Geçersiz yerel yedekleme yolu.",
+    "genericDownloadError": "Kayıt indirilirken bir hata oluştu.",
+    "deleteBackup": "Yedeği Sil",
+    "deleteBackupConfirmation": "\"%{name}\" yedeğini buluttan kalıcı olarak silmek istediğinize emin misiniz? Bu işlem geri alınamaz.",
+    "fromThisDevice": "Bu Cihazdan",
+    "fromAnotherDevice": "Başka Bir Cihazdan",
+    "pendingUpload": "Bekleyen Yükleme",
+    "quotaExceeded": "Depolama kotası aşıldı",
+    "uploadingStatus": "Yükleniyor...",
+    "syncingMetadata": "Meta Veriler Eşitleniyor",
+    "backedUp": "Yedeklendi",
+    "activityQueue": "Etkinlik Kuyruğu",
+    "activityQueueWithCount": "Etkinlik Kuyruğu (%{count})",
+    "loadingBackups": "Yedekler Yükleniyor",
+    "fetchingBackups": "Yedekleriniz alınıyor...",
+    "noBackupsFound": "Yedek Bulunamadı",
+    "noBackupsFoundSubtitle": "Yüklendikten sonra yedekleriniz burada görünecektir.",
+    "backupsDisabled": "Yedeklemeler Devre Dışı",
+    "backupsDisabledSubtitle": "Bekleyen yükleme kuyruğunuzu görmek ve kayıtları otomatik olarak eşitlemek için Bulut sekmesinde yedeklemeyi etkinleştirin.",
+    "everythingBackedUp": "Her Şey Yedeklendi",
+    "everythingBackedUpSubtitle": "Tüm yerel kayıtlarınız başarıyla yüklendi ve eşitlendi."
+  },
+  "healthCheck": {
+    "title": "Sağlık Kontrolü",
+    "locationTitle": "Arka Plan Konumu",
+    "locationStatusAlways": "İzin Verildi",
+    "locationStatusWarning": "Kısıtlı",
+    "locationDescription": "Uygulamanın arka planda veri kaydedebilmesi için konum erişiminin 'Her zaman izin ver' olarak ayarlanması gerekir.",
+    "storageTitle": "Depolama",
+    "storageStatusOk": "Yeterli",
+    "storageStatusWarning": "Düşük",
+    "storageDescription": "Uzun kayıt seansları için cihazınızda yeterli alan (>2GB boş) olduğundan emin olur.",
+    "batteryOptTitle": "Pil Optimizasyonu",
+    "batteryOptStatusOk": "Kısıtlanmamış",
+    "batteryOptStatusWarning": "Optimize Edilmiş",
+    "batteryOptDescription": "Pil Optimizasyonunu 'Kısıtlanmamış' olarak ayarlamak, sistemin arka plandaki kayıtları zamanından önce durdurmasını önler.",
+    "batteryTitle": "Pil Seviyesi",
+    "batteryStatusOk": "İyi",
+    "batteryStatusWarning": "Düşük",
+    "batteryStatusCharging": "Şarj Ediliyor",
+    "batteryDescription": "Sürekli çalışmayı sağlamak için pil seviyenizin yüksek olduğundan emin olun veya cihazınızı şarja takın.",
+    "keepAwakeTitle": "Ekranı Uyanık Tut",
+    "keepAwakeDescription": "Belirli sensörler (Bluetooth ve Kamera gibi), verileri kesintisiz kaydetmek için ekranın aktif kalmasını gerektirir.",
+    "keepAwakeStatusEnabled": "Etkin",
+    "keepAwakeStatusDisabled": "Devre Dışı (Gerekli)",
+    "keepAwakeStatusNotRequired": "Devre Dışı (Gerekli Değil)",
+    "lowPowerTitle": "Düşük Güç Modu",
+    "lowPowerDescription": "Düşük Güç Modu, arka plan işlemlerini ve sensör kaydını kısıtlar. En iyi sonuçlar için sistem ayarlarından kapatın.",
+    "lowPowerStatusOn": "Etkin",
+    "lowPowerStatusOff": "Devre Dışı",
+    "fixButton": "Düzelt",
+    "grantButton": "İzin Ver",
+    "enableButton": "Etkinleştir",
+    "openSettingsButton": "Ayarları Aç",
+    "checking": "Kontrol ediliyor...",
+    "unknown": "Bilinmiyor",
+    "freeSpace": "{{size}} boş"
+  },
+  "fileServer": {
+    "intro": "Aynı ağdaki bir bilgisayardan kayıtlarınıza göz atın ve bunları indirin. Veriler doğrudan bu telefondan bilgisayarınıza gider.",
+    "start": "Yerel Sunucuyu Başlat",
+    "stop": "Sunucuyu Durdur",
+    "port": "Port",
+    "portPromptMessage": "%{min} ile %{max} arasında bir port girin.",
+    "invalidPortTitle": "Geçersiz Port",
+    "stats": "%{requests} istek · %{sent} gönderildi · %{connections} bağlı",
+    "noWifi": "Bu telefonu Wi-Fi'ye bağlayın veya kişisel erişim noktasını açıp bilgisayarınızı ona bağlayın.",
+    "address_wifi": "Wi-Fi",
+    "address_hotspot": "Erişim noktası",
+    "address_usb": "USB",
+    "address_ethernet": "Ethernet",
+    "startError": "Sunucu başlatılamadı.",
+    "stoppedInBackground": "Uygulama arka plana alındığında sunucu durdu.",
+    "ipChanged": "Bu telefonun ağ adresi değişti. Yeni bir bağlantı adresi için sunucuyu yeniden başlatın.",
+    "goodToKnow": "Bilinmesi Gerekenler",
+    "tipSameNetwork": "Bilgisayarınız bu telefonla aynı ağda olmalıdır.",
+    "tipPrivateLink": "Bağlantı özel bir kod içerir. Sunucuyu her başlattığınızda değişir.",
+    "tipForeground": "Aktarım sırasında bu ekranı açık tutun. Ekran otomatik olarak açık kalır.",
+    "tipIsolation": "Bazı misafir ve ofis ağları cihazların birbiriyle iletişimini engeller. Bunun yerine bu telefonun kişisel erişim noktasını kullanın.",
+    "settingsDescription": "Ağınızdaki bir bilgisayardan kayıtlara göz atın ve bunları indirin.",
+    "starting": "Başlatılıyor…"
   }
 }
