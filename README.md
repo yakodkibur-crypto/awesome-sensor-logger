@@ -638,6 +638,8 @@ If you have published work using Sensor Logger, feel free to reach out or make a
 - GPS data logging for photo / video geolocation.
 - Analyzing acceleration and vibration from personal transportation
   - https://github.com/zmsubin/accelerometers_pub
+- Using phone sensor noise as a source of randomness for crypto wallet seeds.
+  - https://github.com/r0ck069/EntropyPipeline/
 
 ## Contribute
 
